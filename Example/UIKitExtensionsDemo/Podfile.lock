@@ -1,0 +1,16 @@
+PODS:
+  - UIKitExtensions (0.1.0)
+
+DEPENDENCIES:
+  - UIKitExtensions (from `../../`)
+
+EXTERNAL SOURCES:
+  UIKitExtensions:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  UIKitExtensions: 482efe8936fc1d3788d796259bb32d02ba41f209
+
+PODFILE CHECKSUM: 254c5c69f5d0459c4e80784cc5524dfd0eba8b3c
+
+COCOAPODS: 1.5.3
