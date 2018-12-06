@@ -1,17 +1,12 @@
 PODS:
   - DinoDNA (0.2.55)
-  - UIKitExtensions (0.0.1):
-    - DinoDNA
 
 DEPENDENCIES:
   - "DinoDNA (from `git@bitbucket.org:appsaurus/dinodna.git`)"
-  - UIKitExtensions (from `../../`)
 
 EXTERNAL SOURCES:
   DinoDNA:
     :git: "git@bitbucket.org:appsaurus/dinodna.git"
-  UIKitExtensions:
-    :path: "../../"
 
 CHECKOUT OPTIONS:
   DinoDNA:
@@ -20,8 +15,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DinoDNA: 0c2d2e62f36b8a86b28864639045db0e23cab49c
-  UIKitExtensions: ccd1a2da3e190242cccaa25edb0f49ff89dfd823
 
-PODFILE CHECKSUM: b7db7cd69b867a3f59477bef93c3903129c8bf6c
+PODFILE CHECKSUM: 8f2a70b7ca700226f2a68b327eca1a16b4994fc5
 
 COCOAPODS: 1.5.3
