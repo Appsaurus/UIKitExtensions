@@ -33,5 +33,4 @@ public extension UITableViewCell{
         bgView.backgroundColor = color
         self.selectedBackgroundView = bgView
     }
-    
 }

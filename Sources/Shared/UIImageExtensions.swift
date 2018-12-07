@@ -145,7 +145,7 @@ extension UIImage{
 
 extension UIImage {
     
-    class func imageWithLayer(layer: CALayer) -> UIImage {
+    public class func imageWithLayer(layer: CALayer) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(layer.bounds.size, layer.isOpaque, UIScreen.main.scale)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let img = UIGraphicsGetImageFromCurrentImageContext()
