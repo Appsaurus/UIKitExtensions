@@ -176,6 +176,14 @@
 		E453A6D021B9E0B200B5F714 /* UIColor+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A63A21B9E0B200B5F714 /* UIColor+Difference.swift */; };
 		E453A6D121B9E0B200B5F714 /* UIColor+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A63A21B9E0B200B5F714 /* UIColor+Difference.swift */; };
 		E453A6D221B9E0B200B5F714 /* UIColor+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A63A21B9E0B200B5F714 /* UIColor+Difference.swift */; };
+		E453A6DB21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */; };
+		E453A6DC21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */; };
+		E453A6DD21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */; };
+		E453A6DE21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */; };
+		E453A6DF21BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
+		E453A6E021BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
+		E453A6E121BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
+		E453A6E221BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,7 +272,7 @@
 		E453A60B21B9DE4700B5F714 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E453A60C21B9DE4700B5F714 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E453A60D21B9DE4700B5F714 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
-		E453A60E21B9DEB700B5F714 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E453A60E21B9DEB700B5F714 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E453A61121B9E0B000B5F714 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
 		E453A61621B9E0B000B5F714 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E453A61721B9E0B000B5F714 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
@@ -303,6 +311,8 @@
 		E453A63821B9E0B200B5F714 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		E453A63921B9E0B200B5F714 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		E453A63A21B9E0B200B5F714 /* UIColor+Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Difference.swift"; sourceTree = "<group>"; };
+		E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTransitionCoordinatorExtensions.swift; sourceTree = "<group>"; };
+		E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayerSugar.swift"; sourceTree = "<group>"; };
 		E4DBC3B4219CD15400145C9B /* UIKitExtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIKitExtensions.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E4DBC3B9219CD18D00145C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DBC3BB219CD18D00145C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -570,7 +580,9 @@
 				E453A63021B9E0B100B5F714 /* UITextViewExtensions.swift */,
 				E453A63821B9E0B200B5F714 /* UIView+ActivityIndicator.swift */,
 				E453A63121B9E0B100B5F714 /* UIView+Animations.swift */,
+				E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */,
 				E453A63221B9E0B100B5F714 /* UIViewControllerExtensions.swift */,
+				E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */,
 				E453A61B21B9E0B000B5F714 /* UIViewExtensions.swift */,
 				E453A63421B9E0B200B5F714 /* UIViewTags.swift */,
 			);
@@ -1104,9 +1116,11 @@
 				E453A65D21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B121B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
 				E453A6C521B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
+				E453A6DD21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67D21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
 				E453A69121B9E0B200B5F714 /* UIImageViewExtensions.swift in Sources */,
 				D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */,
+				E453A6E121BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */,
 				E453A6CD21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */,
 				E453A6D121B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64121B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
@@ -1159,9 +1173,11 @@
 				E453A65E21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B221B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
 				E453A6C621B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
+				E453A6DE21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67E21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
 				E453A69221B9E0B200B5F714 /* UIImageViewExtensions.swift in Sources */,
 				D284B1251F79042800D94AF3 /* watchOS.swift in Sources */,
+				E453A6E221BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */,
 				E453A6CE21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */,
 				E453A6D221B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64221B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
@@ -1205,9 +1221,11 @@
 				E453A65B21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6AF21B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
 				E453A6C321B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
+				E453A6DB21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67B21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
 				E453A68F21B9E0B200B5F714 /* UIImageViewExtensions.swift in Sources */,
 				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
+				E453A6DF21BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */,
 				E453A6CB21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */,
 				E453A6CF21B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A63F21B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
@@ -1260,9 +1278,11 @@
 				E453A65C21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B021B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
 				E453A6C421B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
+				E453A6DC21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67C21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
 				E453A69021B9E0B200B5F714 /* UIImageViewExtensions.swift in Sources */,
 				D284B0F61F79024300D94AF3 /* macOS.swift in Sources */,
+				E453A6E021BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */,
 				E453A6CC21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */,
 				E453A6D021B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64021B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,

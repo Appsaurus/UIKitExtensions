@@ -8,9 +8,12 @@
 
 import Foundation
 import DinoDNA
-//import Actions
 
 public extension UIViewController{
+
+    public func preloadView() {
+        let _ = view
+    }
     
     public func dismissOrPop(animated: Bool = true){
         if let nav = navigationController{
@@ -171,9 +174,9 @@ extension UIViewController{
 }
 //MARK: Navigation item title
 extension UIViewController{
-    
+//
 //    @discardableResult
-//    public func setupNavigationBarTitleLabel(text: String = "", inset: UIEdgeInsets? = nil, style: TextStyle = NavigationBarStyle.defaultStyle.titleTextStyle, maxNumberOfLines: Int = 1) -> UILabel{
+//    public func setupNavigationBarTitleLabel(text: String = "", inset: UIEdgeInsets? = nil, style: TextStyle = NavigationBarStyle.default.titleTextStyle, maxNumberOfLines: Int = 1) -> UILabel{
 //        let navBar = navigationController!.navigationBar
 //        let frame = navBar.bounds.insetBy(dx: navBar.frame.w/6.0, dy: navBar.frame.h/5.0)
 //        let titleLabel = UILabel(frame: frame, text: text)
@@ -184,7 +187,7 @@ extension UIViewController{
 //        navigationItem.titleView = titleLabel
 //        return titleLabel
 //    }
-    
+
     public func maxNavivgationBarTitleFrame(padding: CGFloat = 0.0, centerHorizontally: Bool = true) -> CGRect?{
         guard let navFrame = navigationController?.navigationBar.frame else{
             return nil

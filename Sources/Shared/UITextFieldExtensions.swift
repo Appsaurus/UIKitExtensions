@@ -48,7 +48,7 @@ public extension UITextField{
     
     @IBInspectable public var placeholderColor: UIColor {
         get {
-            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ?? UIColor(red: 199.0, green:199.0, blue: 205.0, alpha: 1.0) //System placeholder color
+            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ??  UIColor(red: 199, green:199, blue: 205, alpha: 1.0) //System placeholder color
         }
         set {
             self.attributedPlaceholder =  (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributedString())?.setColor(newValue).setFont(placeholderFont)
@@ -69,29 +69,29 @@ public extension UITextField{
 
 extension UITextField {
     
-//    public enum TextFieldAccessoryViewPosition{
-//        case left, right
-//    }
-//    public func setupAccessoryView(_ view: UIView,
-//                                   position: TextFieldAccessoryViewPosition = .left,
-//                                   viewMode: UITextField.ViewMode = .always,
-//                                   insets: UIEdgeInsets = .zero,
-//                                   size: CGSize? = nil) {
-//        let size = size ?? CGSize(side: self.font?.pointSize ?? (frame.size.height * 0.75))
-//        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size.width + insets.left + insets.right, height: size.height + insets.top + insets.bottom))
-//        view.frame.size = size
-//        outerView.addSubview(view)
-//        view.autoPinToSuperview(withInsets: insets)
-//        switch position{
-//        case .left:
-//            leftView = outerView
-//            leftViewMode = viewMode
-//        case .right:
-//            rightView = outerView
-//            rightViewMode = viewMode
-//        }
-//        self.contentMode = contentMode
-//    }
+    public enum TextFieldAccessoryViewPosition{
+        case left, right
+    }
+    public func setupAccessoryView(_ view: UIView,
+                                   position: TextFieldAccessoryViewPosition = .left,
+                                   viewMode: UITextField.ViewMode = .always,
+                                   insets: UIEdgeInsets = .zero,
+                                   size: CGSize? = nil) {
+        let size = size ?? CGSize(side: self.font?.pointSize ?? (frame.size.height * 0.75))
+        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size.width + insets.left + insets.right, height: size.height + insets.top + insets.bottom))
+        view.frame.size = size
+        outerView.addSubview(view)
+        view.leftAnchor.constraint(equalTo: outerView.leftAnchor, constant: insets.left)
+        switch position{
+        case .left:
+            leftView = outerView
+            leftViewMode = viewMode
+        case .right:
+            rightView = outerView
+            rightViewMode = viewMode
+        }
+        self.contentMode = contentMode
+    }
 
     
     public func hideCaret(){

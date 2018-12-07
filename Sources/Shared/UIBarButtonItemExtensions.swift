@@ -8,7 +8,7 @@
 
 
 import UIKit
-
+import DinoDNA
 
 extension UIBarButtonItem{
     public var frame: CGRect{
@@ -32,7 +32,7 @@ extension UIBarButtonItem{
 //    }
 }
 
-extension UIBarButtonItem{
+//extension UIBarButtonItem{
 //    static func barButtonWithCustomUIButton(_ titleColor: UIColor? = .primaryContrast, textAlignment: NSTextAlignment = .center, width: CGFloat = 75.0) -> UIBarButtonItem{
 //        let button = BaseUIButton(frame: CGRect(x: 0, y: 0, width: 50.0 , height: 75.0))
 //        button.setTitleColor(titleColor, for: .normal)
@@ -46,4 +46,4 @@ extension UIBarButtonItem{
 //        button.titleLabel.textAlignment = textAlignment
 //        return UIBarButtonItem(customView: button)
 //    }
-}
+//}
