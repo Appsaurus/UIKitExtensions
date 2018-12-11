@@ -184,6 +184,10 @@
 		E453A6E021BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
 		E453A6E121BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
 		E453A6E221BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
+		E4AF822321C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
+		E4AF822421C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
+		E4AF822521C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
+		E4AF822621C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -313,6 +317,7 @@
 		E453A63A21B9E0B200B5F714 /* UIColor+Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Difference.swift"; sourceTree = "<group>"; };
 		E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTransitionCoordinatorExtensions.swift; sourceTree = "<group>"; };
 		E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayerSugar.swift"; sourceTree = "<group>"; };
+		E4AF822221C05558002D6E86 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
 		E4DBC3B4219CD15400145C9B /* UIKitExtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIKitExtensions.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E4DBC3B9219CD18D00145C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DBC3BB219CD18D00145C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -547,6 +552,7 @@
 			children = (
 				E453A63621B9E0B200B5F714 /* AVURLAssetExtensions.swift */,
 				E453A61F21B9E0B000B5F714 /* CALayerExtensions.swift */,
+				E4AF822221C05558002D6E86 /* CGColorExtensions.swift */,
 				E453A62321B9E0B000B5F714 /* CGFloatExtensions.swift */,
 				E453A62F21B9E0B100B5F714 /* CLPlacemarkExtensions.swift */,
 				E453A61821B9E0B000B5F714 /* NSMutableAttributedStringExtensions.swift */,
@@ -1125,6 +1131,7 @@
 				E453A6D121B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64121B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
 				E453A68121B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
+				E4AF822521C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69521B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
 				E453A66D21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68D21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
@@ -1182,6 +1189,7 @@
 				E453A6D221B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64221B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
 				E453A68221B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
+				E4AF822621C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69621B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
 				E453A66E21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68E21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
@@ -1230,6 +1238,7 @@
 				E453A6CF21B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A63F21B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
 				E453A67F21B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
+				E4AF822321C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69321B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
 				E453A66B21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68B21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
@@ -1287,6 +1296,7 @@
 				E453A6D021B9E0B200B5F714 /* UIColor+Difference.swift in Sources */,
 				E453A64021B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,
 				E453A68021B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
+				E4AF822421C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69421B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
 				E453A66C21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68C21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
