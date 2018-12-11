@@ -11,11 +11,11 @@ import DinoDNA
 
 public extension DoubleConvertible {
     public var scaledToPoints: CGFloat {
-        return CGFloat(self.double) / UIScreen.main.scale
+        return self.toCGFloat / UIScreen.main.scale
     }
     
     public var scaledToPixels: CGFloat {
-        return CGFloat(self.double) * UIScreen.main.scale
+        return self.toCGFloat * UIScreen.main.scale
     }
     
 }
