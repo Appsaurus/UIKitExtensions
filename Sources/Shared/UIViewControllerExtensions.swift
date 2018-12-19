@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import DinoDNA
+import Swiftest
 
 public extension UIViewController{
 
@@ -122,7 +122,7 @@ public extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
-    public func presentAlertControllerWithTextField(title: String? = nil, message: String? = nil, textFieldIsSecure: Bool = false, submitButtonTitle: String, submitButtonClosure: @escaping ParameterizedClosure<String?>, cancelButtonClosure: VoidClosure? = nil, inputTextFieldPlaceholder: String? = nil){
+    public func presentAlertControllerWithTextField(title: String? = nil, message: String? = nil, textFieldIsSecure: Bool = false, submitButtonTitle: String, submitButtonClosure: @escaping ClosureIn<String?>, cancelButtonClosure: VoidClosure? = nil, inputTextFieldPlaceholder: String? = nil){
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         var textFieldToSubmit: UITextField?

@@ -72,9 +72,6 @@ public extension UITableView{
     public func append(indexPaths: [IndexPath], with animation: UITableView.RowAnimation = .fade){
         beginUpdates()
         insertRows(at: indexPaths, with: animation)
-        for index in indexPaths{
-                print("inserting rows at" + index.section.toString + index.row.toString)
-        }
         endUpdates()
     }
 }

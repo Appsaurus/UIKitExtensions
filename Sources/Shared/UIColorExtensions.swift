@@ -8,7 +8,7 @@
 //
 //import Foundation
 //import UIKit
-//import DinoDNA
+//import Swiftest
 //public extension UIColor {
 //    
 //    public class func randomColor() -> UIColor{

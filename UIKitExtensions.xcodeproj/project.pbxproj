@@ -72,10 +72,6 @@
 		E453A66821B9E0B200B5F714 /* UIControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62021B9E0B000B5F714 /* UIControlExtensions.swift */; };
 		E453A66921B9E0B200B5F714 /* UIControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62021B9E0B000B5F714 /* UIControlExtensions.swift */; };
 		E453A66A21B9E0B200B5F714 /* UIControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62021B9E0B000B5F714 /* UIControlExtensions.swift */; };
-		E453A66B21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */; };
-		E453A66C21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */; };
-		E453A66D21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */; };
-		E453A66E21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */; };
 		E453A66F21B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62221B9E0B000B5F714 /* UISearchBarExtensions.swift */; };
 		E453A67021B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62221B9E0B000B5F714 /* UISearchBarExtensions.swift */; };
 		E453A67121B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A62221B9E0B000B5F714 /* UISearchBarExtensions.swift */; };
@@ -188,6 +184,30 @@
 		E4AF822421C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
 		E4AF822521C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
 		E4AF822621C05558002D6E86 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF822221C05558002D6E86 /* CGColorExtensions.swift */; };
+		E4F7E0CB21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */; };
+		E4F7E0CC21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */; };
+		E4F7E0CD21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */; };
+		E4F7E0CE21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */; };
+		E4F7E0D421CA1F730061EBB2 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */; };
+		E4F7E0D521CA1F730061EBB2 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */; };
+		E4F7E0D621CA1F730061EBB2 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */; };
+		E4F7E0D721CA1F730061EBB2 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */; };
+		E4F7E0D921CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */; };
+		E4F7E0DA21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */; };
+		E4F7E0DB21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */; };
+		E4F7E0DC21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */; };
+		E4F7E0DE21CA20230061EBB2 /* String+SpellCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */; };
+		E4F7E0DF21CA20230061EBB2 /* String+SpellCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */; };
+		E4F7E0E021CA20230061EBB2 /* String+SpellCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */; };
+		E4F7E0E121CA20230061EBB2 /* String+SpellCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */; };
+		E4F7E0E321CA208F0061EBB2 /* String+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */; };
+		E4F7E0E421CA208F0061EBB2 /* String+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */; };
+		E4F7E0E521CA208F0061EBB2 /* String+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */; };
+		E4F7E0E621CA208F0061EBB2 /* String+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */; };
+		E4F7E0E821CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */; };
+		E4F7E0E921CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */; };
+		E4F7E0EA21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */; };
+		E4F7E0EB21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,7 +309,6 @@
 		E453A61E21B9E0B000B5F714 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		E453A61F21B9E0B000B5F714 /* CALayerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		E453A62021B9E0B000B5F714 /* UIControlExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtensions.swift; sourceTree = "<group>"; };
-		E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ColorProminence.swift"; sourceTree = "<group>"; };
 		E453A62221B9E0B000B5F714 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		E453A62321B9E0B000B5F714 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		E453A62421B9E0B000B5F714 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtensions.swift; sourceTree = "<group>"; };
@@ -347,6 +366,12 @@
 		E4DBC3DE219CD18D00145C9B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E4DBC3DF219CD18D00145C9B /* UIKitExtensionsDemo.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = UIKitExtensionsDemo.xcworkspace; sourceTree = "<group>"; };
 		E4DBC3E0219CD18D00145C9B /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Attributed.swift"; sourceTree = "<group>"; };
+		E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Pasteboard.swift"; sourceTree = "<group>"; };
+		E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpellCheck.swift"; sourceTree = "<group>"; };
+		E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FontSize.swift"; sourceTree = "<group>"; };
+		E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+VideoThumbnail.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,7 +580,12 @@
 				E4AF822221C05558002D6E86 /* CGColorExtensions.swift */,
 				E453A62321B9E0B000B5F714 /* CGFloatExtensions.swift */,
 				E453A62F21B9E0B100B5F714 /* CLPlacemarkExtensions.swift */,
+				E4F7E0CA21CA1E440061EBB2 /* NSAttributedStringExtensions.swift */,
 				E453A61821B9E0B000B5F714 /* NSMutableAttributedStringExtensions.swift */,
+				E4F7E0D321CA1F730061EBB2 /* String+Attributed.swift */,
+				E4F7E0E221CA208F0061EBB2 /* String+FontSize.swift */,
+				E4F7E0D821CA1FD60061EBB2 /* String+Pasteboard.swift */,
+				E4F7E0DD21CA20230061EBB2 /* String+SpellCheck.swift */,
 				E453A62821B9E0B100B5F714 /* UIApplicationExtensions.swift */,
 				E453A61121B9E0B000B5F714 /* UIBarButtonItemExtensions.swift */,
 				E453A61C21B9E0B000B5F714 /* UIBarItemExtensions.swift */,
@@ -567,7 +597,6 @@
 				E453A62721B9E0B100B5F714 /* UIEdgeInsetExtensions.swift */,
 				E453A63721B9E0B200B5F714 /* UIFontExtensions.swift */,
 				E453A62D21B9E0B100B5F714 /* UIGestureRecognizerExtensions.swift */,
-				E453A62121B9E0B000B5F714 /* UIImage+ColorProminence.swift */,
 				E453A61E21B9E0B000B5F714 /* UIImageExtensions.swift */,
 				E453A62A21B9E0B100B5F714 /* UIImageViewExtensions.swift */,
 				E453A62621B9E0B000B5F714 /* UIInterfaceOrientationExtensions.swift */,
@@ -591,6 +620,7 @@
 				E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */,
 				E453A61B21B9E0B000B5F714 /* UIViewExtensions.swift */,
 				E453A63421B9E0B200B5F714 /* UIViewTags.swift */,
+				E4F7E0E721CA20FB0061EBB2 /* URL+VideoThumbnail.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1101,11 +1131,15 @@
 				E453A64D21B9E0B200B5F714 /* UINavigationControllerExtensions.swift in Sources */,
 				E453A68521B9E0B200B5F714 /* UIEdgeInsetExtensions.swift in Sources */,
 				E453A6C121B9E0B200B5F714 /* AVURLAssetExtensions.swift in Sources */,
+				E4F7E0CD21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E453A65521B9E0B200B5F714 /* UIViewExtensions.swift in Sources */,
+				E4F7E0E521CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E453A67121B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */,
 				E453A63D21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */,
+				E4F7E0EA21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E453A66921B9E0B200B5F714 /* UIControlExtensions.swift in Sources */,
 				E453A6C921B9E0B200B5F714 /* UIView+ActivityIndicator.swift in Sources */,
+				E4F7E0DB21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E453A6B921B9E0B200B5F714 /* UIViewTags.swift in Sources */,
 				E453A6A521B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
 				E453A69921B9E0B200B5F714 /* UIColorExtensions.swift in Sources */,
@@ -1117,10 +1151,12 @@
 				E453A65921B9E0B200B5F714 /* UIBarItemExtensions.swift in Sources */,
 				E453A66521B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E453A6AD21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
+				E4F7E0D621CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E453A69D21B9E0B200B5F714 /* UIGestureRecognizerExtensions.swift in Sources */,
 				E453A65121B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */,
 				E453A65D21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B121B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
+				E4F7E0E021CA20230061EBB2 /* String+SpellCheck.swift in Sources */,
 				E453A6C521B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
 				E453A6DD21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67D21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
@@ -1133,7 +1169,6 @@
 				E453A68121B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
 				E4AF822521C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69521B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
-				E453A66D21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68D21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
 				E453A6A921B9E0B200B5F714 /* UITextViewExtensions.swift in Sources */,
 			);
@@ -1159,11 +1194,15 @@
 				E453A64E21B9E0B200B5F714 /* UINavigationControllerExtensions.swift in Sources */,
 				E453A68621B9E0B200B5F714 /* UIEdgeInsetExtensions.swift in Sources */,
 				E453A6C221B9E0B200B5F714 /* AVURLAssetExtensions.swift in Sources */,
+				E4F7E0CE21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E453A65621B9E0B200B5F714 /* UIViewExtensions.swift in Sources */,
+				E4F7E0E621CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E453A67221B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */,
 				E453A63E21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */,
+				E4F7E0EB21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E453A66A21B9E0B200B5F714 /* UIControlExtensions.swift in Sources */,
 				E453A6CA21B9E0B200B5F714 /* UIView+ActivityIndicator.swift in Sources */,
+				E4F7E0DC21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E453A6BA21B9E0B200B5F714 /* UIViewTags.swift in Sources */,
 				E453A6A621B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
 				E453A69A21B9E0B200B5F714 /* UIColorExtensions.swift in Sources */,
@@ -1175,10 +1214,12 @@
 				E453A65A21B9E0B200B5F714 /* UIBarItemExtensions.swift in Sources */,
 				E453A66621B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E453A6AE21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
+				E4F7E0D721CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E453A69E21B9E0B200B5F714 /* UIGestureRecognizerExtensions.swift in Sources */,
 				E453A65221B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */,
 				E453A65E21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B221B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
+				E4F7E0E121CA20230061EBB2 /* String+SpellCheck.swift in Sources */,
 				E453A6C621B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
 				E453A6DE21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67E21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
@@ -1191,7 +1232,6 @@
 				E453A68221B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
 				E4AF822621C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69621B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
-				E453A66E21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68E21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
 				E453A6AA21B9E0B200B5F714 /* UITextViewExtensions.swift in Sources */,
 			);
@@ -1208,11 +1248,15 @@
 				E453A64B21B9E0B200B5F714 /* UINavigationControllerExtensions.swift in Sources */,
 				E453A68321B9E0B200B5F714 /* UIEdgeInsetExtensions.swift in Sources */,
 				E453A6BF21B9E0B200B5F714 /* AVURLAssetExtensions.swift in Sources */,
+				E4F7E0CB21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E453A65321B9E0B200B5F714 /* UIViewExtensions.swift in Sources */,
+				E4F7E0E321CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E453A66F21B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */,
 				E453A63B21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */,
+				E4F7E0E821CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E453A66721B9E0B200B5F714 /* UIControlExtensions.swift in Sources */,
 				E453A6C721B9E0B200B5F714 /* UIView+ActivityIndicator.swift in Sources */,
+				E4F7E0D921CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E453A6B721B9E0B200B5F714 /* UIViewTags.swift in Sources */,
 				E453A6A321B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
 				E453A69721B9E0B200B5F714 /* UIColorExtensions.swift in Sources */,
@@ -1224,10 +1268,12 @@
 				E453A65721B9E0B200B5F714 /* UIBarItemExtensions.swift in Sources */,
 				E453A66321B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E453A6AB21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
+				E4F7E0D421CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E453A69B21B9E0B200B5F714 /* UIGestureRecognizerExtensions.swift in Sources */,
 				E453A64F21B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */,
 				E453A65B21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6AF21B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
+				E4F7E0DE21CA20230061EBB2 /* String+SpellCheck.swift in Sources */,
 				E453A6C321B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
 				E453A6DB21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67B21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
@@ -1240,7 +1286,6 @@
 				E453A67F21B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
 				E4AF822321C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69321B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
-				E453A66B21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68B21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
 				E453A6A721B9E0B200B5F714 /* UITextViewExtensions.swift in Sources */,
 			);
@@ -1266,11 +1311,15 @@
 				E453A64C21B9E0B200B5F714 /* UINavigationControllerExtensions.swift in Sources */,
 				E453A68421B9E0B200B5F714 /* UIEdgeInsetExtensions.swift in Sources */,
 				E453A6C021B9E0B200B5F714 /* AVURLAssetExtensions.swift in Sources */,
+				E4F7E0CC21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E453A65421B9E0B200B5F714 /* UIViewExtensions.swift in Sources */,
+				E4F7E0E421CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E453A67021B9E0B200B5F714 /* UISearchBarExtensions.swift in Sources */,
 				E453A63C21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */,
+				E4F7E0E921CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E453A66821B9E0B200B5F714 /* UIControlExtensions.swift in Sources */,
 				E453A6C821B9E0B200B5F714 /* UIView+ActivityIndicator.swift in Sources */,
+				E4F7E0DA21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E453A6B821B9E0B200B5F714 /* UIViewTags.swift in Sources */,
 				E453A6A421B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
 				E453A69821B9E0B200B5F714 /* UIColorExtensions.swift in Sources */,
@@ -1282,10 +1331,12 @@
 				E453A65821B9E0B200B5F714 /* UIBarItemExtensions.swift in Sources */,
 				E453A66421B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E453A6AC21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
+				E4F7E0D521CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E453A69C21B9E0B200B5F714 /* UIGestureRecognizerExtensions.swift in Sources */,
 				E453A65021B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */,
 				E453A65C21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E453A6B021B9E0B200B5F714 /* UIViewControllerExtensions.swift in Sources */,
+				E4F7E0DF21CA20230061EBB2 /* String+SpellCheck.swift in Sources */,
 				E453A6C421B9E0B200B5F714 /* UIFontExtensions.swift in Sources */,
 				E453A6DC21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67C21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
@@ -1298,7 +1349,6 @@
 				E453A68021B9E0B200B5F714 /* UIInterfaceOrientationExtensions.swift in Sources */,
 				E4AF822421C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E453A69421B9E0B200B5F714 /* UITextFieldExtensions.swift in Sources */,
-				E453A66C21B9E0B200B5F714 /* UIImage+ColorProminence.swift in Sources */,
 				E453A68C21B9E0B200B5F714 /* UITabBarControllerExtensions.swift in Sources */,
 				E453A6A821B9E0B200B5F714 /* UITextViewExtensions.swift in Sources */,
 			);

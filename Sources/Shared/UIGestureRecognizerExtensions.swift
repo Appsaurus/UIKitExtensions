@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DinoDNA
+import Swiftest
 // Global array of targets, as extensions cannot have non-computed properties
 private var target = [Target]()
 

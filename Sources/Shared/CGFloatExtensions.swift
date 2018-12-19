@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import DinoDNA
+import Swiftest
 
-public extension DoubleConvertible {
+public extension CGFloatConvertible {
     public var scaledToPoints: CGFloat {
-        return self.toCGFloat / UIScreen.main.scale
+        return self.cgFloat / UIScreen.main.scale
     }
     
     public var scaledToPixels: CGFloat {
-        return self.toCGFloat * UIScreen.main.scale
+        return self.cgFloat * UIScreen.main.scale
     }
     
 }

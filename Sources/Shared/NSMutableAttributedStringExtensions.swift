@@ -59,10 +59,14 @@ public extension NSMutableAttributedString{
         }
         return self
     }
+}
+
+
+public extension NSMutableAttributedString{
     
     public convenience init(attributedStrings: [NSAttributedString], separatedByLineBreaks: Bool = false){
         self.init(attributedString: attributedStrings.first!)
-        attributedStrings.forEachWithIndex { (index, element) in
+        attributedStrings.enumerated().forEach { (index, element) in
             if index != 0{
                 if separatedByLineBreaks && index != attributedStrings.count{
                     appendLineBreak()
@@ -71,6 +75,39 @@ public extension NSMutableAttributedString{
             }
         }
     }
+    
+    /// Vertically centers the baselines all characters of an attributed string, regardless of differentiating font sizes throughout the string.
+    ///
+    /// - Parameter additionalOffset: Additional bump to give offset (use in the case where you might have an icon or char that is not perfectly centered in its own frame)
+    /// - Returns: The attriuted string with baseline shift applied
+    public func verticallyCenterAllCharacters(additionalOffset: CGFloat = 0.0) -> NSMutableAttributedString{
+        
+        var pointSizes: [CGFloat] = []
+        for charIndex in 0...self.length - 1{
+            if let fontSizeAtIndex = (self.attribute(NSAttributedString.Key.font, at: charIndex, effectiveRange: nil) as AnyObject).pointSize{
+                pointSizes.append(fontSizeAtIndex)
+            }
+        }
+        
+        pointSizes.removeDuplicates()
+        
+        let basePointSize:CGFloat = pointSizes.sorted().last! //Adjust offest to meet the largest font's center
+        
+        for charIndex in 0...self.length - 1{
+            if let fontSize = (self.attribute(NSAttributedString.Key.font, at: charIndex, effectiveRange: nil) as AnyObject).pointSize{
+                if fontSize == basePointSize{
+                    continue
+                }
+                let shiftHeight = (basePointSize - fontSize)/2.0
+                
+                let baselineShift = [NSAttributedString.Key.baselineOffset: shiftHeight + additionalOffset]
+                let range = Range<Int>(charIndex...charIndex)
+                self.addAttributes(baselineShift, range: NSRange(range))
+            }
+        }
+        return self
+    }
+    
 }
 
 #endif

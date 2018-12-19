@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DinoDNA
+import Swiftest
 
 public extension UIView{
     
@@ -419,7 +419,7 @@ extension UIView {
             }
         }
         else{
-            transform = CGAffineTransform(rotationAngle: degrees.degreesToRadians as! CGFloat)
+            transform = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
             completion?()
         }
     }

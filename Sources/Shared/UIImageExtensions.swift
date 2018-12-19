@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DinoDNA
+import Swiftest
 
 public extension UIImage{
     
@@ -68,7 +68,7 @@ public extension UIImage{
     public class func rotate(img: UIImage, by degrees: CGFloat) -> UIImage {
         
         let rotatedViewBox = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
-        let t = CGAffineTransform(rotationAngle: degrees.degreesToRadians as! CGFloat)
+        let t = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
         rotatedViewBox.transform = t
         let rotatedSize = rotatedViewBox.frame.size
         
@@ -80,7 +80,7 @@ public extension UIImage{
         bitmap!.interpolationQuality = .high
         bitmap!.translateBy(x: rotatedSize.width/2, y: rotatedSize.height/2)
         
-        bitmap!.rotate(by: degrees.degreesToRadians as! CGFloat)
+        bitmap!.rotate(by: degrees.degreesToRadians)
         
         bitmap!.scaleBy(x: 1.0, y: -1.0)
         bitmap!.draw(img.cgImage!, in: CGRect(x: -img.size.width / 2, y: -img.size.height / 2, width: img.size.width - 1, height: img.size.height - 1))

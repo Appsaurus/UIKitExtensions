@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import DinoDNA
+import Swiftest
 
 public extension UIEdgeInsets{
     public init(padding: CGFloat){
@@ -51,13 +51,13 @@ extension UIEdgeInsets: ExpressibleByIntegerLiteral{
 
 
 extension UIEdgeInsets: ExpressibleByArrayLiteral{
-    public init(arrayLiteral elements: DoubleConvertible...) {
-        self.init(t: elements[safe: 0]?.toCGFloat ?? 0,
-                  l: elements[safe: 1]?.toCGFloat ?? 0,
-                  b: elements[safe: 2]?.toCGFloat ?? 0,
-                  r: elements[safe: 3]?.toCGFloat ?? 0)
+    public init(arrayLiteral elements: CGFloatConvertible...) {
+        self.init(t: elements[safe: 0]?.cgFloat ?? 0,
+                  l: elements[safe: 1]?.cgFloat ?? 0,
+                  b: elements[safe: 2]?.cgFloat ?? 0,
+                  r: elements[safe: 3]?.cgFloat ?? 0)
     }
     
-    public typealias ArrayLiteralElement = DoubleConvertible
+    public typealias ArrayLiteralElement = CGFloatConvertible
 }
 

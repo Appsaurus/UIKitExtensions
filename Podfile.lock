@@ -1,21 +1,21 @@
 PODS:
-  - DinoDNA (0.2.55)
+  - Swiftest (0.0.2)
 
 DEPENDENCIES:
-  - "DinoDNA (from `git@bitbucket.org:appsaurus/dinodna.git`)"
+  - Swiftest (from `https://github.com/appsaurus/Swiftest.git`)
 
 EXTERNAL SOURCES:
-  DinoDNA:
-    :git: "git@bitbucket.org:appsaurus/dinodna.git"
+  Swiftest:
+    :git: https://github.com/appsaurus/Swiftest.git
 
 CHECKOUT OPTIONS:
-  DinoDNA:
-    :commit: 7cb7c903149d5214d8ed2cfc16d77a220e5b47a6
-    :git: "git@bitbucket.org:appsaurus/dinodna.git"
+  Swiftest:
+    :commit: cd7ba87eda65d91b4e9a65be791517677149972a
+    :git: https://github.com/appsaurus/Swiftest.git
 
 SPEC CHECKSUMS:
-  DinoDNA: 0c2d2e62f36b8a86b28864639045db0e23cab49c
+  Swiftest: d63bb5f7427ebfd10753609d834219db97b63441
 
-PODFILE CHECKSUM: 8f2a70b7ca700226f2a68b327eca1a16b4994fc5
+PODFILE CHECKSUM: 06d474dcb0a6938e600d85e5b597295a97055d38
 
 COCOAPODS: 1.5.3

@@ -188,14 +188,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitExtensionsDemo/Pods-UIKitExtensionsDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DinoDNA/DinoDNA.framework",
+				"${BUILT_PRODUCTS_DIR}/Swiftest/Swiftest.framework",
 				"${BUILT_PRODUCTS_DIR}/UIKitExtensions/UIKitExtensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DinoDNA.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIKitExtensions.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

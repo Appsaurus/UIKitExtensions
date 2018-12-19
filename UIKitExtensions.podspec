@@ -27,5 +27,5 @@ Pod::Spec.new do |s|
   s.watchos.source_files = 'Sources/{watchOS,Shared}/**/*'
 
   s.frameworks = 'UIKit', 'Foundation'
-  s.dependency 'DinoDNA'
+  s.dependency 'Swiftest'
 end

@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 import Contacts
-import DinoDNA
+import Swiftest
 
 extension CLPlacemark {
     public var _postalAddress: CNPostalAddress? {

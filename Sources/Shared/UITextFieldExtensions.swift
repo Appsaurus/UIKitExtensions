@@ -51,7 +51,7 @@ public extension UITextField{
             return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ??  UIColor(red: 199, green:199, blue: 205, alpha: 1.0) //System placeholder color
         }
         set {
-            self.attributedPlaceholder =  (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributedString())?.setColor(newValue).setFont(placeholderFont)
+            self.attributedPlaceholder =  (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributed.mutable)?.setColor(newValue).setFont(placeholderFont)
         }
     }
     
@@ -61,7 +61,7 @@ public extension UITextField{
             return self.attributedPlaceholder?.attribute(.font, at: 0, effectiveRange: nil) as? UIFont ?? UIFont(name: "HelveticaNeueu-Medium", size: 16.0)! //System placeholder color
         }
         set {
-            self.attributedPlaceholder = (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributedString())?.setFont(newValue).setColor(placeholderColor)
+            self.attributedPlaceholder = (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributed.mutable)?.setFont(newValue).setColor(placeholderColor)
         }
     }
     

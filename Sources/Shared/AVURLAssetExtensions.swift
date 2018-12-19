@@ -8,7 +8,7 @@
 
 import Foundation
 import AVFoundation
-import DinoDNA
+import Swiftest
 
 extension AVURLAsset{
     public func thumbnailImage() -> UIImage?{
@@ -39,7 +39,7 @@ extension AVURLAsset{
 }
 
 extension URL{
-    public func videoThumbnailImageAsync(imageResult: @escaping ParameterizedClosure<UIImage>, errorClosure: ErrorClosure?){
+    public func videoThumbnailImageAsync(imageResult: @escaping ClosureIn<UIImage>, errorClosure: ErrorClosure?){
             let asset = AVAsset(url: self)
             let durationSeconds = CMTimeGetSeconds(asset.duration)
             let generator = AVAssetImageGenerator(asset: asset)
