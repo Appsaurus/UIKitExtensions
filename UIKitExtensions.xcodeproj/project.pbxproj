@@ -232,12 +232,12 @@
 			remoteGlobalIDString = D5C6293F1C3A7FAA007F7B7C;
 			remoteInfo = "UIKitExtensions-Mac";
 		};
-		E453A60621B9DE4700B5F714 /* PBXContainerItemProxy */ = {
+		E4D230C421CADBAB00EBC209 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4DBC3C1219CD18D00145C9B /* Pods.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E44AE3417AE21764555FF480AC1831D8;
-			remoteInfo = DinoDNA;
+			remoteGlobalIDString = 5821780E7D360DF35A80CC29BD2F5813;
+			remoteInfo = Swiftest;
 		};
 		E4DBC3E3219CD18D00145C9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -703,8 +703,8 @@
 		E4DBC3C2219CD18D00145C9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E453A60721B9DE4700B5F714 /* DinoDNA.framework */,
 				E4DBC3E4219CD18D00145C9B /* Pods_UIKitExtensionsDemo.framework */,
+				E4D230C521CADBAB00EBC209 /* Swiftest.framework */,
 				E4DBC3E6219CD18D00145C9B /* UIKitExtensions.framework */,
 			);
 			name = Products;
@@ -964,6 +964,7 @@
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4B7GH74X7C;
 						LastSwiftMigration = 0900;
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
@@ -1009,11 +1010,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E453A60721B9DE4700B5F714 /* DinoDNA.framework */ = {
+		E4D230C521CADBAB00EBC209 /* Swiftest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = DinoDNA.framework;
-			remoteRef = E453A60621B9DE4700B5F714 /* PBXContainerItemProxy */;
+			path = Swiftest.framework;
+			remoteRef = E4D230C421CADBAB00EBC209 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E4DBC3E4219CD18D00145C9B /* Pods_UIKitExtensionsDemo.framework */ = {
@@ -1724,6 +1725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1741,6 +1743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
