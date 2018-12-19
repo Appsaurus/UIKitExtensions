@@ -13,9 +13,7 @@
 
 ## Usage
 
-```swift
-<API>
-```
+Coming soon.
 
 ## Installation
 
@@ -23,26 +21,23 @@
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'UIKitExtensions'
+pod 'UIKitExtensions', :git => 'https://github.com/appsaurus/UIKitExtensions.git'
+pod 'Swiftest', :git => 'https://github.com/appsaurus/Swiftest.git'
 ```
 
 **UIKitExtensions** is also available through [Carthage](https://github.com/Carthage/Carthage).
 To install just write into your Cartfile:
 
 ```ruby
-github "Strobocop/UIKitExtensions"
+github "Appsaurus/UIKitExtensions"
 ```
 
 **UIKitExtensions** can also be installed manually. Just download and drop `Sources` folders in your project.
 
-## Author
-
-Brian Strobach, brian@appsaurus.io
-
 ## Contributing
 
-We would love you to contribute to **UIKitExtensions**, check the [CONTRIBUTING](github.com/Strobocop/UIKitExtensions/blob/master/CONTRIBUTING.md) file for more info.
+We would love you to contribute to **UIKitExtensions**, check the [CONTRIBUTING](github.com/Appsaurus/UIKitExtensions/blob/master/CONTRIBUTING.md) file for more info.
 
 ## License
 
-**UIKitExtensions** is available under the MIT license. See the [LICENSE](github.com/Strobocop/UIKitExtensions/blob/master/LICENSE.md) file for more info.
+**UIKitExtensions** is available under the MIT license. See the [LICENSE](github.com/Appsaurus/UIKitExtensions/blob/master/LICENSE.md) file for more info.
