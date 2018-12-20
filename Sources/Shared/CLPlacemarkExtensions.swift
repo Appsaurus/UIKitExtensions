@@ -14,7 +14,7 @@ import Swiftest
 extension CLPlacemark {
     public var _postalAddress: CNPostalAddress? {
         
-        guard #available(iOS 11.0, *) else {
+        guard #available(iOS 11.0, OSX 10.13, *) else {
             guard let addressDictionary = addressDictionary else { return nil }
             let address = CNMutablePostalAddress()
             address.street = addressDictionary["Street"] as? String ?? ""
@@ -24,7 +24,7 @@ extension CLPlacemark {
             address.postalCode =? postalCode
             address.isoCountryCode =? isoCountryCode
             
-            if #available(iOS 10.3, *) {
+            if #available(iOS 10.3, OSX 10.12.4, *) {
                 address.subLocality =? subLocality
                 address.subAdministrativeArea =? subAdministrativeArea
             }

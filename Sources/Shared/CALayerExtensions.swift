@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 public extension CALayer{
@@ -58,3 +59,4 @@ public extension CALayer{
         return border
     }
 }
+#endif

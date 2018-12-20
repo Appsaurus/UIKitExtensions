@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import UIKitExtensions
 
 class SharedTests: XCTestCase {
@@ -85,4 +86,15 @@ class SharedTests: XCTestCase {
         XCTAssertEqual(color, UIColor.orange)
         #endif
     }
+    
+    #if os(iOS) || os(tvOS)
+    var url = URL(string: "https://www.google.com")!
+    func testThumbnail() {
+        XCTAssertNil(url.thumbnail())
+        
+        let videoUrl = Bundle(for: SharedTests.self).url(forResource: "big_buck_bunny_720p_1mb", withExtension: "mp4")!
+        XCTAssertNotNil(videoUrl.thumbnail())
+        XCTAssertNotNil(videoUrl.thumbnail(fromTime: 1))
+    }
+    #endif
 }

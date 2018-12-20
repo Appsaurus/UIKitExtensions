@@ -6,7 +6,7 @@
 //  Copyright © 2018 Brian Strobach. All rights reserved.
 //
 
-#if canImport(AVFoundation) || canImport(UIKit)
+#if canImport(AVFoundation) && canImport(UIKit)
 import AVFoundation
 import UIKit
 
@@ -36,5 +36,3 @@ public extension URL {
     }
 }
 #endif
-
-

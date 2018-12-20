@@ -6,8 +6,7 @@
 //
 //
 
-#if !os(OSX)
-import Foundation
+#if canImport(UIKit)
 import UIKit
 
 public extension NSMutableAttributedString{

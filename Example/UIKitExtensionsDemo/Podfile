@@ -6,4 +6,3 @@ target 'UIKitExtensionsDemo' do
   pod 'UIKitExtensions', :path => '../../'
   pod 'Swiftest', :git => 'https://github.com/appsaurus/Swiftest.git'
 end
-
