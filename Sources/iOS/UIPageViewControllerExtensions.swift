@@ -12,14 +12,7 @@ import UIKit
 
 extension UIPageViewController {
     public func hidePageControl(hideBottomSpace: Bool = true) {
-        var subviews: [Any] = view.subviews
-        var thisControl: UIPageControl?
-        for index in 0..<subviews.count {
-            if (subviews[index] is UIPageControl) {
-                thisControl = (subviews[i] as? UIPageControl)
-            }
-        }
-        thisControl?.isHidden = true
+        view.subviews.forEach(where: {$0 is UIPageControl}, body: {$0.isHidden = true})
         view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height + 40)
     }
 }

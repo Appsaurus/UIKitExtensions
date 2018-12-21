@@ -1321,7 +1321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --config .swiftlint.yml \n";
 		};
 		E43962F921CD4ED9000AF558 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1338,7 +1338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect --config .swiftlint.yml\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --config .swiftlint.yml \n";
 		};
 		E43962FA21CD4EE7000AF558 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
