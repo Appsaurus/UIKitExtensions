@@ -9,36 +9,35 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UITextField{
-    public var fontSize: CGFloat{
-        set{
-            if let font = self.font{
+public extension UITextField {
+    public var fontSize: CGFloat {
+        set {
+            if let font = self.font {
                 self.font = font.withSize(newValue)
-            }
-            else{
+            } else {
                 self.font = UIFont.systemFont(ofSize: newValue)
             }
         }
-        get{
+        get {
             return self.font?.pointSize ?? UIFont.systemFontSize
         }
     }
     
-    public var fontName: String{
-        set{
+    public var fontName: String {
+        set {
             self.font = UIFont(name: newValue, size: fontSize)
         }
-        get{
+        get {
             return self.font?.familyName ?? UIFont.systemFont(ofSize: fontSize).familyName
         }
     }
     
-    public func adjustFontSizeToFit(height: CGFloat){
+    public func adjustFontSizeToFit(height: CGFloat) {
         guard let text = text else { return }
         font = font?.sizedToFit(text: text, inHeight: height)
     }
     
-    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0){
+    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
         adjustFontSizeToFit(height: textRect(forBounds: bounds).h * scaleFactor)
     }
     
@@ -49,7 +48,7 @@ public extension UITextField{
     
     @IBInspectable public var placeholderColor: UIColor {
         get {
-            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ??  UIColor(red: 199, green:199, blue: 205, alpha: 1.0) //System placeholder color
+            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ??  UIColor(red: 199, green: 199, blue: 205, alpha: 1.0) //System placeholder color
         }
         set {
             self.attributedPlaceholder =  (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributed.mutable)?.setColor(newValue).setFont(placeholderFont)
@@ -70,7 +69,7 @@ public extension UITextField{
 
 extension UITextField {
     
-    public enum TextFieldAccessoryViewPosition{
+    public enum TextFieldAccessoryViewPosition {
         case left, right
     }
     public func setupAccessoryView(_ view: UIView,
@@ -83,7 +82,7 @@ extension UITextField {
         view.frame.size = size
         outerView.addSubview(view)
         view.leftAnchor.constraint(equalTo: outerView.leftAnchor, constant: insets.left)
-        switch position{
+        switch position {
         case .left:
             leftView = outerView
             leftViewMode = viewMode
@@ -93,13 +92,12 @@ extension UITextField {
         }
         self.contentMode = contentMode
     }
-
     
-    public func hideCaret(){
+    public func hideCaret() {
         setCaret(color: .clear)
     }
     
-    public func setCaret(color: UIColor){
+    public func setCaret(color: UIColor) {
         tintColor = color
         tintAdjustmentMode = .normal
     }

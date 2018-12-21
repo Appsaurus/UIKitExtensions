@@ -9,27 +9,26 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UITextView{
+public extension UITextView {
     
-    public var fontSize: CGFloat{
-        set{
-            if let font = self.font{
+    public var fontSize: CGFloat {
+        set {
+            if let font = self.font {
                 self.font = font.withSize(newValue)
-            }
-            else{
+            } else {
                 self.font = UIFont.systemFont(ofSize: newValue)
             }
         }
-        get{
+        get {
             return self.font?.pointSize ?? UIFont.systemFontSize
         }
     }
     
-    public var fontName: String{
-        set{
+    public var fontName: String {
+        set {
             self.font = UIFont(name: newValue, size: fontSize)
         }
-        get{
+        get {
             return self.font?.familyName ?? UIFont.systemFont(ofSize: fontSize).familyName
         }
     }

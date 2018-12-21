@@ -9,7 +9,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension String{
+extension String {
     
     /// Swiftest: Check if the given string spelled correctly
     public var isSpelledCorrectly: Bool {

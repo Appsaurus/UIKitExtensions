@@ -20,7 +20,6 @@ import AppKit
 import UIKit
 #endif
 
-
 public extension String {
     
     #if canImport(UIKit)
@@ -31,11 +30,11 @@ public extension String {
     private typealias Font = NSFont
     #endif
     
-    public var attributed: NSAttributedString{
+    public var attributed: NSAttributedString {
         return NSAttributedString(string: self)
     }
     
-    public func attributed(attributes: [NSAttributedString.Key : Any]) -> NSAttributedString{
+    public func attributed(attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         return NSMutableAttributedString(string: self, attributes: attributes)
     }
     
@@ -63,7 +62,6 @@ public extension String {
     public var italic: NSAttributedString {
         return attributed(attributes: [.font: UIFont.italicSystemFont(ofSize: UIFont.systemFontSize)])
     }
-    
     
     /// Swiftest: Add color to string.
     ///

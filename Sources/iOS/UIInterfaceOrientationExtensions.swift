@@ -6,29 +6,27 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 
-
-open class Orientation{
-    public static var orientation: UIInterfaceOrientation{
+open class Orientation {
+    public static var orientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
     }
     
-    public static var isPortrait: Bool{
+    public static var isPortrait: Bool {
         return orientation.isPortrait
     }
     
-    public static var isLandscape: Bool{
+    public static var isLandscape: Bool {
         return orientation.isLandscape
     }
     
 }
-extension UIInterfaceOrientation{
+extension UIInterfaceOrientation {
     
-    public func toMask(allowFlipOnAxis: Bool = true) -> UIInterfaceOrientationMask{
-        switch self{
+    public func toMask(allowFlipOnAxis: Bool = true) -> UIInterfaceOrientationMask {
+        switch self {
         case .portraitUpsideDown:
             return allowFlipOnAxis ? [.portrait, .portraitUpsideDown] : [.portraitUpsideDown]
         case .portrait:

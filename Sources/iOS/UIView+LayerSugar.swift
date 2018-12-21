@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public func roundCorners(){
+    public func roundCorners() {
         cornerRadius = frame.minSideLength/2.0
     }
     
@@ -20,13 +20,13 @@ public extension UIView {
         }
         set {
             layer.cornerRadius = newValue
-            if newValue > 0{
+            if newValue > 0 {
                 layer.masksToBounds = true
             }
             
         }
     }
-    @IBInspectable public var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -36,10 +36,9 @@ public extension UIView {
     }
     @IBInspectable public var borderColor: UIColor? {
         get {
-            if let cBorderColor = layer.borderColor{
+            if let cBorderColor = layer.borderColor {
                 return UIColor(cgColor: cBorderColor)
-            }
-            else {
+            } else {
                 return nil
             }
         }
@@ -49,12 +48,12 @@ public extension UIView {
         
     }
     
-    public func optimizeSubviews(){
+    public func optimizeSubviews() {
         subviews.forEach { (view) in
             view.optimizeRendering()
         }
     }
-    public func optimizeRendering(){
+    public func optimizeRendering() {
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
         layer.isOpaque = true

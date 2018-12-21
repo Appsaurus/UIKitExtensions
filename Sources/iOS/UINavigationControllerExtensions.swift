@@ -11,7 +11,6 @@ import UIKit
 import Swiftest
 public extension UINavigationController {
     
-    
     /**
      Pushes a UIViewController onto the stack and runs a completion handler after the animation has finished.
      

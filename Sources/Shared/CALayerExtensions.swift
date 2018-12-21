@@ -10,9 +10,9 @@ import Foundation
 #if canImport(UIKit)
 import UIKit
 
-public extension CALayer{
+public extension CALayer {
     
-    public func addGlowingShadow(_ color: UIColor, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero){
+    public func addGlowingShadow(_ color: UIColor, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
         shadowColor = color.cgColor
         shadowRadius = radius
         shadowOpacity = opacity
@@ -20,12 +20,11 @@ public extension CALayer{
         masksToBounds = false
     }
     
-    public func resetShadow(){
+    public func resetShadow() {
         shadowRadius = 3.0
         shadowOpacity = 0.0
         shadowOffset = CGSize(width: 0.0, height: -3.0)
     }
-    
     
     public func addBorder(_ edge: UIRectEdge,
                           color: UIColor,
@@ -53,7 +52,6 @@ public extension CALayer{
         }
         
         border.backgroundColor = color.cgColor
-        
         
         self.addSublayer(border)
         return border

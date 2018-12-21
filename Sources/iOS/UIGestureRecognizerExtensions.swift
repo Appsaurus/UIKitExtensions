@@ -22,7 +22,7 @@ public extension UIGestureRecognizer {
         self.addTarget(target.last!, action: #selector(Target.invoke))
     }
     
-    public func onRecognition(_ closure: @escaping VoidClosure){
+    public func onRecognition(_ closure: @escaping VoidClosure) {
         target.append(Target(closure))
         self.addTarget(target.last!, action: #selector(Target.invoke))
     }

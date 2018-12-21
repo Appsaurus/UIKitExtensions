@@ -82,7 +82,7 @@ import UIKit
 //
 //}
 
-extension UINavigationBar{
+extension UINavigationBar {
     
 }
 #endif

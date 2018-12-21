@@ -17,9 +17,7 @@ import UIKit
 import Cocoa
 #endif
 
-
 public extension String {
-    
     
     #if os(iOS) || os(macOS)
     /// Swiftest: Copy string to global pasteboard.
@@ -36,5 +34,3 @@ public extension String {
     }
     #endif
 }
-
-

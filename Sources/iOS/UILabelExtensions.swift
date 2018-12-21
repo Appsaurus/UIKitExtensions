@@ -9,65 +9,63 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UILabel{
+public extension UILabel {
     
-    public var fontSize: CGFloat{
-        set{
-            if let font = self.font{
+    public var fontSize: CGFloat {
+        set {
+            if let font = self.font {
                 self.font = font.withSize(newValue)
-            }
-            else{
+            } else {
                 self.font = UIFont.systemFont(ofSize: newValue)
             }
         }
-        get{
+        get {
             return self.font.pointSize
         }
     }
     
-    public var fontName: String{
-        set{
+    public var fontName: String {
+        set {
             self.font = UIFont(name: fontName, size: fontSize)
         }
-        get{
+        get {
             return self.font.familyName
         }
     }
     
-    public func adjustFontSizeToFit(height: CGFloat){
+    public func adjustFontSizeToFit(height: CGFloat) {
         
         guard let text = text else { return }
         font = font?.sizedToFit(text: text, inHeight: height)
     }
     
-    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0){
+    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
         adjustFontSizeToFit(height: h * scaleFactor)
     }
-
     
     convenience init(frame: CGRect = .zero, text: String) {
         self.init(frame: frame)
         self.text = text
     }
     
-    public func wrapWords(){
+    public func wrapWords() {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
     }
     
-    public func truncateAfter(lines: Int){
+    public func truncateAfter(lines: Int) {
         numberOfLines = lines
         lineBreakMode = .byTruncatingTail
     }
 }
 
-public extension UILabel{
-    public func addGlowingTextShadow(_ color: UIColor? = nil, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero){
+public extension UILabel {
+    public func addGlowingTextShadow(_ color: UIColor? = nil, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
         let color: UIColor = color ?? textColor
         layer.addGlowingShadow(color, radius: radius, opacity: opacity, offset: offset)
     }
-    public func verticallyCenterAllCharactersInAttributedText(){
-        if self.attributedText != nil{
+    public func verticallyCenterAllCharactersInAttributedText() {
+        if self.attributedText != nil {
             self.attributedText = self.attributedText?.mutable.verticallyCenterAllCharacters()
         }
     }
@@ -79,8 +77,7 @@ extension UILabel {
     }
 }
 
-
-//MARK: Autosizing font to fit frame
+// MARK: Autosizing font to fit frame
 //source: https://github.com/tbaranes/FittableFontLabel
 
 public extension UILabel {
@@ -127,7 +124,7 @@ public extension UILabel {
 // MARK: - Helpers
 private extension UILabel {
     
-    func currentAttributedStringAttributes() -> [NSAttributedString.Key : Any] {
+    func currentAttributedStringAttributes() -> [NSAttributedString.Key: Any] {
         var newAttributes = [NSAttributedString.Key: Any]()
         attributedText?.enumerateAttributes(in: NSRange(0..<(text?.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, _, _ in
             newAttributes = attributes

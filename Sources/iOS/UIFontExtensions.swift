@@ -9,8 +9,8 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UIFont{
-    public static func printAvailableFonts(){
+public extension UIFont {
+    public static func printAvailableFonts() {
         for familyName in UIFont.familyNames as [String] {            
             print("\(familyName)")
             for fontName in UIFont.fontNames(forFamilyName: familyName) as [String] {
@@ -37,7 +37,7 @@ public extension UIFont{
             
             let labelText: NSString = text as NSString
             let labelHeight = height
-            let attributes: [NSAttributedString.Key : Any] =  [.font: withSize(fontSizeAverage)]
+            let attributes: [NSAttributedString.Key: Any] =  [.font: withSize(fontSizeAverage)]
             
             let testStringHeight = labelText.size(withAttributes: attributes).height
             

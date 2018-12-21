@@ -10,12 +10,12 @@
 import UIKit
 import Swiftest
 
-public extension UIImage{
+public extension UIImage {
     
-    public var minSideLength: CGFloat{
+    public var minSideLength: CGFloat {
         return min(size.width, size.height)
     }
-    public var maxSideLength: CGFloat{
+    public var maxSideLength: CGFloat {
         return max(size.width, size.height)
     }
     
@@ -45,8 +45,6 @@ public extension UIImage{
         return image?.withRenderingMode(.alwaysOriginal)
     }	
     
- 
-    
     public func croppedtoRect(_ rect: CGRect) -> UIImage? {
         UIGraphicsBeginImageContext(size)
         
@@ -54,13 +52,12 @@ public extension UIImage{
         let rotatedCopy = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
-        if let ref:CGImage = rotatedCopy!.cgImage!.cropping(to: rect){
+        if let ref: CGImage = rotatedCopy!.cgImage!.cropping(to: rect) {
             return UIImage(cgImage: ref)
         }
         debugLog("Attempted to crop image with invalid rect")
         return nil
     }
-    
     
     public func rotated(by degrees: CGFloat) -> UIImage {
         return UIImage.rotate(img: self, by: degrees)
@@ -90,10 +87,8 @@ public extension UIImage{
         return newImage!
     }
     
-    
     @available(iOS 10.0, *)
     public func rotated(by rotationAngle: Measurement<UnitAngle>, options: ImageRotationOptions = []) -> UIImage? {
-        
         
         guard let cgImage = self.cgImage else { return nil }
 
@@ -123,18 +118,18 @@ public extension UIImage{
 
 public struct ImageRotationOptions: OptionSet {
     public let rawValue: Int
-    public init(rawValue:Int){ self.rawValue = rawValue}
+    public init(rawValue: Int) { self.rawValue = rawValue}
     static let flipVertical = ImageRotationOptions(rawValue: 1)
     static let flipHorizontal = ImageRotationOptions(rawValue: 2)
 }
 
-public enum AspectRatioType{
+public enum AspectRatioType {
     case square, portrait, landscape
 }
-extension UIImage{
+extension UIImage {
     
-    public var aspectRatioType: AspectRatioType{
-        switch aspectRatio{
+    public var aspectRatioType: AspectRatioType {
+        switch aspectRatio {
         case 1.0: return .square
         case CGFloat.leastNormalMagnitude..<1.0: return .portrait
         default: return .landscape
@@ -142,7 +137,7 @@ extension UIImage{
     }
     
     ///Width:Height
-    public var aspectRatio: CGFloat{
+    public var aspectRatio: CGFloat {
         return size.width /  size.height
     }
 }
@@ -158,8 +153,7 @@ extension UIImage {
     }
 }
 
-
-extension UIImage{
+extension UIImage {
     public var cgImagePropertyOrientation: CGImagePropertyOrientation {
         switch imageOrientation {
         case .up:

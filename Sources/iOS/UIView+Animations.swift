@@ -6,17 +6,16 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 import Swiftest
 
-extension UIView{
+extension UIView {
     
     public func wobble(duration: Double = 0.15,
                        count: Int? = nil,
                        indefinitely: Bool = false,
-                       completion: VoidClosure? = nil){
+                       completion: VoidClosure? = nil) {
         let count = count
         let rand = (CGFloat((arc4random() % 500)) / 500.0) + 0.5
         let rotateDegree: CGFloat = 2.0
@@ -29,7 +28,7 @@ extension UIView{
         let config = AnimationConfiguration(duration: duration, options: UIView.AnimationOptions(options))
         animate(configuration: config,
                 animations: {
-            if !indefinitely, let repeatCount = count{
+            if !indefinitely, let repeatCount = count {
                 UIView.setAnimationRepeatCount(Float(repeatCount))
             }
             self.transform = rightWobble

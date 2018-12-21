@@ -6,7 +6,6 @@
 //  Copyright © 2018 Brian Strobach. All rights reserved.
 //
 
-
 import XCTest
 @testable import UIKitExtensions
 import Swiftest

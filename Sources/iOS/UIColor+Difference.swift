@@ -9,7 +9,7 @@
 //
 //extension UIColor{
 //
-//    //MARK: Difference API
+// MARK: Difference API
 //    public enum ColorDifferenceAlgorithm{
 //        case CIEDE2000
 //        case CIE94
@@ -29,7 +29,7 @@
 //
 //    }
 //
-//    //MARK: Closest Match API
+// MARK: Closest Match API
 //    public func closestMatch(in palette: [UIColor]) -> UIColor{
 //        return UIColor.closestMatch(to: self, in: palette)
 //    }
@@ -49,7 +49,7 @@
 //        return nearestColor
 //    }
 //
-//    //MARK: Color distance algorithm implementations
+// MARK: Color distance algorithm implementations
 //    /**
 //    Detemine the distance between two colors based on the way humans perceive them.
 //

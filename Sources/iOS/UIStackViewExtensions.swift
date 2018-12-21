@@ -9,9 +9,8 @@
 #if canImport(UIKit)
 import UIKit
 
-
 @available(iOS 9.0, *)
-public struct StackViewConfiguration{
+public struct StackViewConfiguration {
     
     public var axis: NSLayoutConstraint.Axis
     public var distribution: UIStackView.Distribution
@@ -50,15 +49,15 @@ public struct StackViewConfiguration{
 }
 
 @available(iOS 9.0, *)
-extension UIStackView{
+extension UIStackView {
     
-    public convenience init(frame: CGRect = .zero, stackViewConfiguration config: StackViewConfiguration, arrangedSubviews: [UIView] = []){
+    public convenience init(frame: CGRect = .zero, stackViewConfiguration config: StackViewConfiguration, arrangedSubviews: [UIView] = []) {
         self.init(arrangedSubviews: arrangedSubviews)
         self.frame = frame
         apply(stackViewConfiguration: config)
     }
     
-    public func apply(stackViewConfiguration config: StackViewConfiguration){
+    public func apply(stackViewConfiguration config: StackViewConfiguration) {
         alignment = config.alignment
         spacing = config.spacing
         distribution = config.distribution
@@ -67,55 +66,55 @@ extension UIStackView{
 }
 
 @available(iOS 9.0, *)
-public extension UIStackView{
-    public func addArrangedSubviews(_ views: [UIView]){
-        views.forEach{addArrangedSubview($0)}
+public extension UIStackView {
+    public func addArrangedSubviews(_ views: [UIView]) {
+        views.forEach {addArrangedSubview($0)}
     }
     
-    public func clearArrangedSubviews(removeFromSuperView: Bool = true){
+    public func clearArrangedSubviews(removeFromSuperView: Bool = true) {
         removeArrangedSubviews(arrangedSubviews, removeFromSuperview: removeFromSuperView)
     }
     
-    public func swapArrangedSubviews(for arrangedSubviews: [UIView], removeFromSuperView: Bool = true){
+    public func swapArrangedSubviews(for arrangedSubviews: [UIView], removeFromSuperView: Bool = true) {
         clearArrangedSubviews(removeFromSuperView: removeFromSuperView)
         UIView.performWithoutAnimation {
             addArrangedSubviews(arrangedSubviews)            
         }
     }
     
-    public func removeArrangedSubview(_ view: UIView, removeFromSuperview: Bool = true){
+    public func removeArrangedSubview(_ view: UIView, removeFromSuperview: Bool = true) {
         removeArrangedSubview(view)
-        if removeFromSuperview == true{
+        if removeFromSuperview == true {
             view.removeFromSuperview()
         }
     }
     
-    public func removeArrangedSubviews(_ views: [UIView], removeFromSuperview: Bool = true){
-        views.forEach{
+    public func removeArrangedSubviews(_ views: [UIView], removeFromSuperview: Bool = true) {
+        views.forEach {
             removeArrangedSubview($0, removeFromSuperview: removeFromSuperview)
         }
     }
     
-    public func replaceArrangedSubview(at index: Int, with subview: UIView, removeFromSuperview: Bool = true){
+    public func replaceArrangedSubview(at index: Int, with subview: UIView, removeFromSuperview: Bool = true) {
         guard let view = arrangedSubviews[safe: index] else { return }
         removeArrangedSubview(view, removeFromSuperview: removeFromSuperview)
         insertArrangedSubview(subview, at: index)
     }
     
-    public func replaceArrangedSubview(subview: UIView, with newSubview: UIView, removeFromSuperview: Bool = true){
+    public func replaceArrangedSubview(subview: UIView, with newSubview: UIView, removeFromSuperview: Bool = true) {
         guard let index = arrangedSubviews.index(of: subview) else { return }
         removeArrangedSubview(subview, removeFromSuperview: removeFromSuperview)
         insertArrangedSubview(newSubview, at: index)
         
     }
     
-    public func removeArrangedSubview(at index: Int, removeFromSuperview: Bool = true){
+    public func removeArrangedSubview(at index: Int, removeFromSuperview: Bool = true) {
         let subview = arrangedSubviews[index]
         removeArrangedSubview(subview, removeFromSuperview: removeFromSuperview)
     }
     
-    public func removeArrangedSubviews(after index: Int, removeFromSuperview: Bool = true){
-        for idx in (index + 1...arrangedSubviews.count - 1).reversed(){
+    public func removeArrangedSubviews(after index: Int, removeFromSuperview: Bool = true) {
+        for idx in (index + 1...arrangedSubviews.count - 1).reversed() {
             removeArrangedSubview(at: idx, removeFromSuperview: removeFromSuperview)
         }
     }

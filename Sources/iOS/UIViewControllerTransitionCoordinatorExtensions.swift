@@ -8,12 +8,12 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIViewControllerTransitionCoordinator{
-    public var toViewController: UIViewController{
+extension UIViewControllerTransitionCoordinator {
+    public var toViewController: UIViewController {
         return viewController(forKey: .to)!
     }
     
-    public var fromViewController: UIViewController{
+    public var fromViewController: UIViewController {
         return viewController(forKey: .from)!
     }
 }

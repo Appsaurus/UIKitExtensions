@@ -9,8 +9,8 @@ import Foundation
 #if canImport(UIKit)
 import UIKit
 
-extension UITabBarController{
-    public var contentView: UIView?{
+extension UITabBarController {
+    public var contentView: UIView? {
         return view.subviews[0]        
     }
 }

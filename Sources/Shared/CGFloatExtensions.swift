@@ -6,7 +6,6 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 import Swiftest
@@ -21,4 +20,3 @@ public extension CGFloatConvertible {
     }
 }
 #endif
-

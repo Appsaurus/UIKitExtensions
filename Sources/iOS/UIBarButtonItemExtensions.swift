@@ -6,13 +6,12 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 import Swiftest
 
-extension UIBarButtonItem{
-    public var frame: CGRect{
+extension UIBarButtonItem {
+    public var frame: CGRect {
         // swiftlint:disable next force_cast
         return (value(forKey: "view") as! UIView).frame
     }

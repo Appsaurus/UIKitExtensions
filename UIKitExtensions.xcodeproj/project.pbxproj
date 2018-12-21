@@ -220,6 +220,7 @@
 		D5C629401C3A7FAA007F7B7C /* UIKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* UIKitExtensions-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitExtensions-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10C597E1ECC622A80186F7E /* Pods-UIKitExtensions-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitExtensions-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitExtensions-iOS/Pods-UIKitExtensions-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E439630421CD9234000AF558 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E453A60221B9DE4600B5F714 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		E453A60921B9DE4700B5F714 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E453A60A21B9DE4700B5F714 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -486,6 +487,7 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				E439630421CD9234000AF558 /* .swiftlint.yml */,
 				E453A60E21B9DEB700B5F714 /* Podfile */,
 				E453A60921B9DE4700B5F714 /* Cartfile */,
 				E453A60D21B9DE4700B5F714 /* circle.yml */,
@@ -1336,7 +1338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftlint lint --config .swiftlint.yml\n";
+			shellScript = "swiftlint autocorrect --config .swiftlint.yml\n";
 		};
 		E43962FA21CD4EE7000AF558 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

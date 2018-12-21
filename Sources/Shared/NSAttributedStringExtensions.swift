@@ -14,7 +14,7 @@ import UIKit
 import Cocoa
 #endif
 
-extension NSAttributedString{
+extension NSAttributedString {
     #if os(iOS)
     /// Swiftest: Bolded string.
     public var bolded: NSAttributedString {

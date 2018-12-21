@@ -6,24 +6,23 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 
-public extension UIScreen{
-    public static var screenWidth: CGFloat{
+public extension UIScreen {
+    public static var screenWidth: CGFloat {
         return screenSize.width
     }
     
-    public static var screenHeight: CGFloat{
+    public static var screenHeight: CGFloat {
         return screenSize.height
     }
     
-    public static var screenSize: CGSize{
+    public static var screenSize: CGSize {
         return screenBounds.size
     }
     
-    public static var screenBounds: CGRect{
+    public static var screenBounds: CGRect {
         return UIScreen.main.bounds
     }
     

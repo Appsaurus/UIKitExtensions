@@ -10,7 +10,7 @@ import Foundation
 #if canImport(UIKit)
 import UIKit
 
-//MARK: Adds closure alternative to target action to UIControl
+// MARK: Adds closure alternative to target action to UIControl
 open class CallbackHolder: NSObject {
     
     let callback: () -> Void

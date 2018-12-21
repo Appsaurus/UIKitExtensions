@@ -10,10 +10,10 @@ import Foundation
 #if canImport(UIKit)
 import UIKit
 
-extension UIPageViewController{
-    public func hidePageControl(hideBottomSpace: Bool = true){
+extension UIPageViewController {
+    public func hidePageControl(hideBottomSpace: Bool = true) {
         var subviews: [Any] = view.subviews
-        var thisControl: UIPageControl? = nil
+        var thisControl: UIPageControl?
         for index in 0..<subviews.count {
             if (subviews[index] is UIPageControl) {
                 thisControl = (subviews[i] as? UIPageControl)

@@ -6,27 +6,26 @@
 //
 //
 
-
 #if canImport(UIKit)
 import UIKit
 
-public extension UITableViewCell{
-    public func applyClearBackground(){
+public extension UITableViewCell {
+    public func applyClearBackground() {
         backgroundColor = UIColor.clear
         backgroundView?.backgroundColor = UIColor.clear
     }
     
-    public class var defaultReuseIdentifier: String{
+    public class var defaultReuseIdentifier: String {
         return className + "Identifier"
     }
     
-    public func hideSeparatorInset(){
+    public func hideSeparatorInset() {
         self.layoutMargins = UIEdgeInsets.zero
         self.separatorInset = UIEdgeInsets.zero
     }
     
-    public func setSelectedBackground(color: UIColor?){
-        guard let color = color else{
+    public func setSelectedBackground(color: UIColor?) {
+        guard let color = color else {
             self.selectedBackgroundView = nil
             return
         }

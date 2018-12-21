@@ -9,8 +9,8 @@
 #if canImport(UIKit)
 import UIKit
 
-extension CGColor{
-    public var uiColor: UIColor{
+extension CGColor {
+    public var uiColor: UIColor {
         return UIColor(cgColor: self)
     }
 }

@@ -9,7 +9,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension IndexPath: ExpressibleByIntegerLiteral{
+extension IndexPath: ExpressibleByIntegerLiteral {
     public typealias IntegerLiteralType = Int
     
     public init(integerLiteral value: Int) {
@@ -17,4 +17,3 @@ extension IndexPath: ExpressibleByIntegerLiteral{
     }
 }
 #endif
-
