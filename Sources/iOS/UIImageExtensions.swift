@@ -68,9 +68,8 @@ public extension UIImage{
     
     public class func rotate(img: UIImage, by degrees: CGFloat) -> UIImage {
         
-        let rotatedViewBox = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))
-        let t = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
-        rotatedViewBox.transform = t
+        let rotatedViewBox = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))        
+        rotatedViewBox.transform = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
         let rotatedSize = rotatedViewBox.frame.size
         
         UIGraphicsBeginImageContext(rotatedSize)
@@ -108,8 +107,12 @@ public extension UIImage{
             renderContext.cgContext.translateBy(x: rect.midX, y: rect.midY)
             renderContext.cgContext.rotate(by: rotationInRadians)
             
+            // swiftlint:disable next identifier_name
             let x = options.contains(.flipVertical) ? -1.0 : 1.0
+            
+            // swiftlint:disable next identifier_name
             let y = options.contains(.flipHorizontal) ? 1.0 : -1.0
+            
             renderContext.cgContext.scaleBy(x: CGFloat(x), y: CGFloat(y))
             
             let drawRect = CGRect(origin: CGPoint(x: -self.size.width/2, y: -self.size.height/2), size: self.size)

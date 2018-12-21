@@ -17,18 +17,17 @@
 		D284B1051F79038B00D94AF3 /* UIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284B0FC1F79038B00D94AF3 /* UIKitExtensions.framework */; };
 		D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1221F79041C00D94AF3 /* tvOS.swift */; };
 		D284B1251F79042800D94AF3 /* watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1241F79042800D94AF3 /* watchOS.swift */; };
-		D284B1381F7906DB00D94AF3 /* Info-iOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */; };
 		D284B1391F7906DB00D94AF3 /* Info-tvOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */; };
 		D284B13B1F7906DB00D94AF3 /* Info-macOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B1331F7906DA00D94AF3 /* Info-macOS-Tests.plist */; };
 		D284B13E1F7907AD00D94AF3 /* tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B13D1F7907AD00D94AF3 /* tvOSTests.swift */; };
 		D284B1441F7908B100D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
-		D284B1451F7908B200D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		D284B1461F7908B300D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		D284B1471F7908B800D94AF3 /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1361F7906DA00D94AF3 /* iOSTests.swift */; };
 		D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B12E1F7906DA00D94AF3 /* macOSTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* UIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* UIKitExtensions.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* UIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* UIKitExtensions.framework */; };
 		D61EC858C68525F843BB206C /* Pods_UIKitExtensions_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E12E9E3C9EF55234D6E814 /* Pods_UIKitExtensions_macOS.framework */; };
+		E43962F121CB5EA3000AF558 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		E453A63B21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61121B9E0B000B5F714 /* UIBarButtonItemExtensions.swift */; };
 		E453A63F21B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61621B9E0B000B5F714 /* UIPageViewControllerExtensions.swift */; };
 		E453A64321B9E0B200B5F714 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61721B9E0B000B5F714 /* UIButtonExtensions.swift */; };
@@ -601,8 +600,8 @@
 				D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */,
 				D284B1331F7906DA00D94AF3 /* Info-macOS-Tests.plist */,
 				D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */,
-				D284B1351F7906DA00D94AF3 /* iOS */,
 				D284B12D1F7906DA00D94AF3 /* macOS */,
+				D284B1351F7906DA00D94AF3 /* iOS */,
 				D284B1311F7906DA00D94AF3 /* Shared */,
 				D284B1341F7906DA00D94AF3 /* tvOS */,
 			);
@@ -795,6 +794,7 @@
 			buildConfigurationList = D284B10D1F79038B00D94AF3 /* Build configuration list for PBXNativeTarget "UIKitExtensions-tvOS" */;
 			buildPhases = (
 				D2CF3AFCAF2122148FA042CE /* [CP] Check Pods Manifest.lock */,
+				E43962FA21CD4EE7000AF558 /* ShellScript */,
 				D284B0F71F79038B00D94AF3 /* Sources */,
 				D284B0F81F79038B00D94AF3 /* Frameworks */,
 				D284B0F91F79038B00D94AF3 /* Headers */,
@@ -834,6 +834,7 @@
 			buildConfigurationList = D284B11D1F79039F00D94AF3 /* Build configuration list for PBXNativeTarget "UIKitExtensions-watchOS" */;
 			buildPhases = (
 				5A2AD018E9934BF5FAFA5895 /* [CP] Check Pods Manifest.lock */,
+				E43962FB21CD4EF0000AF558 /* ShellScript */,
 				D284B1131F79039F00D94AF3 /* Sources */,
 				D284B1141F79039F00D94AF3 /* Frameworks */,
 				D284B1151F79039F00D94AF3 /* Headers */,
@@ -853,6 +854,7 @@
 			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "UIKitExtensions-iOS" */;
 			buildPhases = (
 				09F79A9C04098022E3D3F856 /* [CP] Check Pods Manifest.lock */,
+				E43962F821CD4ED2000AF558 /* ShellScript */,
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
@@ -892,6 +894,7 @@
 			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "UIKitExtensions-macOS" */;
 			buildPhases = (
 				8B3BA8CCD016F2F562B7908F /* [CP] Check Pods Manifest.lock */,
+				E43962F921CD4ED9000AF558 /* ShellScript */,
 				D5C6293B1C3A7FAA007F7B7C /* Sources */,
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
 				D5C6293D1C3A7FAA007F7B7C /* Headers */,
@@ -1059,7 +1062,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D284B1391F7906DB00D94AF3 /* Info-tvOS-Tests.plist in Resources */,
-				D284B1381F7906DB00D94AF3 /* Info-iOS-Tests.plist in Resources */,
 				D284B13B1F7906DB00D94AF3 /* Info-macOS-Tests.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1302,6 +1304,74 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E43962F821CD4ED2000AF558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		E43962F921CD4ED9000AF558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint lint --config .swiftlint.yml\n";
+		};
+		E43962FA21CD4EE7000AF558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		E43962FB21CD4EF0000AF558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		E59E7ECF2D5CF57F24051843 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1462,8 +1532,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43962F121CB5EA3000AF558 /* SharedTests.swift in Sources */,
 				E4D230EF21CB031000EBC209 /* NSAttributedStringExtensionTests.swift in Sources */,
-				D284B1451F7908B200D94AF3 /* SharedTests.swift in Sources */,
 				D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

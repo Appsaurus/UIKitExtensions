@@ -10,7 +10,7 @@
 import UIKit
 
 public enum UIScrollViewOffsetPosition{
-    case Top, Bottom, BouncingBottom, BouncingTop, Middle
+    case top, bottom, bouncingBottom, bouncingTop, middle
 }
 public extension UIScrollView {
     
@@ -30,18 +30,18 @@ public extension UIScrollView {
     public func calculateYOffsetPostition(for offset: CGFloat) -> UIScrollViewOffsetPosition{
         switch offset{
         case -999999999.99..<verticalOffsetForTop:
-            return .BouncingTop
+            return .bouncingTop
         case verticalOffsetForTop:
-            return .Top
+            return .top
         case verticalOffsetForTop..<verticalOffsetForBottom:
-            return .Middle
+            return .middle
         case verticalOffsetForBottom:
-            return .Bottom
+            return .bottom
         case verticalOffsetForBottom..<999999999.99:
-            return .BouncingBottom
+            return .bouncingBottom
         default:
             assertionFailure("Missing case")
-            return .Top
+            return .top
         }
     }
     
@@ -62,11 +62,11 @@ public extension UIScrollView {
     }
     
     public var hasReachedBottomOfContent: Bool{
-        return [.Bottom, .BouncingBottom].contains(yOffsetPosition)
+        return [.bottom, .bouncingBottom].contains(yOffsetPosition)
     }
     
     public var hasReachedTopOfContent: Bool{
-        return [.Top, .BouncingTop].contains(yOffsetPosition)
+        return [.top, .bouncingTop].contains(yOffsetPosition)
     }
 }
 #endif

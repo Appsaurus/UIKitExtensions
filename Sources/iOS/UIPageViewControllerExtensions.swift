@@ -14,8 +14,8 @@ extension UIPageViewController{
     public func hidePageControl(hideBottomSpace: Bool = true){
         var subviews: [Any] = view.subviews
         var thisControl: UIPageControl? = nil
-        for i in 0..<subviews.count {
-            if (subviews[i] is UIPageControl) {
+        for index in 0..<subviews.count {
+            if (subviews[index] is UIPageControl) {
                 thisControl = (subviews[i] as? UIPageControl)
             }
         }

@@ -1,5 +1,6 @@
 import XCTest
 
+// swiftlint:disable:next type_name
 class tvOSTests: XCTestCase {
 
   override func setUp() {

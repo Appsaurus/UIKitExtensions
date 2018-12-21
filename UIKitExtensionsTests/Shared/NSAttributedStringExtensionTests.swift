@@ -10,7 +10,6 @@
 import XCTest
 @testable import UIKitExtensions
 import Swiftest
-
 #if canImport(Foundation)
 import Foundation
 

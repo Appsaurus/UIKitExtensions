@@ -15,11 +15,14 @@ extension UICollectionView{
         register(cellClass, forCellWithReuseIdentifier: cellClass.defaultIdentifier)
     }
 
+    
     public func dequeueReusableCell<C: UICollectionViewCell>(for indexPath: IndexPath) -> C{
+        // swiftlint:disable:next force_cast
         return dequeueReusableCell(withReuseIdentifier: C.self.defaultIdentifier, for: indexPath) as! C
     }
 
     public func dequeueReusableCell<C: UICollectionViewCell>(for index: Int) -> C{
+        // swiftlint:disable:next force_cast
         return dequeueReusableCell(withReuseIdentifier: C.self.defaultIdentifier, for: IndexPath(item: index, section: 0)) as! C
     }
 }

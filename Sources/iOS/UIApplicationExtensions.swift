@@ -135,10 +135,12 @@ public extension UIApplication{
 public extension UIApplication {
     
     public class var versionNumber: String {
+        // swiftlint:disable next force_cast
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     }
     
     public class var buildNumber: String {
+        // swiftlint:disable next force_cast
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
     }
     

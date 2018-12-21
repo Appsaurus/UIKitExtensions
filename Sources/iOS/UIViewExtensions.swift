@@ -10,6 +10,7 @@
 import Swiftest
 import UIKit
 
+// swiftlint:disable all identifier_name
 public extension UIView{
     
     /// X value of CGRect's origin
@@ -75,6 +76,7 @@ public extension UIView {
         let nibName = nibName ?? self.className
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: nibName, bundle: bundle)
+        // swiftlint:disable next force_cast
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! T
         return view
     }

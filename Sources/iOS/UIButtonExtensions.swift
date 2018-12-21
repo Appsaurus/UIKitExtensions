@@ -82,7 +82,7 @@ public extension UIButton {
         let imageWidth = imageEdgeInsets.left + imageView!.frame.size.width
         var widthToSpanLabel = frame.size.width
         if centerInEntireFrame{
-            widthToSpanLabel = widthToSpanLabel - imageWidth - imageEdgeInsets.left
+            widthToSpanLabel -= imageWidth - imageEdgeInsets.left
         }
         let titleWidth = titleLabel?.frame.size.width ?? 0.0
         let leftInsetForTitleLabel = (widthToSpanLabel - titleWidth) / 2.0

@@ -1,8 +1,14 @@
 PODS:
   - Swiftest (0.0.5)
+  - SwiftLint (0.29.1)
 
 DEPENDENCIES:
   - Swiftest (from `https://github.com/appsaurus/Swiftest.git`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
 
 EXTERNAL SOURCES:
   Swiftest:
@@ -15,7 +21,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Swiftest: a51749e99f5384656120cfefa744512b8c5278a4
+  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
 
-PODFILE CHECKSUM: 172a6653f98132d67b2c20a7e659537518be4cbd
+PODFILE CHECKSUM: 05be9d948e8466b674f82a2705e506dd65b22d25
 
 COCOAPODS: 1.5.3

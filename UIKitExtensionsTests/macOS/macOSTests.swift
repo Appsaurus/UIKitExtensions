@@ -1,5 +1,7 @@
 import XCTest
+import Foundation
 
+// swiftlint:disable:next type_name
 class macOSTests: XCTestCase {
 
   override func setUp() {

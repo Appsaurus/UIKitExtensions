@@ -115,8 +115,8 @@ public extension UIStackView{
     }
     
     public func removeArrangedSubviews(after index: Int, removeFromSuperview: Bool = true){
-        for i in (index + 1...arrangedSubviews.count - 1).reversed(){
-            removeArrangedSubview(at: i, removeFromSuperview: removeFromSuperview)
+        for idx in (index + 1...arrangedSubviews.count - 1).reversed(){
+            removeArrangedSubview(at: idx, removeFromSuperview: removeFromSuperview)
         }
     }
 }

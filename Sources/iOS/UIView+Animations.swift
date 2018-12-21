@@ -13,12 +13,15 @@ import Swiftest
 
 extension UIView{
     
-    public func wobble(duration: Double = 0.15, count: Int? = nil, indefinitely: Bool = false, completion: VoidClosure? = nil){
+    public func wobble(duration: Double = 0.15,
+                       count: Int? = nil,
+                       indefinitely: Bool = false,
+                       completion: VoidClosure? = nil){
         let count = count
-        let r = (CGFloat((arc4random() % 500)) / 500.0) + 0.5
+        let rand = (CGFloat((arc4random() % 500)) / 500.0) + 0.5
         let rotateDegree: CGFloat = 2.0
-        let leftWobble = CGAffineTransform.identity.rotated(by: CGFloat((rotateDegree * -1 - r).degreesToRadians.double))
-        let rightWobble = CGAffineTransform.identity.rotated(by: CGFloat((rotateDegree + r).degreesToRadians.double))
+        let leftWobble = CGAffineTransform.identity.rotated(by: CGFloat((rotateDegree * -1 - rand).degreesToRadians.double))
+        let rightWobble = CGAffineTransform.identity.rotated(by: CGFloat((rotateDegree + rand).degreesToRadians.double))
         self.transform = leftWobble
         var options = [UIView.AnimationOptions.allowUserInteraction, UIView.AnimationOptions.autoreverse]
         if indefinitely { options.append(UIView.AnimationOptions.repeat) }

@@ -4,7 +4,7 @@ import XCTest
 
 class SharedTests: XCTestCase {
 
-    #if !os(tvOS) && !os(watchOS)
+    #if os(iOS) || os(macOS)
     func testBold() {
         let boldString = "hello".bold
         // swiftlint:disable next legacy_constructor

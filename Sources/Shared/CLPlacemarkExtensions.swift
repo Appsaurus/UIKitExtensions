@@ -11,10 +11,12 @@ import CoreLocation
 import Contacts
 import Swiftest
 
-extension CLPlacemark {
-    public var _postalAddress: CNPostalAddress? {
+@available(iOS, obsoleted: 11.0, message: "Use apples implementation of postalAddress instead.")
+@available(OSX, obsoleted: 10.13, message: "Use apples implementation of postalAddress instead.")
+    extension CLPlacemark {
         
-        guard #available(iOS 11.0, OSX 10.13, *) else {
+        public var postalAddress: CNPostalAddress? {
+            
             guard let addressDictionary = addressDictionary else { return nil }
             let address = CNMutablePostalAddress()
             address.street = addressDictionary["Street"] as? String ?? ""
@@ -30,6 +32,5 @@ extension CLPlacemark {
             }
             return address
         }
-        return self.postalAddress
     }
-}
+

@@ -10,7 +10,7 @@ import Foundation
 import Swiftest
 
 public extension UIViewController{
-
+    
     public func preloadView() {
         let _ = view
     }
@@ -52,7 +52,11 @@ public extension UIViewController{
     
     
     
-    public func swap(childViewController oldViewController: UIViewController, withReplacementViewController newViewController:UIViewController, inContainer containerView: UIView, animated: Bool = true, completion: VoidClosure? = nil){
+    public func swap(childViewController oldViewController: UIViewController,
+                     withReplacementViewController newViewController:UIViewController,
+                     inContainer containerView: UIView,
+                     animated: Bool = true,
+                     completion: VoidClosure? = nil){
         remove(childViewController: oldViewController)
         add(childViewController: newViewController, toContainer: containerView)
         completion?()
@@ -89,7 +93,12 @@ public extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
-    public func presentAlertController(title: String?, message: String?, cancelButtonTitle: String = "Cancel", onCancel: @escaping VoidClosure = {}, retryButtonTitle: String = "Retry", retryButtonClosure: @escaping VoidClosure){
+    public func presentAlertController(title: String?,
+                                       message: String?,
+                                       cancelButtonTitle: String = "Cancel",
+                                       onCancel: @escaping VoidClosure = {},
+                                       retryButtonTitle: String = "Retry",
+                                       retryButtonClosure: @escaping VoidClosure){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { (action) in
@@ -105,7 +114,12 @@ public extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
-    public func presentAlertController(title: String?, message: String?, buttonTitle: String, buttonClosure: @escaping VoidClosure, secondButtonTitle: String? = nil, secondButtonClosure: VoidClosure? = nil){
+    public func presentAlertController(title: String?,
+                                       message: String?,
+                                       buttonTitle: String,
+                                       buttonClosure: @escaping VoidClosure,
+                                       secondButtonTitle: String? = nil,
+                                       secondButtonClosure: VoidClosure? = nil){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let buttonAction = UIAlertAction(title: buttonTitle, style: .default) { (action) in
@@ -122,7 +136,11 @@ public extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
-    public func presentAlertControllerWithTextField(title: String? = nil, message: String? = nil, textFieldIsSecure: Bool = false, submitButtonTitle: String, submitButtonClosure: @escaping ClosureIn<String?>, cancelButtonClosure: VoidClosure? = nil, inputTextFieldPlaceholder: String? = nil){
+    public func presentAlertControllerWithTextField(title: String? = nil,
+                                                    message: String? = nil,
+                                                    textFieldIsSecure: Bool = false,
+                                                    submitButtonTitle: String,
+                                                    submitButtonClosure: @escaping ClosureIn<String?>, cancelButtonClosure: VoidClosure? = nil, inputTextFieldPlaceholder: String? = nil){
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         var textFieldToSubmit: UITextField?
@@ -158,36 +176,48 @@ public extension UIViewController{
 }
 
 extension UIViewController{
-	public func showErrorAlert(title: String? = nil, message: String? = nil, _ error: Error? = nil){
-		let error: Error = error ?? BasicError.unknown
-		presentAlertController(title: title, message: message ?? error.localizedDescription)
-	}
+    public func showErrorAlert(title: String? = nil, message: String? = nil, _ error: Error? = nil){
+        let error: Error = error ?? BasicError.unknown
+        presentAlertController(title: title, message: message ?? error.localizedDescription)
+    }
     public func showError(title: String? = nil, message: String? = nil, error: Error? = nil){
         let error: Error = error ?? BasicError.unknown
         presentAlertController(title: title, message: message ?? error.localizedDescription)
     }
     
-    public func showError(title: String? = nil, message: String? = nil, error: Error? = nil, cancelButtonTitle: String = "Cancel", onCancel: @escaping VoidClosure = {}, retryButtonTitle: String = "Retry", retryButtonClosure: @escaping VoidClosure = {}){
+    public func showError(title: String? = nil,
+                          message: String? = nil,
+                          error: Error? = nil,
+                          cancelButtonTitle: String = "Cancel",
+                          onCancel: @escaping VoidClosure = {},
+                          retryButtonTitle: String = "Retry",
+                          retryButtonClosure: @escaping VoidClosure = {}){
         let error: Error = error ?? BasicError.unknown
-        presentAlertController(title: title, message: message ?? error.localizedDescription, cancelButtonTitle: cancelButtonTitle, onCancel: onCancel, retryButtonTitle: retryButtonTitle, retryButtonClosure: retryButtonClosure)
+
+        presentAlertController(title: title,
+                               message: message ?? error.localizedDescription,
+                               cancelButtonTitle: cancelButtonTitle,
+                               onCancel: onCancel,
+                               retryButtonTitle: retryButtonTitle,
+                               retryButtonClosure: retryButtonClosure)
     }
 }
 //MARK: Navigation item title
 extension UIViewController{
-//
-//    @discardableResult
-//    public func setupNavigationBarTitleLabel(text: String = "", inset: UIEdgeInsets? = nil, style: TextStyle = NavigationBarStyle.default.titleTextStyle, maxNumberOfLines: Int = 1) -> UILabel{
-//        let navBar = navigationController!.navigationBar
-//        let frame = navBar.bounds.insetBy(dx: navBar.frame.w/6.0, dy: navBar.frame.h/5.0)
-//        let titleLabel = UILabel(frame: frame, text: text)
-//        titleLabel.apply(textStyle: style)
-//        titleLabel.adjustsFontSizeToFitWidth = true
-//        titleLabel.numberOfLines = maxNumberOfLines
-//        titleLabel.textAlignment = .center
-//        navigationItem.titleView = titleLabel
-//        return titleLabel
-//    }
-
+    //
+    //    @discardableResult
+    //    public func setupNavigationBarTitleLabel(text: String = "", inset: UIEdgeInsets? = nil, style: TextStyle = NavigationBarStyle.default.titleTextStyle, maxNumberOfLines: Int = 1) -> UILabel{
+    //        let navBar = navigationController!.navigationBar
+    //        let frame = navBar.bounds.insetBy(dx: navBar.frame.w/6.0, dy: navBar.frame.h/5.0)
+    //        let titleLabel = UILabel(frame: frame, text: text)
+    //        titleLabel.apply(textStyle: style)
+    //        titleLabel.adjustsFontSizeToFitWidth = true
+    //        titleLabel.numberOfLines = maxNumberOfLines
+    //        titleLabel.textAlignment = .center
+    //        navigationItem.titleView = titleLabel
+    //        return titleLabel
+    //    }
+    
     public func maxNavivgationBarTitleFrame(padding: CGFloat = 0.0, centerHorizontally: Bool = true) -> CGRect?{
         guard let navFrame = navigationController?.navigationBar.frame else{
             return nil
@@ -236,17 +266,17 @@ extension UIViewController{
 }
 
 extension Array where Element: UIViewController{
-	public func loadViewsIfNeeded(){
-		for viewController in self{
-			switch viewController{
-			case let navController as UINavigationController:
-				navController.loadViewIfNeeded()
-				navController.viewControllers.loadViewsIfNeeded()
-			default:
-				viewController.loadViewIfNeeded()
-				viewController.children.loadViewsIfNeeded()
-			}
-
-		}
-	}
+    public func loadViewsIfNeeded(){
+        for viewController in self{
+            switch viewController{
+            case let navController as UINavigationController:
+                navController.loadViewIfNeeded()
+                navController.viewControllers.loadViewsIfNeeded()
+            default:
+                viewController.loadViewIfNeeded()
+                viewController.children.loadViewsIfNeeded()
+            }
+            
+        }
+    }
 }

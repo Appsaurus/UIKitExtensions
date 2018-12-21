@@ -20,6 +20,7 @@ public extension UIEdgeInsets{
         self.init(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
     }
     
+    // swiftlint:disable next identifier_name
     public init(t: CGFloat = 0.0, l: CGFloat = 0.0, b: CGFloat = 0.0, r: CGFloat = 0.0){
         self.init(top: t, left: l, bottom: b, right: r)
     }
