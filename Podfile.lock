@@ -1,5 +1,5 @@
 PODS:
-  - Swiftest (0.0.5)
+  - Swiftest (0.0.6)
   - SwiftLint (0.29.1)
 
 DEPENDENCIES:
@@ -16,11 +16,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Swiftest:
-    :commit: 8187a33e9ac4f7483f59b0a0d5dd1d59c27ec106
+    :commit: 634fa20601cbc6117d2e3f74ed330854a3a4535f
     :git: https://github.com/appsaurus/Swiftest.git
 
 SPEC CHECKSUMS:
-  Swiftest: a51749e99f5384656120cfefa744512b8c5278a4
+  Swiftest: 7df25aa2579b47c8186ce769910a73c3dd334cd6
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
 
 PODFILE CHECKSUM: 05be9d948e8466b674f82a2705e506dd65b22d25

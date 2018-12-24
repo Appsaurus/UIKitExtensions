@@ -102,10 +102,8 @@ public extension UIImage {
             renderContext.cgContext.translateBy(x: rect.midX, y: rect.midY)
             renderContext.cgContext.rotate(by: rotationInRadians)
             
-            // swiftlint:disable next identifier_name
             let x = options.contains(.flipVertical) ? -1.0 : 1.0
             
-            // swiftlint:disable next identifier_name
             let y = options.contains(.flipHorizontal) ? 1.0 : -1.0
             
             renderContext.cgContext.scaleBy(x: CGFloat(x), y: CGFloat(y))
