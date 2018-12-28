@@ -1,10 +1,12 @@
 PODS:
-  - Swiftest (0.0.6)
-  - SwiftLint (0.29.1)
+  - Swiftest (0.0.8)
+  - SwiftLint (0.29.2)
+  - SwiftTestUtils (0.1.2)
 
 DEPENDENCIES:
   - Swiftest (from `https://github.com/appsaurus/Swiftest.git`)
   - SwiftLint
+  - SwiftTestUtils (from `https://github.com/appsaurus/SwiftTestUtils.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -13,16 +15,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Swiftest:
     :git: https://github.com/appsaurus/Swiftest.git
+  SwiftTestUtils:
+    :git: https://github.com/appsaurus/SwiftTestUtils.git
 
 CHECKOUT OPTIONS:
   Swiftest:
-    :commit: 634fa20601cbc6117d2e3f74ed330854a3a4535f
+    :commit: 45d3d30dc73139d6e3257630f62cb2914e7c003f
     :git: https://github.com/appsaurus/Swiftest.git
+  SwiftTestUtils:
+    :commit: ee2905865b92773dcbae076a4c585108ad13de90
+    :git: https://github.com/appsaurus/SwiftTestUtils.git
 
 SPEC CHECKSUMS:
-  Swiftest: 7df25aa2579b47c8186ce769910a73c3dd334cd6
-  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
+  Swiftest: 0149c68a8af064586aba9c66cde137b955bdc186
+  SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
+  SwiftTestUtils: 72446afda6c7b362fc266f78a5ddb0516869e412
 
-PODFILE CHECKSUM: 05be9d948e8466b674f82a2705e506dd65b22d25
+PODFILE CHECKSUM: 024406b7a9fd796afba26da5507d5cb8a4431bac
 
 COCOAPODS: 1.5.3

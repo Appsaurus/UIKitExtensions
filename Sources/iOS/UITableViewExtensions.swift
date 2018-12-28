@@ -83,11 +83,11 @@ extension UITableView {
 			DispatchQueue.main.async {
 				self.reloadData()
 			}
-		}) { _ in
+        }, completion: { _ in
 			DispatchQueue.main.async {
 				completion()
 			}
-		}
+		})
 	}
 }
 #endif

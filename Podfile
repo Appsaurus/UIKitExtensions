@@ -9,7 +9,7 @@ def libaryShared
 end
 
 def testShared
-    
+    pod 'SwiftTestUtils', :git => 'https://github.com/appsaurus/SwiftTestUtils.git'
 end
 
 target 'UIKitExtensions-iOS' do

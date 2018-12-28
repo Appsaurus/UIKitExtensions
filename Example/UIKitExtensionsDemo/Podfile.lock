@@ -1,6 +1,6 @@
 PODS:
-  - Swiftest (0.0.2)
-  - UIKitExtensions (0.0.3):
+  - Swiftest (0.0.7)
+  - UIKitExtensions (0.0.5):
     - Swiftest
 
 DEPENDENCIES:
@@ -15,13 +15,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Swiftest:
-    :commit: cd7ba87eda65d91b4e9a65be791517677149972a
+    :commit: d06b5bf1b3ad0ba1fb0da56b8e0ce7cb17c33c06
     :git: https://github.com/appsaurus/Swiftest.git
 
 SPEC CHECKSUMS:
-  Swiftest: d63bb5f7427ebfd10753609d834219db97b63441
-  UIKitExtensions: 1704cca38eb16e4917b2dc424beddfa5269b1051
+  Swiftest: 01e61763b756919cdf244e1429670dcad08fb91d
+  UIKitExtensions: b2463090413fe065041c029368f62ff951b6b69c
 
-PODFILE CHECKSUM: fad40b7276868aaf3d4638877584fcf145a605ba
+PODFILE CHECKSUM: f44f65a54315bb877d8de1cac2a8491c9d4b5f9a
 
 COCOAPODS: 1.5.3

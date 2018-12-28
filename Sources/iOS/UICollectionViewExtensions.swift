@@ -35,10 +35,7 @@ extension UICollectionViewCell {
 extension UICollectionView {
 
     public var contentCenter: CGPoint {
-
-        get {
-            return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y)
-        }
+        return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y)
     }
 
     public var centerCellIndexPath: IndexPath? {

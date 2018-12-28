@@ -9,6 +9,17 @@
 #if canImport(UIKit)
 import UIKit
 
+extension UIColor {
+    public static var systemPlaceholder: UIColor {
+        return UIColor(red: 199, green: 199, blue: 205, alpha: 1.0)
+    }
+}
+
+extension UIFont {
+    public static var systemPlaceholder: UIFont {
+        return UIFont(name: "HelveticaNeue-Medium", size: 16.0)!
+    }
+}
 public extension UITextField {
     public var fontSize: CGFloat {
         set {
@@ -48,21 +59,23 @@ public extension UITextField {
     
     @IBInspectable public var placeholderColor: UIColor {
         get {
-            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ??  UIColor(red: 199, green: 199, blue: 205, alpha: 1.0) //System placeholder color
+            return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ?? .systemPlaceholder
         }
         set {
-            self.attributedPlaceholder =  (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributed.mutable)?.setColor(newValue).setFont(placeholderFont)
+            attributedPlaceholder = currentPlaceholder?.setColor(newValue).setFont(placeholderFont)
         }
     }
     
-    @IBInspectable public var placeholderFont: UIFont {
-        get {
-            
-            return self.attributedPlaceholder?.attribute(.font, at: 0, effectiveRange: nil) as? UIFont ?? UIFont(name: "HelveticaNeueu-Medium", size: 16.0)! //System placeholder color
+    public var placeholderFont: UIFont {
+        get {            
+            return self.attributedPlaceholder?.attribute(.font, at: 0, effectiveRange: nil) as? UIFont ?? .systemPlaceholder
         }
         set {
-            self.attributedPlaceholder = (self.attributedPlaceholder?.mutable ?? self.placeholder?.attributed.mutable)?.setFont(newValue).setColor(placeholderColor)
+            attributedPlaceholder = currentPlaceholder?.setFont(newValue).setColor(placeholderColor)
         }
+    }
+    private var currentPlaceholder: NSMutableAttributedString? {
+        return (attributedPlaceholder ?? placeholder?.attributed)?.mutable
     }
     
 }

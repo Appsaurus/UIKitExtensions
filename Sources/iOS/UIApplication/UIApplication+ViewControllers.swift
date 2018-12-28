@@ -43,22 +43,31 @@ public extension UIApplication {
     public var topWindowRootViewController: UIViewController? {
         return topMostWindow?.rootViewController
     }
+
+    public func openURLIfPossible(_ url: URL) {
+
+    }
     
     public func callNumber(_ phoneNumber: String) {
         var phoneNumber = phoneNumber
         let charsToRemove = CharacterSet.decimalDigits.inverted
         phoneNumber = phoneNumber.components(separatedBy: charsToRemove).joined(separator: "")
-        if let phoneCallURL: URL = URL(string: "tel://\(phoneNumber)") {
-            if (self.canOpenURL(phoneCallURL)) {
-                self.openURL(phoneCallURL)
-            }
+        if let phoneCallURL: URL = "tel://\(phoneNumber)".url {
+            openURLIfPossible(phoneCallURL)
         }
     }
     
     public func confirmAndCallPhoneNumber(_ phoneNumber: String) {
-        self.topmostViewController?.confirmUserIntention(title: "Call \(phoneNumber)?", confirmationTitle: "Yes", cancelTitle: "No", prompt: nil, runOnConfirmation: {
-            self.callNumber(phoneNumber)
-        })
+        self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
+                                                 actions: [ "Yes" + self.callNumber(phoneNumber),
+                                                            "No" ~ .cancel])
+        self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
+            actions: [ ("Yes", .cancel) + self.callNumber(phoneNumber),
+                       "No"])
+
+        self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
+            actions: [ "Yes" ~ .cancel + self.callNumber(phoneNumber),
+                       "No"])
     }
     
     // MARK: Apple Maps deep links
@@ -83,7 +92,8 @@ public extension UIApplication {
     }
     
     public func openAppleMapsAndGiveDirections(_ startLocation: MKMapItem? = MKMapItem.forCurrentLocation(), destination: MKMapItem) {
-        let launchOptions: NSDictionary = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving, forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
+        let launchOptions: NSDictionary = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving,
+                                                       forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
         MKMapItem.openMaps(with: [startLocation!, destination], launchOptions: launchOptions as? [String: AnyObject])
     }
 }

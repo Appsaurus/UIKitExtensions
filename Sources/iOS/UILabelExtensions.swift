@@ -40,7 +40,7 @@ public extension UILabel {
     }
     
     public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
-        adjustFontSizeToFit(height: h * scaleFactor)
+        adjustFontSizeToFit(height: frame.h * scaleFactor)
     }
     
     convenience init(frame: CGRect = .zero, text: String) {

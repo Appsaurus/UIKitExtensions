@@ -9,6 +9,7 @@
 import Foundation
 #if canImport(UIKit)
 import UIKit
+import Swiftest
 
 public extension UIBarItem {
     public func setTitleTextAttributes(_ attributes: [NSAttributedString.Key: AnyObject]?, forStates states: UIControl.State...) {
@@ -17,7 +18,10 @@ public extension UIBarItem {
         }
     }
     
-    public func setAttributed(font: UIFont? = nil, textColor: UIColor? = nil, title: String? = nil, forState state: UIControl.State) {
+    public func setAttributed(font: UIFont? = nil,
+                              textColor: UIColor? = nil,
+                              title: String? = nil,
+                              forState state: UIControl.State) {
         var attributes: [NSAttributedString.Key: AnyObject] = [:]
         if let font = font {
             attributes[.font] = font

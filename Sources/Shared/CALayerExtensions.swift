@@ -37,16 +37,12 @@ public extension CALayer {
         switch edge {
         case UIRectEdge.top:
             border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: thickness - distance)
-            break
         case UIRectEdge.bottom:
             border.frame = CGRect(x: 0, y: self.frame.height - thickness + distance, width: self.frame.width, height: thickness)
-            break
         case UIRectEdge.left:
             border.frame = CGRect(x: 0, y: 0, width: thickness, height: self.frame.height - distance)
-            break
         case UIRectEdge.right:
             border.frame = CGRect(x: self.frame.width - thickness + distance, y: 0, width: thickness, height: self.frame.height)
-            break
         default:
             break
         }

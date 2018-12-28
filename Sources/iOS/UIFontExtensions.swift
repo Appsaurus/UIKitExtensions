@@ -26,7 +26,7 @@ public extension UIFont {
         var fontSizeAverage: CGFloat = 0
         var textAndLabelHeightDiff: CGFloat = 0
 
-        while (minFontSize <= maxFontSize) {
+        while minFontSize <= maxFontSize {
             
             fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 2
             
@@ -43,17 +43,17 @@ public extension UIFont {
             
             textAndLabelHeightDiff = labelHeight - testStringHeight
             
-            if (fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize) {
-                if (textAndLabelHeightDiff < 0) {
+            if fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize {
+                if textAndLabelHeightDiff < 0 {
                     return withSize(fontSizeAverage - 1)
                 }
                 return withSize(fontSizeAverage)
             }
             
-            if (textAndLabelHeightDiff < 0) {
+            if textAndLabelHeightDiff < 0 {
                 maxFontSize = fontSizeAverage - 1
                 
-            } else if (textAndLabelHeightDiff > 0) {
+            } else if textAndLabelHeightDiff > 0 {
                 minFontSize = fontSizeAverage + 1
                 
             } else {

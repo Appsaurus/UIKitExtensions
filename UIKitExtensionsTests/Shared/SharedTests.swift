@@ -29,8 +29,9 @@ class SharedTests: XCTestCase {
     
     func testUnderline() {
         let underlinedString = "hello".underline
-        // swiftlint:disable legacy_constructor
-        let attrs = underlinedString.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, underlinedString.length))
+        let attrs = underlinedString.attributes(at: 0,
+                                                longestEffectiveRange: nil,
+                                                in: underlinedString.fullRange)
         // swiftlint:enable legacy_constructor
         XCTAssertNotNil(attrs[NSAttributedString.Key.underlineStyle])
         guard let style = attrs[NSAttributedString.Key.underlineStyle] as? Int else {
@@ -42,8 +43,9 @@ class SharedTests: XCTestCase {
     
     func testStrikethrough() {
         let strikedthroughString = "hello".strikethrough
-        // swiftlint:disable next legacy_constructor
-        let attrs = strikedthroughString.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, strikedthroughString.length))
+        let attrs = strikedthroughString.attributes(at: 0,
+                                                    longestEffectiveRange: nil,
+                                                    in: strikedthroughString.fullRange)
         XCTAssertNotNil(attrs[NSAttributedString.Key.strikethroughStyle])
         guard let style = attrs[NSAttributedString.Key.strikethroughStyle] as? NSNumber else {
             XCTFail("Unable to find style in testStrikethrough")
@@ -55,8 +57,9 @@ class SharedTests: XCTestCase {
     #if os(iOS)
     func testItalic() {
         let italicString = "hello".italic
-        // swiftlint:disable next legacy_constructor
-        let attrs = italicString.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, italicString.length))
+        let attrs = italicString.attributes(at: 0,
+                                            longestEffectiveRange: nil,
+                                            in: italicString.fullRange)
         XCTAssertNotNil(attrs[NSAttributedString.Key.font])
         guard let font = attrs[NSAttributedString.Key.font] as? UIFont else {
             XCTFail("Unable to find font in testItalic")
@@ -68,8 +71,9 @@ class SharedTests: XCTestCase {
     
     func testColored() {
         let coloredString = "hello".colored(with: .orange)
-        // swiftlint:disable next legacy_constructor
-        let attrs = coloredString.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, coloredString.length))
+        let attrs = coloredString.attributes(at: 0,
+                                             longestEffectiveRange: nil,
+                                             in: coloredString.fullRange)
         XCTAssertNotNil(attrs[NSAttributedString.Key.foregroundColor])
         
         #if os(macOS)
