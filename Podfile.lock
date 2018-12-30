@@ -1,5 +1,5 @@
 PODS:
-  - Swiftest (0.0.8)
+  - Swiftest (0.0.11)
   - SwiftLint (0.29.2)
   - SwiftTestUtils (0.1.2)
 
@@ -20,14 +20,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Swiftest:
-    :commit: 45d3d30dc73139d6e3257630f62cb2914e7c003f
+    :commit: 5414b2ddb640fee708c1a120558bbd0cf8bade35
     :git: https://github.com/appsaurus/Swiftest.git
   SwiftTestUtils:
     :commit: ee2905865b92773dcbae076a4c585108ad13de90
     :git: https://github.com/appsaurus/SwiftTestUtils.git
 
 SPEC CHECKSUMS:
-  Swiftest: 0149c68a8af064586aba9c66cde137b955bdc186
+  Swiftest: 427378dc087b53ffdb10e3e4c92cd6787c4be70a
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
   SwiftTestUtils: 72446afda6c7b362fc266f78a5ddb0516869e412
 

@@ -33,28 +33,25 @@ extension UIAlertAction: UIAlertActionConvertible {
     }
 }
 
-//Overloading addition operator
+//Overloading function mapping operator
 
-public func + (lhs: AlertActionTitle, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
+public func => (lhs: AlertActionTitle, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
     return UIAlertAction(title: lhs, closure: rhs)
 }
 
-public func + (lhs: UIAlertAction, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
+public func => (lhs: UIAlertAction, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
     return UIAlertAction(title: lhs.title, style: lhs.style, closure: rhs)
 }
 
-public func + (lhs: (AlertActionTitle, UIAlertAction.Style), rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
-    return UIAlertAction(title: lhs.0, style: lhs.1, closure: rhs)
-}
 
-precedencegroup AlertStylePrecedence {
-    higherThan: AdditionPrecedence
-    associativity: left
-
-}
-
-infix operator ~ : AlertStylePrecedence
-
+/// UIKitExtensions: Style operator overloaded to create styleable AlertActions from a title and style.
+///
+///         let action: UIAlertAction = "Delete" ~ .destructive
+///
+/// - Parameters:
+///   - lhs: A title for the UIAlertAction
+///   - rhs: An UIAlertAction Style to apply to the title.
+/// - Returns: UIAlertAction with title and style applied.
 public func ~ (lhs: AlertActionTitle, rhs: UIAlertAction.Style) -> UIAlertAction {
     return UIAlertAction(title: lhs, style: rhs)
 }

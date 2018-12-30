@@ -945,8 +945,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "UIKitExtensions-iOS" */;
 			buildPhases = (
-				E43962F821CD4ED2000AF558 /* SwiftLint */,
 				09F79A9C04098022E3D3F856 /* [CP] Check Pods Manifest.lock */,
+				E43962F821CD4ED2000AF558 /* SwiftLint */,
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
@@ -985,8 +985,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "UIKitExtensions-macOS" */;
 			buildPhases = (
-				E43962F921CD4ED9000AF558 /* SwiftLint */,
 				8B3BA8CCD016F2F562B7908F /* [CP] Check Pods Manifest.lock */,
+				E43962F921CD4ED9000AF558 /* SwiftLint */,
 				D5C6293B1C3A7FAA007F7B7C /* Sources */,
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
 				D5C6293D1C3A7FAA007F7B7C /* Headers */,

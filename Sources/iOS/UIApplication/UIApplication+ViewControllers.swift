@@ -59,15 +59,8 @@ public extension UIApplication {
     
     public func confirmAndCallPhoneNumber(_ phoneNumber: String) {
         self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
-                                                 actions: [ "Yes" + self.callNumber(phoneNumber),
+                                                 actions: [ "Yes" => self.callNumber(phoneNumber),
                                                             "No" ~ .cancel])
-        self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
-            actions: [ ("Yes", .cancel) + self.callNumber(phoneNumber),
-                       "No"])
-
-        self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
-            actions: [ "Yes" ~ .cancel + self.callNumber(phoneNumber),
-                       "No"])
     }
     
     // MARK: Apple Maps deep links
