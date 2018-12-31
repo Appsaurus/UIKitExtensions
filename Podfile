@@ -2,6 +2,7 @@ use_frameworks!
 
 def shared
     pod 'Swiftest', :git => 'https://github.com/appsaurus/Swiftest.git'
+    pod 'DarkMagic', :git => 'https://github.com/appsaurus/DarkMagic.git'
 end
 
 def libaryShared

@@ -31,4 +31,5 @@ Pod::Spec.new do |s|
   s.osx.frameworks = 'AppKit'
   
   s.dependency 'Swiftest'
+  s.dependency 'DarkMagic'
 end

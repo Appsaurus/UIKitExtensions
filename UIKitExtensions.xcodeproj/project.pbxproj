@@ -72,6 +72,14 @@
 		E453A6CB21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A63921B9E0B200B5F714 /* UITableViewCellExtensions.swift */; };
 		E453A6DB21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */; };
 		E453A6DF21BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */; };
+		E487377221DAA6F70094F2EB /* SelectableClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377121DAA6F70094F2EB /* SelectableClosure.swift */; };
+		E487377321DAA6F70094F2EB /* SelectableClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377121DAA6F70094F2EB /* SelectableClosure.swift */; };
+		E487377921DAD2A20094F2EB /* UIBarButtonItem+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377821DAD2A20094F2EB /* UIBarButtonItem+Closures.swift */; };
+		E487377A21DAD2A20094F2EB /* UIBarButtonItem+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377821DAD2A20094F2EB /* UIBarButtonItem+Closures.swift */; };
+		E487378021DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377F21DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift */; };
+		E487378121DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487377F21DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift */; };
+		E487378321DAD2C40094F2EB /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487378221DAD2C40094F2EB /* UIControl+Closures.swift */; };
+		E487378421DAD2C40094F2EB /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487378221DAD2C40094F2EB /* UIControl+Closures.swift */; };
 		E499C12421D5EBD40000C270 /* UIView+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C12321D5EBD40000C270 /* UIView+Visibility.swift */; };
 		E499C12B21D688C80000C270 /* UIView+ToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C12A21D688C80000C270 /* UIView+ToImage.swift */; };
 		E499C12C21D688C80000C270 /* UIView+ToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C12A21D688C80000C270 /* UIView+ToImage.swift */; };
@@ -298,6 +306,10 @@
 		E453A63921B9E0B200B5F714 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTransitionCoordinatorExtensions.swift; sourceTree = "<group>"; };
 		E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayerSugar.swift"; sourceTree = "<group>"; };
+		E487377121DAA6F70094F2EB /* SelectableClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableClosure.swift; sourceTree = "<group>"; };
+		E487377821DAD2A20094F2EB /* UIBarButtonItem+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Closures.swift"; sourceTree = "<group>"; };
+		E487377F21DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Closures.swift"; sourceTree = "<group>"; };
+		E487378221DAD2C40094F2EB /* UIControl+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Closures.swift"; sourceTree = "<group>"; };
 		E499C12321D5EBD40000C270 /* UIView+Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Visibility.swift"; sourceTree = "<group>"; };
 		E499C12A21D688C80000C270 /* UIView+ToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ToImage.swift"; sourceTree = "<group>"; };
 		E499C12D21D68D040000C270 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
@@ -621,6 +633,7 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E487376C21DAA3F50094F2EB /* UIKit+Closures */,
 				E453A6D921BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift */,
 				E499C14521D69F5B0000C270 /* UIViewController */,
 				E499C13921D6901D0000C270 /* AutoResizingMask+.swift */,
@@ -656,6 +669,17 @@
 				D284B1341F7906DA00D94AF3 /* tvOS */,
 			);
 			path = UIKitExtensionsTests;
+			sourceTree = "<group>";
+		};
+		E487376C21DAA3F50094F2EB /* UIKit+Closures */ = {
+			isa = PBXGroup;
+			children = (
+				E487377121DAA6F70094F2EB /* SelectableClosure.swift */,
+				E487377821DAD2A20094F2EB /* UIBarButtonItem+Closures.swift */,
+				E487377F21DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift */,
+				E487378221DAD2C40094F2EB /* UIControl+Closures.swift */,
+			);
+			path = "UIKit+Closures";
 			sourceTree = "<group>";
 		};
 		E499C14521D69F5B0000C270 /* UIViewController */ = {
@@ -1317,6 +1341,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitExtensions-tvOS-Tests/Pods-UIKitExtensions-tvOS-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DarkMagic-tvOS/DarkMagic.framework",
 				"${BUILT_PRODUCTS_DIR}/Swiftest-tvOS/Swiftest.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-tvOS/SwiftTestUtils.framework",
 			);
@@ -1324,6 +1349,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTestUtils.framework",
 			);
@@ -1363,6 +1389,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitExtensions-macOS-Tests/Pods-UIKitExtensions-macOS-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DarkMagic-macOS/DarkMagic.framework",
 				"${BUILT_PRODUCTS_DIR}/Swiftest-macOS/Swiftest.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-macOS/SwiftTestUtils.framework",
 			);
@@ -1370,6 +1397,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTestUtils.framework",
 			);
@@ -1479,6 +1507,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitExtensions-iOS-Tests/Pods-UIKitExtensions-iOS-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DarkMagic-iOS/DarkMagic.framework",
 				"${BUILT_PRODUCTS_DIR}/Swiftest-iOS/Swiftest.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-iOS/SwiftTestUtils.framework",
 			);
@@ -1486,6 +1515,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTestUtils.framework",
 			);
@@ -1506,6 +1536,7 @@
 				E453A67521B9E0B200B5F714 /* CGFloatExtensions.swift in Sources */,
 				E499C13B21D6901D0000C270 /* AutoResizingMask+.swift in Sources */,
 				E499C13221D68D2E0000C270 /* UIView+PixelColor.swift in Sources */,
+				E487378421DAD2C40094F2EB /* UIControl+Closures.swift in Sources */,
 				E4F7E0CD21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E4F7E0E521CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E4A45A3A21D587CA00B96D3E /* UIView+FrameAnimations.swift in Sources */,
@@ -1516,6 +1547,7 @@
 				E499C13521D68D630000C270 /* UIView+VisualEffect.swift in Sources */,
 				E4F7E0EA21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E499C14B21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */,
+				E487378121DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift in Sources */,
 				E4BB9D6621D53C3A001ABC9B /* UIView+Animations.swift in Sources */,
 				E4F7E0DB21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E4BB9D6C21D53C3A001ABC9B /* UIView+ViewHeirarchy.swift in Sources */,
@@ -1523,7 +1555,9 @@
 				E4BB9D6B21D53C3A001ABC9B /* UIViewTags.swift in Sources */,
 				E4BB9D6821D53C3A001ABC9B /* UIViewController+AlertControllers.swift in Sources */,
 				E499C14821D6A3FB0000C270 /* UIViewController+PresentationAwareness.swift in Sources */,
+				E487377321DAA6F70094F2EB /* SelectableClosure.swift in Sources */,
 				E453A6A521B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
+				E487377A21DAD2A20094F2EB /* UIBarButtonItem+Closures.swift in Sources */,
 				E4A45A3421D586CB00B96D3E /* UIView+NibLoading.swift in Sources */,
 				E453A66521B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E4F7E0D621CA1F730061EBB2 /* String+Attributed.swift in Sources */,
@@ -1574,11 +1608,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E499C14D21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */,
+				E487378021DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift in Sources */,
 				E499C13421D68D630000C270 /* UIView+VisualEffect.swift in Sources */,
 				E499C13121D68D2E0000C270 /* UIView+PixelColor.swift in Sources */,
 				E499C12421D5EBD40000C270 /* UIView+Visibility.swift in Sources */,
 				E453A6B321B9E0B200B5F714 /* UICollectionViewExtensions.swift in Sources */,
 				E499C13F21D692840000C270 /* UIViewController+Children.swift in Sources */,
+				E487377921DAD2A20094F2EB /* UIBarButtonItem+Closures.swift in Sources */,
 				E453A64721B9E0B200B5F714 /* NSMutableAttributedStringExtensions.swift in Sources */,
 				E453A65F21B9E0B200B5F714 /* UIImageExtensions.swift in Sources */,
 				E453A67321B9E0B200B5F714 /* CGFloatExtensions.swift in Sources */,
@@ -1606,6 +1642,7 @@
 				E453A66321B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
 				E499C14721D6A3FB0000C270 /* UIViewController+PresentationAwareness.swift in Sources */,
 				E4A45A2D21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */,
+				E487378321DAD2C40094F2EB /* UIControl+Closures.swift in Sources */,
 				E499C14121D692840000C270 /* UIViewController+Loading.swift in Sources */,
 				E453A6AB21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
 				E499C14A21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */,
@@ -1623,6 +1660,7 @@
 				E453A6DB21BAEF7B00B5F714 /* UIViewControllerTransitionCoordinatorExtensions.swift in Sources */,
 				E453A67B21B9E0B200B5F714 /* UILabelExtensions.swift in Sources */,
 				E499C13A21D6901D0000C270 /* AutoResizingMask+.swift in Sources */,
+				E487377221DAA6F70094F2EB /* SelectableClosure.swift in Sources */,
 				E453A6DF21BAEF7B00B5F714 /* UIView+LayerSugar.swift in Sources */,
 				E453A6CB21B9E0B200B5F714 /* UITableViewCellExtensions.swift in Sources */,
 				E453A63F21B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */,

@@ -33,29 +33,6 @@ extension UIAlertAction: UIAlertActionConvertible {
     }
 }
 
-//Overloading function mapping operator
-
-public func => (lhs: AlertActionTitle, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
-    return UIAlertAction(title: lhs, closure: rhs)
-}
-
-public func => (lhs: UIAlertAction, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
-    return UIAlertAction(title: lhs.title, style: lhs.style, closure: rhs)
-}
-
-
-/// UIKitExtensions: Style operator overloaded to create styleable AlertActions from a title and style.
-///
-///         let action: UIAlertAction = "Delete" ~ .destructive
-///
-/// - Parameters:
-///   - lhs: A title for the UIAlertAction
-///   - rhs: An UIAlertAction Style to apply to the title.
-/// - Returns: UIAlertAction with title and style applied.
-public func ~ (lhs: AlertActionTitle, rhs: UIAlertAction.Style) -> UIAlertAction {
-    return UIAlertAction(title: lhs, style: rhs)
-}
-
 extension UIAlertController {
     public func add(actions: [UIAlertAction]) {
         actions.forEach {addAction($0)}
@@ -90,5 +67,29 @@ extension UIAlertAction {
             closure()
         })
     }
+}
+
+// MARK: Operators
+
+//Overloading function mapping operator
+
+public func => (lhs: AlertActionTitle, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
+    return UIAlertAction(title: lhs, closure: rhs)
+}
+
+public func => (lhs: UIAlertAction, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
+    return UIAlertAction(title: lhs.title, style: lhs.style, closure: rhs)
+}
+
+/// UIKitExtensions: Style operator overloaded to create styleable AlertActions from a title and style.
+///
+///         let action: UIAlertAction = "Delete" ~ .destructive
+///
+/// - Parameters:
+///   - lhs: A title for the UIAlertAction
+///   - rhs: An UIAlertAction Style to apply to the title.
+/// - Returns: UIAlertAction with title and style applied.
+public func ~ (lhs: AlertActionTitle, rhs: UIAlertAction.Style) -> UIAlertAction {
+    return UIAlertAction(title: lhs, style: rhs)
 }
 #endif
