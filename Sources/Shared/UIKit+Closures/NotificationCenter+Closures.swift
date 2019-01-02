@@ -29,9 +29,9 @@ public extension NotificationClosureObserver where Self: NSObject {
     /// - Returns: A cancellable notification observation.
     @discardableResult
     public func on(_ name: Notification.Name,
-                            object: Any? = nil,
-                            from notificationCenter: NotificationCenter? = nil,
-                            closure: @escaping NotificationClosure) -> NotificationObservation {
+                   object: Any? = nil,
+                   from notificationCenter: NotificationCenter? = nil,
+                   closure: @escaping NotificationClosure) -> NotificationObservation {
         let notificationCenter = notificationCenter ?? (self as? NotificationCenter) ?? .default
         return addAction(binding: closure, to: { [unowned notificationCenter] in
             notificationCenter.addObserver($0,
@@ -54,9 +54,9 @@ public extension NotificationClosureObserver where Self: NSObject {
     /// - Returns: A cancellable notification observation.
     @discardableResult
     public func on(_ name: Notification.Name,
-                            object: Any? = nil,
-                            from notificationCenter: NotificationCenter? = nil,
-                            closure: @escaping VoidClosure) -> VoidAction {
+                   object: Any? = nil,
+                   from notificationCenter: NotificationCenter? = nil,
+                   closure: @escaping VoidClosure) -> VoidAction {
         let notificationCenter = notificationCenter ?? (self as? NotificationCenter) ?? .default
         return addAction(binding: closure, to: { [unowned notificationCenter] in
             notificationCenter.addObserver($0,
