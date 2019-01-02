@@ -10,19 +10,23 @@
 import UIKit
 import Swiftest
 
-extension UIBarButtonItem: SelectorClosurable & TargetActionable {
+extension UIBarButtonItem: TargetActionable {
 
     public func addTarget(_ target: Any, action: Selector) {
         self.target = target as AnyObject
         self.action = action
     }
-    public func onTap(_ closure: @escaping VoidClosure) {
-        addTargetAction(closure)
-    }
 }
-extension SelectorClosurable where Self: UIBarButtonItem {
-    public func onTap(_ closure: @escaping ClosureIn<Self>) {
-        addTargetAction(closure)
+extension ActionDelegatable where Self: UIBarButtonItem {
+
+    @discardableResult
+    public mutating func onTap(_ closure: @escaping VoidClosure) -> VoidAction {
+        return addTargetAction(closure)
+    }
+
+    @discardableResult
+    public mutating  func onTap(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+        return addTargetAction(closure)
     }
 }
 

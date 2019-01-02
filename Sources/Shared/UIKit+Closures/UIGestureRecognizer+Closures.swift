@@ -10,25 +10,27 @@
 import UIKit
 import Swiftest
 
-extension UIGestureRecognizer: SelectorClosurable & TargetActionable {
-    public func onGesture(_ closure: @escaping VoidClosure) {
-        bind(closure, via: { [weak self] in
-            guard let self = self else { return }
-            self.addTarget($0, action: $1)
-        })
-    }
-    public convenience init(closure: @escaping VoidClosure) {
+extension UIGestureRecognizer: TargetActionable {}
+extension ActionDelegatable where Self: UIGestureRecognizer {
+
+    public init(closure: @escaping VoidClosure) {
         self.init()
         onGesture(closure)
     }
-}
-extension SelectorClosurable where Self: UIGestureRecognizer {
-    public func onGesture(_ closure: @escaping ClosureIn<Self>) {
-        addTargetAction(closure)
+
+    @discardableResult
+    public mutating func onGesture(_ closure: @escaping VoidClosure) -> VoidAction {
+        return addTargetAction(closure)
     }
+
     public init(closure: @escaping ClosureIn<Self>) {
         self.init()
         onGesture(closure)
+    }
+
+    @discardableResult
+    public mutating func onGesture(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+        return addTargetAction(closure)
     }
 }
 

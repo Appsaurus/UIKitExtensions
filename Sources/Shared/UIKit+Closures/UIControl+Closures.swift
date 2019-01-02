@@ -10,21 +10,31 @@
 import UIKit
 import Swiftest
 
-extension UIControl: SelectorClosurable {
+extension ActionDelegatable where Self: UIControl {
 
-    public func on(_ controlEvents: Event, closure: @escaping VoidClosure) {
-        bind(closure, via: { [weak self] in
+    @discardableResult
+    public mutating func addAction(_ closure: @escaping VoidClosure) -> VoidAction {
+        return on(.primaryActionTriggered, closure: closure)
+    }
+
+    @discardableResult
+    public mutating func addAction(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+        return on(.primaryActionTriggered, closure: closure)
+    }
+
+    @discardableResult
+    public mutating func on(_ controlEvents: Event, closure: @escaping VoidClosure) -> VoidAction {
+        return addAction(binding: closure, to: { [weak self] (target, action) in
             guard let self = self else { return }
-            self.addTarget($0, action: $1, for: controlEvents)
+            self.addTarget(target, action: action, for: controlEvents)
         })
     }
-}
 
-extension SelectorClosurable where Self: UIControl {
-    public func on(_ controlEvents: Event, closure: @escaping ClosureIn<Self>) {
-        bind(closure, via: { [weak self] in
+    @discardableResult
+    public mutating func on(_ controlEvents: Event, closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+        return addAction(binding: closure, to: { [weak self] (target, action) in
             guard let self = self else { return }
-            self.addTarget($0, action: $1, for: controlEvents)
+            self.addTarget(target, action: action, for: controlEvents)
         })
     }
 }
