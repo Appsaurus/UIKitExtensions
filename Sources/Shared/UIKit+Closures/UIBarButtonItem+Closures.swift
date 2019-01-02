@@ -20,12 +20,12 @@ extension UIBarButtonItem: TargetActionable {
 extension ActionDelegatable where Self: UIBarButtonItem {
 
     @discardableResult
-    public mutating func onTap(_ closure: @escaping VoidClosure) -> VoidAction {
+    public func onTap(_ closure: @escaping VoidClosure) -> VoidAction {
         return addTargetAction(closure)
     }
 
     @discardableResult
-    public mutating  func onTap(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+    public  func onTap(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
         return addTargetAction(closure)
     }
 }

@@ -15,7 +15,7 @@ public typealias SelectorBindingMethod = (Any, Selector) -> Void
 public protocol Action {
     var key: String { get }
     var selector: Selector { get }
-    
+
     func bind(to method: SelectorBindingMethod) -> Self
 }
 
@@ -68,7 +68,7 @@ public class ActionIn<T>: Action {
     }
 }
 
-public protocol ActionBindable {}
+public protocol ActionBindable: class {}
 
 public extension ActionBindable {
     public func bind<T>(_ closure: @escaping ClosureIn<T>,

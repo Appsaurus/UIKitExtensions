@@ -11,8 +11,8 @@ import DarkMagic
 import Swiftest
 
 public protocol ActionDelegatable: ActionBindable {
-    mutating func addAction(binding closure: @escaping VoidClosure, to method: SelectorBindingMethod) -> VoidAction
-    mutating func addAction<P>(binding closure: @escaping ClosureIn<P>, to method: SelectorBindingMethod) -> ActionIn<P>
+    func addAction(binding closure: @escaping VoidClosure, to method: SelectorBindingMethod) -> VoidAction
+    func addAction<P>(binding closure: @escaping ClosureIn<P>, to method: SelectorBindingMethod) -> ActionIn<P>
 }
 
 private extension AssociatedObjectKeys {
@@ -29,22 +29,22 @@ public extension ActionDelegatable where Self: NSObject {
         }
     }
     @discardableResult
-    public mutating func addAction(binding closure: @escaping VoidClosure,
-                                   to method: SelectorBindingMethod) -> VoidAction {
+    public func addAction(binding closure: @escaping VoidClosure,
+                          to method: SelectorBindingMethod) -> VoidAction {
         let action = bind(closure, to: method)
         actions[action.key] = action
         return action
     }
 
     @discardableResult
-    public mutating func addAction<P>(binding closure: @escaping ClosureIn<P>,
-                                      to method: SelectorBindingMethod) -> ActionIn<P> {
+    public func addAction<P>(binding closure: @escaping ClosureIn<P>,
+                             to method: SelectorBindingMethod) -> ActionIn<P> {
         let action = bind(closure, to: method)
         actions[action.key] = action
         return action
     }
 
-    public mutating func remove(action: Action) {
+    public func remove(action: Action) {
         actions.removeValue(forKey: action.key)
     }
 }

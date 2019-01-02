@@ -15,12 +15,12 @@ public protocol TargetActionable: class {
 
 extension ActionDelegatable where Self: NSObject & TargetActionable {
     @discardableResult
-    public mutating func addTargetAction(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+    public func addTargetAction(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
         return addAction(binding: closure, to: addTarget)
     }
 
     @discardableResult
-    public mutating func addTargetAction(_ closure: @escaping VoidClosure) -> VoidAction {
+    public func addTargetAction(_ closure: @escaping VoidClosure) -> VoidAction {
         return addAction(binding: closure, to: addTarget)
     }
 }

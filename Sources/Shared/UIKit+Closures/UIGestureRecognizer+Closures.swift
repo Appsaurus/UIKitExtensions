@@ -19,7 +19,7 @@ extension ActionDelegatable where Self: UIGestureRecognizer {
     }
 
     @discardableResult
-    public mutating func onGesture(_ closure: @escaping VoidClosure) -> VoidAction {
+    public func onGesture(_ closure: @escaping VoidClosure) -> VoidAction {
         return addTargetAction(closure)
     }
 
@@ -29,7 +29,7 @@ extension ActionDelegatable where Self: UIGestureRecognizer {
     }
 
     @discardableResult
-    public mutating func onGesture(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+    public func onGesture(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
         return addTargetAction(closure)
     }
 }

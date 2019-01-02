@@ -13,17 +13,17 @@ import Swiftest
 extension ActionDelegatable where Self: UIControl {
 
     @discardableResult
-    public mutating func addAction(_ closure: @escaping VoidClosure) -> VoidAction {
+    public func addAction(_ closure: @escaping VoidClosure) -> VoidAction {
         return on(.primaryActionTriggered, closure: closure)
     }
 
     @discardableResult
-    public mutating func addAction(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+    public  func addAction(_ closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
         return on(.primaryActionTriggered, closure: closure)
     }
 
     @discardableResult
-    public mutating func on(_ controlEvents: Event, closure: @escaping VoidClosure) -> VoidAction {
+    public  func on(_ controlEvents: Event, closure: @escaping VoidClosure) -> VoidAction {
         return addAction(binding: closure, to: { [weak self] (target, action) in
             guard let self = self else { return }
             self.addTarget(target, action: action, for: controlEvents)
@@ -31,7 +31,7 @@ extension ActionDelegatable where Self: UIControl {
     }
 
     @discardableResult
-    public mutating func on(_ controlEvents: Event, closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
+    public  func on(_ controlEvents: Event, closure: @escaping ClosureIn<Self>) -> ActionIn<Self> {
         return addAction(binding: closure, to: { [weak self] (target, action) in
             guard let self = self else { return }
             self.addTarget(target, action: action, for: controlEvents)
