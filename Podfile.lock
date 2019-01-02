@@ -1,6 +1,6 @@
 PODS:
   - DarkMagic (0.0.2)
-  - Swiftest (0.0.11)
+  - Swiftest (0.0.12)
   - SwiftLint (0.29.2)
   - SwiftTestUtils (0.1.2)
 
@@ -27,7 +27,7 @@ CHECKOUT OPTIONS:
     :commit: 0dd7dbb31d16ef1afd4ccc75b1179a54296aaaed
     :git: https://github.com/appsaurus/DarkMagic.git
   Swiftest:
-    :commit: 5414b2ddb640fee708c1a120558bbd0cf8bade35
+    :commit: 04f08cde027f74180457600caf53ab29be2ae8ea
     :git: https://github.com/appsaurus/Swiftest.git
   SwiftTestUtils:
     :commit: ee2905865b92773dcbae076a4c585108ad13de90
@@ -35,7 +35,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DarkMagic: b71093ea6606dd5737eca437e63aa8a30db213b5
-  Swiftest: 427378dc087b53ffdb10e3e4c92cd6787c4be70a
+  Swiftest: 98d648aba22af5da50970a0e46b4593f63e911bf
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
   SwiftTestUtils: 72446afda6c7b362fc266f78a5ddb0516869e412
 

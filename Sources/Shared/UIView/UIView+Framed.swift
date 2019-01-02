@@ -11,6 +11,23 @@ import Swiftest
 import UIKit
 
 extension UIView: Framed {
+
+    public var w: CGFloat {
+        get {
+            return width
+        } set(value) {
+            size.w = value
+        }
+    }
+
+    public var h: CGFloat {
+        get {
+            return height
+        } set(value) {
+            size.h = value
+        }
+    }
+    
     public var origin: CGPoint {
         get {
             return frame.origin
