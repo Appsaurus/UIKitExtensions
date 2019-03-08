@@ -111,8 +111,6 @@
 		E499C14B21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */; };
 		E499C14D21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
 		E499C14E21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
-		E4A45A2A21D5833D00B96D3E /* UIView+Framed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2921D5833D00B96D3E /* UIView+Framed.swift */; };
-		E4A45A2B21D5833D00B96D3E /* UIView+Framed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2921D5833D00B96D3E /* UIView+Framed.swift */; };
 		E4A45A2D21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A2E21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A3021D585D600B96D3E /* UIResponder+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */; };
@@ -332,7 +330,6 @@
 		E499C14621D6A3FB0000C270 /* UIViewController+PresentationAwareness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationAwareness.swift"; sourceTree = "<group>"; };
 		E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EasyNavigation.swift"; sourceTree = "<group>"; };
 		E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ActionSugar.swift"; sourceTree = "<group>"; };
-		E4A45A2921D5833D00B96D3E /* UIView+Framed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Framed.swift"; sourceTree = "<group>"; };
 		E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BatchGestureRecognizers.swift"; sourceTree = "<group>"; };
 		E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+ParentViewController.swift"; sourceTree = "<group>"; };
 		E4A45A3221D586CB00B96D3E /* UIView+NibLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
@@ -722,7 +719,6 @@
 				E453A6DA21BAEF7B00B5F714 /* UIView+LayerSugar.swift */,
 				E453A63421B9E0B200B5F714 /* UIViewTags.swift */,
 				E4BB9D5C21D53C10001ABC9B /* UIView+ViewHeirarchy.swift */,
-				E4A45A2921D5833D00B96D3E /* UIView+Framed.swift */,
 				E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */,
 				E4A45A3221D586CB00B96D3E /* UIView+NibLoading.swift */,
 				E4A45A3521D5876600B96D3E /* UIView+Subviews.swift */,
@@ -1544,7 +1540,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E453A64921B9E0B200B5F714 /* NSMutableAttributedStringExtensions.swift in Sources */,
-				E4A45A2B21D5833D00B96D3E /* UIView+Framed.swift in Sources */,
 				E453A67521B9E0B200B5F714 /* CGFloatExtensions.swift in Sources */,
 				E499C13B21D6901D0000C270 /* AutoResizingMask+.swift in Sources */,
 				E499C13221D68D2E0000C270 /* UIView+PixelColor.swift in Sources */,
@@ -1664,7 +1659,6 @@
 				E499C14A21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */,
 				E487378821DC5B790094F2EB /* NotificationCenter+Closures.swift in Sources */,
 				E4BB9D5D21D53C10001ABC9B /* UIView+ViewHeirarchy.swift in Sources */,
-				E4A45A2A21D5833D00B96D3E /* UIView+Framed.swift in Sources */,
 				E4D230D221CAF28C00EBC209 /* IndexPath+ExpressibleByIntegerLiteral.swift in Sources */,
 				E4F7E0D421CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E487379221DD5D210094F2EB /* ActionDelegatable.swift in Sources */,
@@ -2103,10 +2097,6 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4B7GH74X7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitExtensionsTests/Info-iOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.UIKitExtensionsTests;
@@ -2122,10 +2112,6 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4B7GH74X7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitExtensionsTests/Info-iOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.UIKitExtensionsTests;
@@ -2191,10 +2177,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4B7GH74X7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitExtensionsTests/Info-macOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -2214,10 +2196,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4B7GH74X7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitExtensionsTests/Info-macOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

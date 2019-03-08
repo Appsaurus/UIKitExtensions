@@ -41,8 +41,8 @@ public extension UIView {
                                  completion: VoidClosure? = nil) {
 
         moveToMainWindow()
-        let widthScale = destinationFrame.w / w
-        let heightScale = destinationFrame.h / h
+        let widthScale = destinationFrame.w / frame.w
+        let heightScale = destinationFrame.h / frame.h
 
         let scaleTransform = CGAffineTransform(scaleX: widthScale, y: heightScale)
 

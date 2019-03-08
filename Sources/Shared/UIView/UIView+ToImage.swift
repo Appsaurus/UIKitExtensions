@@ -14,13 +14,13 @@ extension UIView {
     public func toImage(transparentBackground: Bool? = nil) -> UIImage {
         guard #available(iOS 10.0, *) else {
             let opaque = transparentBackground != nil ? !transparentBackground! : isOpaque
-            UIGraphicsBeginImageContextWithOptions(size, opaque, 0.0)
+            UIGraphicsBeginImageContextWithOptions(frame.size, opaque, 0.0)
             layer.render(in: UIGraphicsGetCurrentContext()!)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             return UIImage(cgImage: image!.cgImage!)
         }
-        let renderer = UIGraphicsImageRenderer(size: size)
+        let renderer = UIGraphicsImageRenderer(size: frame.size)
         return renderer.image { _ in
             drawHierarchy(in: bounds, afterScreenUpdates: true)
         }
