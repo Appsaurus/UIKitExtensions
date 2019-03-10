@@ -60,7 +60,7 @@ public extension UIApplication {
     public func confirmAndCallPhoneNumber(_ phoneNumber: String) {
         self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
                                                  actions: [ "Yes" => self.callNumber(phoneNumber),
-                                                            "No" ~ .cancel])
+                                                            "No" .~ .cancel])
     }
     
     // MARK: Apple Maps deep links
