@@ -40,7 +40,19 @@ public extension UIViewController {
         }
         nav.popViewController(animated: animated)
         completion?()
+    }
 
+    public func dismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let self = self else { return }
+            self.dismiss(animated: animated, completion: completion)
+        }
+    }
+    public func popOrDismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let self = self else { return }
+            self.popOrDismiss(animated: animated, completion: completion)
+        }
     }
 }
 #endif

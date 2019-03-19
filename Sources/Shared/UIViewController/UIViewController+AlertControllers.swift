@@ -12,18 +12,29 @@ import Swiftest
 
 public extension UIViewController {
 
+    @discardableResult
     public func presentAlert(title: String? = nil,
                              message: String? = nil,
-                             actions: UIAlertActionConvertible...) {
-        presentAlert(title: title, message: message, actions: actions)
+                             autoDismissAfter delay: TimeInterval = 3,
+                             actions: UIAlertActionConvertible...) -> UIAlertController {
+        return presentAlert(title: title,
+                            message: message,
+                            autoDismissAfter: delay,
+                            actions: actions)
     }
 
+    @discardableResult
     public func presentAlert(title: String? = nil,
                              message: String? = nil,
-                             actions: [UIAlertActionConvertible]) {
+                             autoDismissAfter delay: TimeInterval = 3,
+                             actions: [UIAlertActionConvertible]) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.add(actions: actions.map {$0.toAlertAction})
+        if alertController.actions.count == 0 {
+            alertController.dismiss(after: delay)
+        }
         self.present(alertController, animated: true, completion: nil)
+        return alertController
     }
 }
 
