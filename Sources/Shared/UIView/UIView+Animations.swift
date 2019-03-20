@@ -220,7 +220,7 @@ extension UIView {
 }
 
 public class AnimationConfiguration {
-    public static var `default`: AnimationConfiguration = .default
+    public static var `default`: AnimationConfiguration = AnimationConfiguration()
 
     public var duration: TimeInterval
     public var delay: TimeInterval
@@ -234,7 +234,7 @@ public class AnimationConfiguration {
 }
 
 public class SpringAnimationConfiguration {
-    public static var `default`: SpringAnimationConfiguration = .default
+    public static var `default`: SpringAnimationConfiguration = SpringAnimationConfiguration()
 
     public var duration: TimeInterval
     public var delay: TimeInterval
