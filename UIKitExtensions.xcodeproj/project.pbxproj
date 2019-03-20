@@ -28,6 +28,11 @@
 		D5C6294A1C3A7FAA007F7B7C /* UIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* UIKitExtensions.framework */; };
 		D61EC858C68525F843BB206C /* Pods_UIKitExtensions_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E12E9E3C9EF55234D6E814 /* Pods_UIKitExtensions_macOS.framework */; };
 		E43962F121CB5EA3000AF558 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
+		E453684E22428F7500651646 /* UIImage+Modificaiton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453684D22428F7500651646 /* UIImage+Modificaiton.swift */; };
+		E453685022428F7500651646 /* UIImage+Modificaiton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453684D22428F7500651646 /* UIImage+Modificaiton.swift */; };
+		E453685122428F7500651646 /* UIImage+Modificaiton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453684D22428F7500651646 /* UIImage+Modificaiton.swift */; };
+		E453685C2242910300651646 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
+		E453685D2242910400651646 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
 		E453A63B21B9E0B200B5F714 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61121B9E0B000B5F714 /* UIBarButtonItemExtensions.swift */; };
 		E453A63F21B9E0B200B5F714 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61621B9E0B000B5F714 /* UIPageViewControllerExtensions.swift */; };
 		E453A64321B9E0B200B5F714 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61721B9E0B000B5F714 /* UIButtonExtensions.swift */; };
@@ -110,7 +115,6 @@
 		E499C14A21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */; };
 		E499C14B21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */; };
 		E499C14D21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
-		E499C14E21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
 		E4A45A2D21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A2E21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A3021D585D600B96D3E /* UIResponder+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */; };
@@ -271,6 +275,7 @@
 		D5C629491C3A7FAA007F7B7C /* UIKitExtensions-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitExtensions-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10C597E1ECC622A80186F7E /* Pods-UIKitExtensions-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitExtensions-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitExtensions-iOS/Pods-UIKitExtensions-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E439630421CD9234000AF558 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E453684D22428F7500651646 /* UIImage+Modificaiton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+Modificaiton.swift"; path = "Sources/Shared/UIImage+Modificaiton.swift"; sourceTree = SOURCE_ROOT; };
 		E453A60221B9DE4600B5F714 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		E453A60921B9DE4700B5F714 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E453A60A21B9DE4700B5F714 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -658,6 +663,7 @@
 				E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */,
 				E499C12D21D68D040000C270 /* UIColor+RGBA.swift */,
 				E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */,
+				E453684D22428F7500651646 /* UIImage+Modificaiton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1452,7 +1458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --config .swiftlint.yml \n\"${PODS_ROOT}/SwiftLint/swiftlint\" --config .swiftlint.yml \n";
+			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --config .swiftlint.yml \n#\"${PODS_ROOT}/SwiftLint/swiftlint\" --config .swiftlint.yml \n";
 		};
 		E43962F921CD4ED9000AF558 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1555,6 +1561,7 @@
 				E499C13521D68D630000C270 /* UIView+VisualEffect.swift in Sources */,
 				E4F7E0EA21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
 				E499C14B21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */,
+				E453685022428F7500651646 /* UIImage+Modificaiton.swift in Sources */,
 				E487378121DAD2B40094F2EB /* UIGestureRecognizer+Closures.swift in Sources */,
 				E4BB9D6621D53C3A001ABC9B /* UIView+Animations.swift in Sources */,
 				E4F7E0DB21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
@@ -1576,7 +1583,7 @@
 				D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */,
 				E487379021DD5BEB0094F2EB /* TargetActionable+Closures.swift in Sources */,
 				E487379321DD5D210094F2EB /* ActionDelegatable.swift in Sources */,
-				E499C14E21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */,
+				E453685C2242910300651646 /* UIAlertController+ActionSugar.swift in Sources */,
 				E4AF822521C05558002D6E86 /* CGColorExtensions.swift in Sources */,
 				E4A45A2E21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */,
 				E499C12F21D68D040000C270 /* UIColor+RGBA.swift in Sources */,
@@ -1603,9 +1610,11 @@
 				E4F7E0CE21CA1E440061EBB2 /* NSAttributedStringExtensions.swift in Sources */,
 				E4F7E0E621CA208F0061EBB2 /* String+FontSize.swift in Sources */,
 				E4F7E0EB21CA20FB0061EBB2 /* URL+VideoThumbnail.swift in Sources */,
+				E453685D2242910400651646 /* UIAlertController+ActionSugar.swift in Sources */,
 				E4F7E0DC21CA1FD60061EBB2 /* String+Pasteboard.swift in Sources */,
 				E453A6A621B9E0B200B5F714 /* CLPlacemarkExtensions.swift in Sources */,
 				E453A66621B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
+				E453685122428F7500651646 /* UIImage+Modificaiton.swift in Sources */,
 				E4F7E0D721CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E4F7E0E121CA20230061EBB2 /* String+SpellCheck.swift in Sources */,
 				D284B1251F79042800D94AF3 /* watchOS.swift in Sources */,
@@ -1648,6 +1657,7 @@
 				E453A69F21B9E0B200B5F714 /* UITableViewExtensions.swift in Sources */,
 				E4A45A3021D585D600B96D3E /* UIResponder+ParentViewController.swift in Sources */,
 				E453A64321B9E0B200B5F714 /* UIButtonExtensions.swift in Sources */,
+				E453684E22428F7500651646 /* UIImage+Modificaiton.swift in Sources */,
 				E453A6BB21B9E0B200B5F714 /* UIScrollViewExtensions.swift in Sources */,
 				E453A65721B9E0B200B5F714 /* UIBarItem+TitleTextAttributes.swift in Sources */,
 				E453A66321B9E0B200B5F714 /* CALayerExtensions.swift in Sources */,
