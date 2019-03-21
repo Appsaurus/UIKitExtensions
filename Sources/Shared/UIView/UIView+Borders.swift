@@ -15,6 +15,8 @@ extension UIView {
                           color: UIColor = UIColor.white,
                           thickness: CGFloat = 1,
                           padding: CGFloat = 0.0) -> [UIView] {
+
+        var thickness = thickness.scaledToPixels
         var borders = [UIView]()
 
         func border() -> UIView {
