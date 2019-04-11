@@ -10,7 +10,7 @@
 import UIKit
 
 public extension UIFont {
-    public static func printAvailableFonts() {
+    static func printAvailableFonts() {
         for familyName in UIFont.familyNames as [String] {            
             print("\(familyName)")
             for fontName in UIFont.fontNames(forFamilyName: familyName) as [String] {
@@ -20,7 +20,7 @@ public extension UIFont {
         }
     }
     
-    public func sizedToFit(text: String, inHeight height: CGFloat) -> UIFont {
+    func sizedToFit(text: String, inHeight height: CGFloat) -> UIFont {
         var minFontSize: CGFloat = 2
         var maxFontSize: CGFloat = 100
         var fontSizeAverage: CGFloat = 0

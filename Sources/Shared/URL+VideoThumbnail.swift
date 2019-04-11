@@ -26,7 +26,7 @@ public extension URL {
     ///
     /// - Parameter time: Seconds into the video where the image should be generated.
     /// - Returns: The UIImage result of the AVAssetImageGenerator
-    public func thumbnail(fromTime time: Float64 = 0) -> UIImage? {
+    func thumbnail(fromTime time: Float64 = 0) -> UIImage? {
         let imageGenerator = AVAssetImageGenerator(asset: AVAsset(url: self))
         let time = CMTimeMakeWithSeconds(time, preferredTimescale: 1)
         var actualTime = CMTimeMake(value: 0, timescale: 0)

@@ -30,36 +30,36 @@ public extension String {
     private typealias Font = NSFont
     #endif
     
-    public var attributed: NSAttributedString {
+    var attributed: NSAttributedString {
         return NSAttributedString(string: self)
     }
     
-    public func attributed(attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
+    func attributed(attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         return NSMutableAttributedString(string: self, attributes: attributes)
     }
     
     #if os(iOS) || os(macOS)
     /// Swiftest: Bold string.
-    public var bold: NSAttributedString {
+    var bold: NSAttributedString {
         return attributed(attributes: [.font: Font.boldSystemFont(ofSize: Font.systemFontSize)])
     }
     #endif
     
     #if canImport(Foundation)
     /// Swiftest: Underlined string
-    public var underline: NSAttributedString {
+    var underline: NSAttributedString {
         return attributed(attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
     }
     
     /// Swiftest: Strikethrough string.
-    public var strikethrough: NSAttributedString {
+    var strikethrough: NSAttributedString {
         return attributed(attributes: [.strikethroughStyle: NSNumber(value: NSUnderlineStyle.single.rawValue as Int)])
     }
     #endif
     
     #if canImport(UIKit)
     /// Swiftest: Italic string.
-    public var italic: NSAttributedString {
+    var italic: NSAttributedString {
         return attributed(attributes: [.font: UIFont.italicSystemFont(ofSize: UIFont.systemFontSize)])
     }
     
@@ -67,7 +67,7 @@ public extension String {
     ///
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString versions of string colored with given color.
-    public func colored(with color: UIColor) -> NSAttributedString {
+    func colored(with color: UIColor) -> NSAttributedString {
         return attributed(attributes: [.foregroundColor: color])
     }
     #endif

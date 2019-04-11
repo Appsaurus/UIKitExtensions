@@ -11,7 +11,7 @@ import UIKit
 
 public extension UILabel {
     
-    public var fontSize: CGFloat {
+    var fontSize: CGFloat {
         set {
             if let font = self.font {
                 self.font = font.withSize(newValue)
@@ -24,7 +24,7 @@ public extension UILabel {
         }
     }
     
-    public var fontName: String {
+    var fontName: String {
         set {
             self.font = UIFont(name: fontName, size: fontSize)
         }
@@ -33,13 +33,13 @@ public extension UILabel {
         }
     }
     
-    public func adjustFontSizeToFit(height: CGFloat) {
+    func adjustFontSizeToFit(height: CGFloat) {
         
         guard let text = text else { return }
         font = font?.sizedToFit(text: text, inHeight: height)
     }
     
-    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
+    func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
         adjustFontSizeToFit(height: frame.h * scaleFactor)
     }
     
@@ -48,23 +48,23 @@ public extension UILabel {
         self.text = text
     }
     
-    public func wrapWords() {
+    func wrapWords() {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
     }
     
-    public func truncateAfter(lines: Int) {
+    func truncateAfter(lines: Int) {
         numberOfLines = lines
         lineBreakMode = .byTruncatingTail
     }
 }
 
 public extension UILabel {
-    public func addGlowingTextShadow(_ color: UIColor? = nil, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
+    func addGlowingTextShadow(_ color: UIColor? = nil, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
         let color: UIColor = color ?? textColor
         layer.addGlowingShadow(color, radius: radius, opacity: opacity, offset: offset)
     }
-    public func verticallyCenterAllCharactersInAttributedText() {
+    func verticallyCenterAllCharactersInAttributedText() {
         if self.attributedText != nil {
             self.attributedText = self.attributedText?.mutable.verticallyCenterAllCharacters()
         }
@@ -73,7 +73,7 @@ public extension UILabel {
 
 extension UILabel {
     func sizeOfTitle() -> CGSize {
-        return text?.size(withAttributes: [NSAttributedString.Key.font: self.font]) ?? .zero
+        return text?.size(withAttributes: [NSAttributedString.Key.font: self.font as Any]) ?? .zero
     }
 }
 
@@ -88,7 +88,7 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeToFit(maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
+    func fontSizeToFit(maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
         guard let unwrappedText = self.text else {
             return
         }
@@ -104,7 +104,7 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeThatFits(text string: String, maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) -> CGFloat {
+    func fontSizeThatFits(text string: String, maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) -> CGFloat {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let minimumFontSize = maxFontSize * minFontScale

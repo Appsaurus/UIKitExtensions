@@ -24,7 +24,7 @@ public extension String {
     ///
     ///        "SomeText".copyToPasteboard() // copies "SomeText" to pasteboard
     ///
-    public func copyToPasteboard() {
+    func copyToPasteboard() {
         #if os(iOS)
         UIPasteboard.general.string = self
         #elseif os(macOS)

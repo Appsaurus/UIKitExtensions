@@ -20,7 +20,7 @@ private extension AssociatedObjectKeys {
 }
 public extension ActionDelegatable where Self: NSObject {
 
-    public var actions: [String: Action] {
+    var actions: [String: Action] {
         get {
             return self[.actions, [:]]
         }
@@ -29,7 +29,7 @@ public extension ActionDelegatable where Self: NSObject {
         }
     }
     @discardableResult
-    public func addAction(binding closure: @escaping VoidClosure,
+    func addAction(binding closure: @escaping VoidClosure,
                           to method: SelectorBindingMethod) -> VoidAction {
         let action = bind(closure, to: method)
         actions[action.key] = action
@@ -37,14 +37,14 @@ public extension ActionDelegatable where Self: NSObject {
     }
 
     @discardableResult
-    public func addAction<P>(binding closure: @escaping ClosureIn<P>,
+    func addAction<P>(binding closure: @escaping ClosureIn<P>,
                              to method: SelectorBindingMethod) -> ActionIn<P> {
         let action = bind(closure, to: method)
         actions[action.key] = action
         return action
     }
 
-    public func remove(action: Action) {
+    func remove(action: Action) {
         actions.removeValue(forKey: action.key)
     }
 }

@@ -11,19 +11,19 @@ import UIKit
 
 public extension UIView {
 
-    public func disableGestureRecognizers() {
+    func disableGestureRecognizers() {
         gestureRecognizers?.forEach({ (gr) -> Void in
             gr.isEnabled = false
         })
     }
 
-    public func enableGestureRecognizers() {
+    func enableGestureRecognizers() {
         gestureRecognizers?.forEach({ (gr) -> Void in
             gr.isEnabled = true
         })
     }
 
-    public func removeGestureRecognizers() {
+    func removeGestureRecognizers() {
         gestureRecognizers?.forEach({ (gr) -> Void in
             self.removeGestureRecognizer(gr)
         })

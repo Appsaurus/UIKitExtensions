@@ -10,7 +10,7 @@
 import UIKit
 
 public extension UIView {
-    public func color(at point: CGPoint) -> UIColor {
+    func color(at point: CGPoint) -> UIColor {
 
         var pixel: [CUnsignedChar] = [0, 0, 0, 0]
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -27,11 +27,11 @@ public extension UIView {
 
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
-    public func alpha(at point: CGPoint) -> CGFloat {
+    func alpha(at point: CGPoint) -> CGFloat {
         return color(at: point).rgba.alpha
     }
 
-    public func hasAlphaAtPoint(_ point: CGPoint) -> Bool {
+    func hasAlphaAtPoint(_ point: CGPoint) -> Bool {
         return alpha(at: point) > 0.0
     }
 }

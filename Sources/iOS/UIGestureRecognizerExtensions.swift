@@ -14,7 +14,7 @@ private var target = [Target]()
 
 public extension UIGestureRecognizer {
     
-    convenience public init(trailingClosure closure: @escaping VoidClosure) {
+    convenience init(trailingClosure closure: @escaping VoidClosure) {
         // let UIGestureRecognizer do its thing
         self.init()
         
@@ -22,7 +22,7 @@ public extension UIGestureRecognizer {
         self.addTarget(target.last!, action: #selector(Target.invoke))
     }
     
-    public func onRecognition(_ closure: @escaping VoidClosure) {
+    func onRecognition(_ closure: @escaping VoidClosure) {
         target.append(Target(closure))
         self.addTarget(target.last!, action: #selector(Target.invoke))
     }

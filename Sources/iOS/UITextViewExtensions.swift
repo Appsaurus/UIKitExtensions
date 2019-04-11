@@ -11,7 +11,7 @@ import UIKit
 
 public extension UITextView {
     
-    public var fontSize: CGFloat {
+    var fontSize: CGFloat {
         set {
             if let font = self.font {
                 self.font = font.withSize(newValue)
@@ -24,7 +24,7 @@ public extension UITextView {
         }
     }
     
-    public var fontName: String {
+    var fontName: String {
         set {
             self.font = UIFont(name: newValue, size: fontSize)
         }

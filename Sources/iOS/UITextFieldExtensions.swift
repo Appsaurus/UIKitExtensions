@@ -21,7 +21,7 @@ extension UIFont {
     }
 }
 public extension UITextField {
-    public var fontSize: CGFloat {
+    var fontSize: CGFloat {
         set {
             if let font = self.font {
                 self.font = font.withSize(newValue)
@@ -34,7 +34,7 @@ public extension UITextField {
         }
     }
     
-    public var fontName: String {
+    var fontName: String {
         set {
             self.font = UIFont(name: newValue, size: fontSize)
         }
@@ -43,21 +43,21 @@ public extension UITextField {
         }
     }
     
-    public func adjustFontSizeToFit(height: CGFloat) {
+    func adjustFontSizeToFit(height: CGFloat) {
         guard let text = text else { return }
         font = font?.sizedToFit(text: text, inHeight: height)
     }
     
-    public func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
+    func adjustFontSizeToFitHeight(scaleFactor: CGFloat = 1.0) {
         adjustFontSizeToFit(height: textRect(forBounds: bounds).h * scaleFactor)
     }
     
     /// A Boolean value that determines whether the textfield is being edited or is selected.
-    public var isEditingOrSelected: Bool {
+    var isEditingOrSelected: Bool {
         return isEditing || isSelected
     }
     
-    @IBInspectable public var placeholderColor: UIColor {
+    @IBInspectable var placeholderColor: UIColor {
         get {
             return self.attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ?? .systemPlaceholder
         }
@@ -66,7 +66,7 @@ public extension UITextField {
         }
     }
     
-    public var placeholderFont: UIFont {
+    var placeholderFont: UIFont {
         get {            
             return self.attributedPlaceholder?.attribute(.font, at: 0, effectiveRange: nil) as? UIFont ?? .systemPlaceholder
         }

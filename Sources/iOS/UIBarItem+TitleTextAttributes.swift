@@ -12,13 +12,13 @@ import UIKit
 import Swiftest
 
 public extension UIBarItem {
-    public func setTitleTextAttributes(_ attributes: [NSAttributedString.Key: AnyObject]?, forStates states: UIControl.State...) {
+    func setTitleTextAttributes(_ attributes: [NSAttributedString.Key: AnyObject]?, forStates states: UIControl.State...) {
         states.forEach { (state) in
             setTitleTextAttributes(attributes, for: state)
         }
     }
     
-    public func setAttributed(font: UIFont? = nil,
+    func setAttributed(font: UIFont? = nil,
                               textColor: UIColor? = nil,
                               title: String? = nil,
                               forState state: UIControl.State) {
@@ -35,7 +35,7 @@ public extension UIBarItem {
         }
     }
     
-    public func setAttributed(font: UIFont? = nil, textColor: UIColor? = nil, title: String? = nil, forStates states: UIControl.State...) {
+    func setAttributed(font: UIFont? = nil, textColor: UIColor? = nil, title: String? = nil, forStates states: UIControl.State...) {
         states.forEach { (state) in
             setAttributed(font: font, textColor: textColor, title: title, forState: state)
         }

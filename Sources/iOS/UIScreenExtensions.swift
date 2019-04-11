@@ -10,19 +10,19 @@
 import UIKit
 
 public extension UIScreen {
-    public static var screenWidth: CGFloat {
+    static var screenWidth: CGFloat {
         return screenSize.width
     }
     
-    public static var screenHeight: CGFloat {
+    static var screenHeight: CGFloat {
         return screenSize.height
     }
     
-    public static var screenSize: CGSize {
+    static var screenSize: CGSize {
         return screenBounds.size
     }
     
-    public static var screenBounds: CGRect {
+    static var screenBounds: CGRect {
         return UIScreen.main.bounds
     }
     

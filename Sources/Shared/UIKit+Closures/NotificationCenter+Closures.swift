@@ -28,7 +28,7 @@ public extension NotificationClosureObserver where Self: NSObject {
     ///   - closure: The closure to invoke whenever the notification is posted.
     /// - Returns: A cancellable notification observation.
     @discardableResult
-    public func on(_ name: Notification.Name,
+    func on(_ name: Notification.Name,
                    object: Any? = nil,
                    from notificationCenter: NotificationCenter? = nil,
                    closure: @escaping NotificationClosure) -> NotificationObservation {
@@ -53,7 +53,7 @@ public extension NotificationClosureObserver where Self: NSObject {
     ///   - closure: The closure to invoke whenever the notification is posted.
     /// - Returns: A cancellable notification observation.
     @discardableResult
-    public func on(_ name: Notification.Name,
+    func on(_ name: Notification.Name,
                    object: Any? = nil,
                    from notificationCenter: NotificationCenter? = nil,
                    closure: @escaping VoidClosure) -> VoidAction {

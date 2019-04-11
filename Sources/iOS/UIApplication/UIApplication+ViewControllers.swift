@@ -12,11 +12,11 @@ import MapKit
 import Swiftest
 
 public extension UIApplication {
-    public class var topmostViewController: UIViewController? {
+    class var topmostViewController: UIViewController? {
         return UIApplication.shared.topmostViewController
     }
     
-    public var topmostViewController: UIViewController? {
+    var topmostViewController: UIViewController? {
         guard var topController = keyWindow?.rootViewController else {
             return nil
         }
@@ -26,29 +26,29 @@ public extension UIApplication {
         return topController
     }
     
-    public class var topMostWindow: UIWindow? {
+    class var topMostWindow: UIWindow? {
         return UIApplication.shared.windows.last
     }
     
-    public var topMostWindow: UIWindow? {
+    var topMostWindow: UIWindow? {
         return windows.last
     }
     
     ///The root view of the topmost window. Example use case: You can present alert controllers from here without disrupting the state of current first responders in underlying view controllers.
     
-    public class var topWindowRootViewController: UIViewController? {
+    class var topWindowRootViewController: UIViewController? {
         return UIApplication.shared.topMostWindow?.rootViewController
     }
     
-    public var topWindowRootViewController: UIViewController? {
+    var topWindowRootViewController: UIViewController? {
         return topMostWindow?.rootViewController
     }
 
-    public func openURLIfPossible(_ url: URL) {
+    func openURLIfPossible(_ url: URL) {
 
     }
     
-    public func callNumber(_ phoneNumber: String) {
+    func callNumber(_ phoneNumber: String) {
         var phoneNumber = phoneNumber
         let charsToRemove = CharacterSet.decimalDigits.inverted
         phoneNumber = phoneNumber.components(separatedBy: charsToRemove).joined(separator: "")
@@ -57,26 +57,26 @@ public extension UIApplication {
         }
     }
     
-    public func confirmAndCallPhoneNumber(_ phoneNumber: String) {
+    func confirmAndCallPhoneNumber(_ phoneNumber: String) {
         self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
                                                  actions: [ "Yes" => self.callNumber(phoneNumber),
                                                             "No" .~ .cancel])
     }
     
     // MARK: Apple Maps deep links
-    public func openAppleMapsAndDropPin(_ address: String) {
+    func openAppleMapsAndDropPin(_ address: String) {
         var address = address
         address = address.replacingOccurrences(of: " ", with: "+")
         self.openURL(URL(string: "http://maps.apple.com/?address=\(address)")!)
     }
     
-    public func openAppleMapsAndGiveDirections(_ destinationAddress: String) {
+    func openAppleMapsAndGiveDirections(_ destinationAddress: String) {
         var address = destinationAddress
         address = address.replacingOccurrences(of: " ", with: "+")
         self.openURL(URL(string: "http://maps.apple.com/?daddr=\(address)&dirflg=d")!)
     }
     
-    public func openAppleMapsAndGiveDirectionsWithDestinationCoordinates(_ long: String, lat: String) {
+    func openAppleMapsAndGiveDirectionsWithDestinationCoordinates(_ long: String, lat: String) {
         
         let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(long)!, CLLocationDegrees(lat)!)
         let placemark: MKPlacemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
@@ -84,7 +84,7 @@ public extension UIApplication {
         openAppleMapsAndGiveDirections(nil, destination: mapItem)
     }
     
-    public func openAppleMapsAndGiveDirections(_ startLocation: MKMapItem? = MKMapItem.forCurrentLocation(), destination: MKMapItem) {
+    func openAppleMapsAndGiveDirections(_ startLocation: MKMapItem? = MKMapItem.forCurrentLocation(), destination: MKMapItem) {
         let launchOptions: NSDictionary = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving,
                                                        forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
         MKMapItem.openMaps(with: [startLocation!, destination], launchOptions: launchOptions as? [String: AnyObject])
@@ -92,23 +92,23 @@ public extension UIApplication {
 }
 
 public extension UIApplication {
-    public class var mainWindow: UIWindow {
+    class var mainWindow: UIWindow {
         return  UIApplication.shared.delegate!.window!!
     }
 
 }
 
 public extension UIApplication {
-    public class func documentsDirectory() -> URL {
+    class func documentsDirectory() -> URL {
         let fm = FileManager.default
         return fm.urls(for: .documentDirectory, in: .userDomainMask).last!
     }
     
-    public class func enableAutolayoutWarningLog(_ enabled: Bool = true) {
+    class func enableAutolayoutWarningLog(_ enabled: Bool = true) {
         UserDefaults.standard.setValue(enabled, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
     }
     
-    public class func emptyDocumentsDirectory() {
+    class func emptyDocumentsDirectory() {
         debugLog("Attempting to empty documents directory")
         let fileMgr = FileManager()
         
@@ -122,7 +122,7 @@ public extension UIApplication {
         }
     }
     
-    public func refreshAllViews() {
+    func refreshAllViews() {
         for window in self.windows {
             for view in window.subviews {
                 view.removeFromSuperview()
@@ -135,17 +135,17 @@ public extension UIApplication {
 
 public extension UIApplication {
     
-    public class var versionNumber: String {
+    class var versionNumber: String {
         // swiftlint:disable next force_cast
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     }
     
-    public class var buildNumber: String {
+    class var buildNumber: String {
         // swiftlint:disable next force_cast
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
     }
     
-    public class var versionAndBuildNumber: String {
+    class var versionAndBuildNumber: String {
         let version = versionNumber, build = buildNumber
         return version == build ? "v\(version)" : "v\(version)(\(build))"
     }

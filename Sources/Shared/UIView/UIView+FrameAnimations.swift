@@ -11,14 +11,14 @@ import UIKit
 
 public extension UIView {
 
-    public static var mainWindow: UIWindow {
+    static var mainWindow: UIWindow {
         return UIApplication.mainWindow
     }
-    public func frame(in view: UIView) -> CGRect {
+    func frame(in view: UIView) -> CGRect {
         return frameConvertedToCoordinateSpace(of: view)
     }
 
-    public func frameConvertedToCoordinateSpace(of view: UIView) -> CGRect {
+    func frameConvertedToCoordinateSpace(of view: UIView) -> CGRect {
         let immediateParent = superview ?? .mainWindow
         return immediateParent.convert(frame, to: view.superview ?? .mainWindow)
     }
@@ -29,7 +29,7 @@ public extension UIView {
      - returns: New frame coordinates in window coordinate space
      */
     @discardableResult
-    public func moveToMainWindow() -> CGRect {
+    func moveToMainWindow() -> CGRect {
         if superview === UIApplication.mainWindow { return frame}
         let mainWindowFrame = self.frameInMainWindow
         UIApplication.mainWindow.addSubview(self)
@@ -39,12 +39,12 @@ public extension UIView {
         return mainWindowFrame
     }
 
-    public var frameInMainWindow: CGRect {
+    var frameInMainWindow: CGRect {
         guard let superview = superview, superview !== UIApplication.mainWindow else { return frame }
         return superview.convert(frame, to: .mainWindow)
     }
     
-    public func moveToFront() {
+    func moveToFront() {
         superview?.bringSubviewToFront(self)
     }
 }

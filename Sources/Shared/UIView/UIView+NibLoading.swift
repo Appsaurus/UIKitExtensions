@@ -23,7 +23,7 @@ public extension UIView {
 
      - returns: The instantiated view
      */
-    public class func fromNib<T: UIView>(_ nibName: String? = nil) -> T? {
+    class func fromNib<T: UIView>(_ nibName: String? = nil) -> T? {
         let nibName = nibName ?? self.className
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: nibName, bundle: bundle)

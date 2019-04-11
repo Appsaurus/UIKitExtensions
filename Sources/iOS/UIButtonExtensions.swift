@@ -10,7 +10,7 @@
 import UIKit
 
 public extension UIButton {
-    public var fontSize: CGFloat {
+    var fontSize: CGFloat {
         set {
             if let font = self.titleLabel?.font {
                 self.titleLabel?.font = font.withSize(newValue)
@@ -23,7 +23,7 @@ public extension UIButton {
         }
     }
     
-    public var fontName: String {
+    var fontName: String {
         set {
             self.titleLabel?.font = UIFont(name: newValue, size: fontSize)
         }
@@ -32,7 +32,7 @@ public extension UIButton {
         }
     }
     
-    public var disabled: Bool {
+    var disabled: Bool {
         set {
             isEnabled = !newValue
         }
@@ -44,33 +44,33 @@ public extension UIButton {
 
 public extension UIButton {
     
-    public func setTitleColor(_ color: UIColor) {
+    func setTitleColor(_ color: UIColor) {
         setTitleColor(color, for: .normal)
     }
     
-    public func setTitle(_ title: String, forStates states: [UIControl.State]) {
+    func setTitle(_ title: String, forStates states: [UIControl.State]) {
         for state in states {
             setTitle(title, for: state)
         }
     }
     
-    public func setAttributedTitle(_ title: NSAttributedString, forStates states: [UIControl.State]) {
+    func setAttributedTitle(_ title: NSAttributedString, forStates states: [UIControl.State]) {
         for state in states {
             setAttributedTitle(title, for: state)
         }
     }
     
-    public func setAttributedTitle(_ title: String, font: UIFont? = nil, color: UIColor? = nil, forStates states: [UIControl.State]) {
+    func setAttributedTitle(_ title: String, font: UIFont? = nil, color: UIColor? = nil, forStates states: [UIControl.State]) {
         for state in states {
             setAttributedTitle(title, font: font, color: color, forState: state)
         }
     }
-    public func setAttributedTitle(_ title: String, font: UIFont? = nil, color: UIColor? = nil, forState state: UIControl.State) {
+    func setAttributedTitle(_ title: String, font: UIFont? = nil, color: UIColor? = nil, forState state: UIControl.State) {
         let attribTitle = NSMutableAttributedString.attributedString(title, font: font, color: color)
         setAttributedTitle(attribTitle, for: state)
     }
     
-    public func alignImageToLeftAndCenterTitle(_ leftPadding: CGFloat = 10.0, centerInEntireFrame: Bool = true) {
+    func alignImageToLeftAndCenterTitle(_ leftPadding: CGFloat = 10.0, centerInEntireFrame: Bool = true) {
         imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         contentEdgeInsets = UIEdgeInsets.zero
         contentHorizontalAlignment = .left
@@ -85,7 +85,7 @@ public extension UIButton {
         titleEdgeInsets = UIEdgeInsets(top: 0.0, left: leftInsetForTitleLabel, bottom: 0.0, right: 0.0)
     }
     
-    public func centerTitle(_ contentInsets: UIEdgeInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 10.0)) {
+    func centerTitle(_ contentInsets: UIEdgeInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 10.0)) {
         titleLabel?.textAlignment = .center
         contentHorizontalAlignment = .center
         titleEdgeInsets = UIEdgeInsets.zero

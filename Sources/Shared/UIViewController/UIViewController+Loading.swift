@@ -13,15 +13,15 @@ import Swiftest
 
 public extension UIViewController {
     
-    public func preloadView() {
+    func preloadView() {
         _ = view
     }
-    public func preloadViewsRecursively() {
+    func preloadViewsRecursively() {
         preloadView()
         nestedChildren().callOnEach(UIViewController.preloadView)
     }
 
-    public func loadViewsRecursivelyIfNeeded() {
+    func loadViewsRecursivelyIfNeeded() {
         loadViewIfNeeded()
         nestedChildren().callOnEach(UIViewController.loadViewIfNeeded)
     }

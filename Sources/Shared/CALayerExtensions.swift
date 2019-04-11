@@ -12,7 +12,7 @@ import UIKit
 
 public extension CALayer {
     
-    public func addGlowingShadow(_ color: UIColor, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
+    func addGlowingShadow(_ color: UIColor, radius: CGFloat = 5.0, opacity: Float = 1.0, offset: CGSize = CGSize.zero) {
         shadowColor = color.cgColor
         shadowRadius = radius
         shadowOpacity = opacity
@@ -20,13 +20,13 @@ public extension CALayer {
         masksToBounds = false
     }
     
-    public func resetShadow() {
+    func resetShadow() {
         shadowRadius = 3.0
         shadowOpacity = 0.0
         shadowOffset = CGSize(width: 0.0, height: -3.0)
     }
     
-    public func addBorder(_ edge: UIRectEdge,
+    func addBorder(_ edge: UIRectEdge,
                           color: UIColor,
                           thickness: CGFloat,
                           distance: CGFloat = CGFloat(0.0)) -> CALayer {

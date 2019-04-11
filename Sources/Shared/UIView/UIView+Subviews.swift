@@ -12,7 +12,7 @@ import Swiftest
 
 public extension UIView {
 
-    public func animate(to destinationFrame: CGRect,
+    func animate(to destinationFrame: CGRect,
                         in destinationSuperview: UIView = UIApplication.mainWindow,
                         using configuration: AnimationConfiguration = .default,
                         additionalAnimations: VoidClosure? = nil,
@@ -34,7 +34,7 @@ public extension UIView {
 
     //swiftlint:disable:next todo
     //FIXME: This works for one animation on a view and scales nicely, but any subsequent animation on the same view seems to break. I think this has something to do with the transform no longer being equal to identity, and the frame no longer being valid after the first animation.
-    public func animateTransform(to destinationFrame: CGRect,
+    func animateTransform(to destinationFrame: CGRect,
                                  in destinationSuperview: UIView = UIApplication.mainWindow,
                                  using configuration: AnimationConfiguration = .default,
                                  additionalAnimations: VoidClosure? = nil,
@@ -61,24 +61,24 @@ public extension UIView {
                 completion?()
         })
     }
-    public func addSubviews(_ views: UIView...) {
+    func addSubviews(_ views: UIView...) {
         views.forEach {addSubview($0)}
     }
-    public func addSubviews(_ views: [UIView]) {
+    func addSubviews(_ views: [UIView]) {
         views.forEach {addSubview($0)}
     }
 
     //Optional subiews
 
-    public func addSubview(_ optionalSubview: UIView?) {
+    func addSubview(_ optionalSubview: UIView?) {
         guard let view = optionalSubview else { return }
         addSubview(view)
     }
-    public func addSubviews(_ optionalSubviews: [UIView?]) {
+    func addSubviews(_ optionalSubviews: [UIView?]) {
         addSubviews(optionalSubviews.removeNils())
     }
 
-    public func addSubviews(_ optionalSubviews: UIView?...) {
+    func addSubviews(_ optionalSubviews: UIView?...) {
         addSubviews(optionalSubviews.removeNils())
     }
 }

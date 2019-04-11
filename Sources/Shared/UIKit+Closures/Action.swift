@@ -71,12 +71,12 @@ public class ActionIn<T>: Action {
 public protocol ActionBindable: class {}
 
 public extension ActionBindable {
-    public func bind<T>(_ closure: @escaping ClosureIn<T>,
+    func bind<T>(_ closure: @escaping ClosureIn<T>,
                         to method: SelectorBindingMethod) -> ActionIn<T> {
         return ActionIn<T>(closure).bind(to: method)
     }
 
-    public func bind(_ closure: @escaping VoidClosure,
+    func bind(_ closure: @escaping VoidClosure,
                      to method: SelectorBindingMethod) -> VoidAction {
         return VoidAction(closure).bind(to: method)
     }

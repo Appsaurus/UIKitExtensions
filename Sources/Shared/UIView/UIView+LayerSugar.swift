@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Corner Rounding
 public extension UIView {
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -23,11 +23,11 @@ public extension UIView {
         }
     }
 
-    public func roundCorners() {
+    func roundCorners() {
         cornerRadius = frame.minSideLength/2.0
     }
 
-    public func roundCornersUsingLayerMask(_ corners: UIRectCorner, radius: CGFloat) {
+    func roundCornersUsingLayerMask(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(side: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -38,7 +38,7 @@ public extension UIView {
 // MARK: Borders
 public extension UIView {
 
-    @IBInspectable public var borderWidth: CGFloat {
+    @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -46,7 +46,7 @@ public extension UIView {
             layer.borderWidth = (newValue / UIScreen.main.scale)
         }
     }
-    @IBInspectable public var borderColor: UIColor? {
+    @IBInspectable var borderColor: UIColor? {
         get {
             if let cBorderColor = layer.borderColor {
                 return UIColor(cgColor: cBorderColor)
@@ -60,7 +60,7 @@ public extension UIView {
         
     }
 
-    public func addBorder(_ width: CGFloat, color: UIColor) {
+    func addBorder(_ width: CGFloat, color: UIColor) {
         layer.borderWidth = width / UIScreen.main.scale
         layer.borderColor = color.cgColor
     }
@@ -68,12 +68,12 @@ public extension UIView {
 
 // MARK: Rendering Optimization
 public extension UIView {
-    public func optimizeSubviews() {
+    func optimizeSubviews() {
         subviews.forEach { (view) in
             view.optimizeRendering()
         }
     }
-    public func optimizeRendering() {
+    func optimizeRendering() {
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
         layer.isOpaque = true

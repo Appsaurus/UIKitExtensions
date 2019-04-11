@@ -1,27 +1,36 @@
 PODS:
-  - Swiftest (0.0.7)
-  - UIKitExtensions (0.0.5):
+  - DarkMagic (0.0.4)
+  - Swiftest (0.0.18)
+  - UIKitExtensions (0.0.18):
+    - DarkMagic
     - Swiftest
 
 DEPENDENCIES:
+  - DarkMagic (from `https://github.com/appsaurus/DarkMagic.git`)
   - Swiftest (from `https://github.com/appsaurus/Swiftest.git`)
   - UIKitExtensions (from `../../`)
 
 EXTERNAL SOURCES:
+  DarkMagic:
+    :git: https://github.com/appsaurus/DarkMagic.git
   Swiftest:
     :git: https://github.com/appsaurus/Swiftest.git
   UIKitExtensions:
     :path: "../../"
 
 CHECKOUT OPTIONS:
+  DarkMagic:
+    :commit: b6e5a19acc048e21d9caa18a95915137f99beb74
+    :git: https://github.com/appsaurus/DarkMagic.git
   Swiftest:
-    :commit: d06b5bf1b3ad0ba1fb0da56b8e0ce7cb17c33c06
+    :commit: 48d78074e32b2d95ae097e1e0ffe96ec6ce66c67
     :git: https://github.com/appsaurus/Swiftest.git
 
 SPEC CHECKSUMS:
-  Swiftest: 01e61763b756919cdf244e1429670dcad08fb91d
-  UIKitExtensions: b2463090413fe065041c029368f62ff951b6b69c
+  DarkMagic: ccb2f3da6cd0b07b96cd44b3033d998dd6a8cddd
+  Swiftest: 408f5c420196665271cf1cf2a81b6cb1839998c1
+  UIKitExtensions: e39ded4e82a3833ac350efabe521c8b6011fd07f
 
-PODFILE CHECKSUM: f44f65a54315bb877d8de1cac2a8491c9d4b5f9a
+PODFILE CHECKSUM: 3cc73835a85bf308ae82a10a08e22e75d7ec21f5
 
 COCOAPODS: 1.5.3

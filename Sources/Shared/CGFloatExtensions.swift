@@ -11,11 +11,11 @@ import UIKit
 import Swiftest
 
 public extension CGFloatConvertible {
-    public var scaledToPoints: CGFloat {
+    var scaledToPoints: CGFloat {
         return self.cgFloat / UIScreen.main.scale
     }
 
-    public var scaledToPixels: CGFloat {
+    var scaledToPixels: CGFloat {
         return self.cgFloat * UIScreen.main.scale
     }
 }

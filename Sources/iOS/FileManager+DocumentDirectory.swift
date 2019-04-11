@@ -11,11 +11,11 @@ import UIKit
 import Swiftest
 
 public extension FileManager {
-    public var documentsDirectory: URL {
+    var documentsDirectory: URL {
         return urls(for: .documentDirectory, in: .userDomainMask)[0]
     }
     
-    public func emptyDocumentsDirectory() throws {
+    func emptyDocumentsDirectory() throws {
         let directoryPath = documentsDirectory.absoluteString
         
         guard let directoryContents = try? contentsOfDirectory(atPath: directoryPath) else { return }

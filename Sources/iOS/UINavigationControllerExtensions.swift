@@ -18,14 +18,14 @@ public extension UINavigationController {
      - parameter animated:       Whether or not the push should be animated
      - parameter completion:     Closure to run after push has finished
      */
-    public func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping VoidClosure) {
+    func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping VoidClosure) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
         pushViewController(viewController, animated: animated)
         CATransaction.commit()
     }
     
-    public var previousViewController: UIViewController? {
+    var previousViewController: UIViewController? {
         guard viewControllers.count > 1 else {
             return nil
         }

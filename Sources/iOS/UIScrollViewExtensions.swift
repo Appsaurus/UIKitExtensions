@@ -14,20 +14,20 @@ public enum UIScrollViewOffsetPosition {
 }
 public extension UIScrollView {
     
-    public func scrollToTop(_ animated: Bool = true) {
+    func scrollToTop(_ animated: Bool = true) {
         setContentOffset(CGPoint(x: contentOffset.x, y: verticalOffsetForTop), animated: animated)
     }
     
-    public func scrollToBottom(_ animated: Bool = true) {
+    func scrollToBottom(_ animated: Bool = true) {
         setContentOffset(CGPoint(x: contentOffset.x, y: verticalOffsetForBottom), animated: animated)
     }
 
     //Note: 999999999.99 magic number is because CGFloat.min and max will crash this
-    public var yOffsetPosition: UIScrollViewOffsetPosition {
+    var yOffsetPosition: UIScrollViewOffsetPosition {
         return self.calculateYOffsetPostition(for: contentOffset.y)
     }
     
-    public func calculateYOffsetPostition(for offset: CGFloat) -> UIScrollViewOffsetPosition {
+    func calculateYOffsetPostition(for offset: CGFloat) -> UIScrollViewOffsetPosition {
         switch offset {
         case -999999999.99..<verticalOffsetForTop:
             return .bouncingTop
@@ -45,7 +45,7 @@ public extension UIScrollView {
         }
     }
     
-    public var verticalOffsetForTop: CGFloat {
+    var verticalOffsetForTop: CGFloat {
         let topInset = contentInset.top
         if topInset == 0.0 {
             return topInset
@@ -53,7 +53,7 @@ public extension UIScrollView {
         return -topInset
     }
     
-    public var verticalOffsetForBottom: CGFloat {
+    var verticalOffsetForBottom: CGFloat {
         let scrollViewHeight = bounds.height
         let scrollContentSizeHeight = contentSize.height
         let bottomInset = contentInset.bottom
@@ -61,11 +61,11 @@ public extension UIScrollView {
         return max(scrollViewBottomOffset, verticalOffsetForTop + 0.1)
     }
     
-    public var hasReachedBottomOfContent: Bool {
+    var hasReachedBottomOfContent: Bool {
         return [.bottom, .bouncingBottom].contains(yOffsetPosition)
     }
     
-    public var hasReachedTopOfContent: Bool {
+    var hasReachedTopOfContent: Bool {
         return [.top, .bouncingTop].contains(yOffsetPosition)
     }
 }

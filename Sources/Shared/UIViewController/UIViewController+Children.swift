@@ -12,7 +12,7 @@ import Swiftest
 
 public extension UIViewController {
     
-    public func add(_ child: UIViewController, to container: UIView) {
+    func add(_ child: UIViewController, to container: UIView) {
         child.view.frame = container.bounds
         container.addSubview(child.view)
         child.view.autoresizingMask = .flexibleSize
@@ -21,14 +21,14 @@ public extension UIViewController {
         child.didMove(toParent: self)
     }
     
-    public func remove(_ child: UIViewController) {
+    func remove(_ child: UIViewController) {
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
         child.didMove(toParent: nil)
     }
     
-    public func swap(out oldChild: UIViewController,
+    func swap(out oldChild: UIViewController,
                      with newChild: UIViewController,
                      into container: UIView? = nil,
                      animated: Bool = true,
@@ -39,14 +39,14 @@ public extension UIViewController {
         completion?()
     }
 
-    public func callOnNestedHeirachy(_ method: MethodOf<UIViewController>,
+    func callOnNestedHeirachy(_ method: MethodOf<UIViewController>,
                                      includeSelf: Bool = true,
                                      childSearchConfiguration: ChildViewControllerSearchConfiguration = .all(recursive: true)) {
         if includeSelf { call(method, on: self) }
         nestedChildren(childSearchConfiguration).callOnEach(method)
     }
 
-    public func nestedChildren(_ configuration: ChildViewControllerSearchConfiguration = .all(recursive: true)) -> [UIViewController] {
+    func nestedChildren(_ configuration: ChildViewControllerSearchConfiguration = .all(recursive: true)) -> [UIViewController] {
         var allChildren: [UIViewController] = children
         var managerTypes: [ViewControllerManagerType] = []
         var recursive: Bool = false

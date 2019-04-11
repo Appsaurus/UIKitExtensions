@@ -37,6 +37,8 @@ extension UIInterfaceOrientation {
             return allowFlipOnAxis ? [.landscapeLeft, .landscapeRight] : [.landscapeLeft]
         case .unknown:
             return [.portrait]
+        @unknown default:
+            fatalError()
         }
     }
     

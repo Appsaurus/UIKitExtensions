@@ -13,7 +13,7 @@ import Swiftest
 public extension UIViewController {
 
     @discardableResult
-    public func presentAlert(title: String? = nil,
+    func presentAlert(title: String? = nil,
                              message: String? = nil,
                              autoDismissAfter delay: TimeInterval = 3,
                              actions: UIAlertActionConvertible...) -> UIAlertController {
@@ -24,7 +24,7 @@ public extension UIViewController {
     }
 
     @discardableResult
-    public func presentAlert(title: String? = nil,
+    func presentAlert(title: String? = nil,
                              message: String? = nil,
                              autoDismissAfter delay: TimeInterval = 3,
                              actions: [UIAlertActionConvertible]) -> UIAlertController {

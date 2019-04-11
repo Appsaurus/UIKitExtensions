@@ -12,10 +12,10 @@ import Swiftest
 
 public extension UIImage {
     
-    public var minSideLength: CGFloat {
+    var minSideLength: CGFloat {
         return min(size.width, size.height)
     }
-    public var maxSideLength: CGFloat {
+    var maxSideLength: CGFloat {
         return max(size.width, size.height)
     }
     
@@ -25,7 +25,7 @@ public extension UIImage {
      - Parameter size: The size of the image to create.
      - Returns: A UIImage that is the color passed in.
      */
-    public class func image(ofColor color: UIColor, size: CGSize) -> UIImage? {
+    class func image(ofColor color: UIColor, size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
@@ -45,7 +45,7 @@ public extension UIImage {
         return image?.withRenderingMode(.alwaysOriginal)
     }	
     
-    public func croppedtoRect(_ rect: CGRect) -> UIImage? {
+    func croppedtoRect(_ rect: CGRect) -> UIImage? {
         UIGraphicsBeginImageContext(size)
         
         draw(in: CGRect(origin: CGPoint.zero, size: size))
@@ -59,11 +59,11 @@ public extension UIImage {
         return nil
     }
     
-    public func rotated(by degrees: CGFloat) -> UIImage {
+    func rotated(by degrees: CGFloat) -> UIImage {
         return UIImage.rotate(img: self, by: degrees)
     }
     
-    public class func rotate(img: UIImage, by degrees: CGFloat) -> UIImage {
+    class func rotate(img: UIImage, by degrees: CGFloat) -> UIImage {
         
         let rotatedViewBox = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height))        
         rotatedViewBox.transform = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
@@ -88,7 +88,7 @@ public extension UIImage {
     }
     
     @available(iOS 10.0, *)
-    public func rotated(by rotationAngle: Measurement<UnitAngle>, options: ImageRotationOptions = []) -> UIImage? {
+    func rotated(by rotationAngle: Measurement<UnitAngle>, options: ImageRotationOptions = []) -> UIImage? {
         
         guard let cgImage = self.cgImage else { return nil }
 
@@ -170,6 +170,8 @@ extension UIImage {
             return CGImagePropertyOrientation.right
         case .rightMirrored:
             return CGImagePropertyOrientation.rightMirrored
+        @unknown default:
+            fatalError()
         }
     }
 }

@@ -12,12 +12,12 @@ import UIKit
 public extension UIView {
 
     @discardableResult
-    public func setBackgroundBlur(style: UIBlurEffect.Style) -> UIVisualEffectView {
+    func setBackgroundBlur(style: UIBlurEffect.Style) -> UIVisualEffectView {
         return setBackground(effect: UIBlurEffect(style: style))
     }
 
     @discardableResult
-    public func setBackground(effect: UIVisualEffect) -> UIVisualEffectView {
+    func setBackground(effect: UIVisualEffect) -> UIVisualEffectView {
         let effectView = UIVisualEffectView(effect: effect)
         effectView.frame = bounds
         effectView.autoresizingMask = .flexibleSize
