@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIKitExtensions"
   s.summary          = "A short description of UIKitExtensions."
-  s.version          = "0.0.19"
+  s.version          = "0.0.20"
   s.homepage         = "github.com/Strobocop/UIKitExtensions"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   
   s.social_media_url = 'https://twitter.com/Strobocop'
   
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.requires_arc = true
   
   s.ios.deployment_target = '9.0'
