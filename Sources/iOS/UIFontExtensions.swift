@@ -62,5 +62,9 @@ public extension UIFont {
         }
         return withSize(fontSizeAverage)
     }
+
+    func with(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
+        return UIFont(descriptor: fontDescriptor.withSymbolicTraits(.trait), size: pointSize)
+    }
 }
 #endif
