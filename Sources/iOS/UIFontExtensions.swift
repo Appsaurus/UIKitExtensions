@@ -64,7 +64,7 @@ public extension UIFont {
     }
 
     func with(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
-        return UIFont(descriptor: fontDescriptor.withSymbolicTraits(.trait), size: pointSize)
+        return UIFont(descriptor: fontDescriptor.withSymbolicTraits(traits)!, size: pointSize)
     }
 }
 #endif
