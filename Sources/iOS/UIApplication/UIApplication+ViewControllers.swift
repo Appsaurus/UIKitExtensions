@@ -44,22 +44,49 @@ public extension UIApplication {
         return topMostWindow?.rootViewController
     }
 
-    func openURLIfPossible(_ url: URL) {
+
+    @discardableResult
+    func openURL(_ urlString: String) throws {
+        guard let url = urlString.url else {
+            throw URLError(.badURL)
+        }
+        try openURLIfPossible(url)
+    }
+    @discardableResult
+    func openURLIfPossible(_ urlString: String) throws {
+        guard let url = urlString.url else {
+            throw URLError(.badURL)
+        }
+        try openURLIfPossible(url)
+    }
+
+    @discardableResult
+    func openURLIfPossible(_ url: URL) throws {
+        guard canOpenURL(url) else {
+            throw URLError(.badURL)
+        }
+        openURL(url)
 
     }
     
-    func callNumber(_ phoneNumber: String) {
+    func callNumber(_ phoneNumber: String) throws {
         var phoneNumber = phoneNumber
         let charsToRemove = CharacterSet.decimalDigits.inverted
         phoneNumber = phoneNumber.components(separatedBy: charsToRemove).joined(separator: "")
-        if let phoneCallURL: URL = "tel://\(phoneNumber)".url {
-            openURLIfPossible(phoneCallURL)
-        }
+        try openURLIfPossible("tel://\(phoneNumber)")
     }
     
     func confirmAndCallPhoneNumber(_ phoneNumber: String) {
+        let callAction = { [weak self] in
+            do{
+                try self?.callNumber(phoneNumber)
+            }
+            catch{
+                self?.topmostViewController?.showError(error: error)
+            }
+        }
         self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
-                                                 actions: [ "Yes" => self.callNumber(phoneNumber),
+                                                actions: [ "Yes" => callAction(),
                                                             "No" .~ .cancel])
     }
     
