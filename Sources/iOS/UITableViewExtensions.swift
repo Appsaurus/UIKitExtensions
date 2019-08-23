@@ -77,8 +77,9 @@ public extension UITableView {
     }
 }
 
-extension UITableView {
-	public func reloadData(completion: @escaping () -> Void) {
+
+public extension UITableView {
+	func reloadData(completion: @escaping () -> Void) {
 		UIView.animate(withDuration: 0, animations: {
 			DispatchQueue.main.async {
 				self.reloadData()
