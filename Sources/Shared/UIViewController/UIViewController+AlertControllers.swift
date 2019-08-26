@@ -15,7 +15,7 @@ public extension UIViewController {
     @discardableResult
     func presentAlert(title: String? = nil,
                              message: String? = nil,
-                             autoDismissAfter delay: TimeInterval = 3,
+                             autoDismissAfter delay: TimeInterval = 2,
                              actions: UIAlertActionConvertible...) -> UIAlertController {
         return presentAlert(title: title,
                             message: message,
@@ -26,7 +26,7 @@ public extension UIViewController {
     @discardableResult
     func presentAlert(title: String? = nil,
                              message: String? = nil,
-                             autoDismissAfter delay: TimeInterval = 3,
+                             autoDismissAfter delay: TimeInterval = 2,
                              actions: [UIAlertActionConvertible]) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.add(actions: actions.map {$0.toAlertAction})
