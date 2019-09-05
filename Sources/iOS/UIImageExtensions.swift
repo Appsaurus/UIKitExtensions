@@ -175,4 +175,47 @@ extension UIImage {
         }
     }
 }
+
+@available(iOS 10.0, *)
+public extension UIImage {
+    func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvas = CGSize(width: size.width * percentage, height: size.height * percentage)
+        return UIGraphicsImageRenderer(size: canvas, format: imageRendererFormat).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        return UIGraphicsImageRenderer(size: canvas, format: imageRendererFormat).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+}
+
+public extension UIImage {
+    func compressTo(_ expectedSizeInMB:Int) -> UIImage? {
+        let sizeInBytes = expectedSizeInMB * 1000000
+        var needCompress:Bool = true
+        var imgData:Data?
+        var compressingValue:CGFloat = 1.0
+        while (needCompress && compressingValue > 0.0) {
+            if let data:Data = jpegData(compressionQuality: compressingValue) {
+                if data.bytes.count < sizeInBytes {
+                    needCompress = false
+                    imgData = data
+                } else {
+                    compressingValue -= 0.1
+                }
+            }
+        }
+
+        if let data = imgData {
+            if (data.bytes.count < sizeInBytes) {
+                return UIImage(data: data)
+            }
+        }
+        return nil
+    }
+}
 #endif
+
