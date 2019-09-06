@@ -164,17 +164,45 @@ public extension UIApplication {
     
     class var versionNumber: String {
         // swiftlint:disable next force_cast
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        return Bundle.main.versionNumber!
     }
     
     class var buildNumber: String {
         // swiftlint:disable next force_cast
-        return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
+        return Bundle.main.buildNumber!
     }
     
     class var versionAndBuildNumber: String {
         let version = versionNumber, build = buildNumber
-        return version == build ? "v\(version)" : "v\(version)(\(build))"
+        return "\(versionNumber)(\(buildNumber))"
+    }
+
+    class var displayName: String {
+        // swiftlint:disable next force_cast
+        return Bundle.main.displayName!
+    }
+
+    class var majorAppVersion: String {
+        // swiftlint:disable next force_cast
+        return versionNumber.components(separatedBy: ".").first!
+    }
+}
+
+public extension Bundle {
+    // Name of the app - title under the icon.
+    var displayName: String? {
+        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ??
+            object(forInfoDictionaryKey: "CFBundleName") as? String
+    }
+
+    var versionNumber: String? {
+        // swiftlint:disable next force_cast
+        return object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+    }
+
+    var buildNumber: String? {
+        // swiftlint:disable next force_cast
+        return object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String
     }
 }
 #endif
