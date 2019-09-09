@@ -9,26 +9,40 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
 
-    public func registerReusable(cellClass: UICollectionViewCell.Type) {
-        register(cellClass, forCellWithReuseIdentifier: cellClass.defaultIdentifier)
+    func register<Cell: UICollectionViewCell>(_ cellType: Cell.Type, with identifier: String? = nil) {
+        register(cellType, forCellWithReuseIdentifier: identifier ?? cellType.defaultReuseIdentifier)
     }
     
-    public func dequeueReusableCell<C: UICollectionViewCell>(for indexPath: IndexPath) -> C {
+    func dequeueReusableCell<Cell: UICollectionViewCell>(_ indexPath: IndexPath, with identifier: String? = nil) -> Cell {
+        let identifier = identifier ?? Cell.defaultReuseIdentifier
         // swiftlint:disable:next force_cast
-        return dequeueReusableCell(withReuseIdentifier: C.self.defaultIdentifier, for: indexPath) as! C
+        return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! Cell
     }
 
-    public func dequeueReusableCell<C: UICollectionViewCell>(for index: Int) -> C {
+    func dequeueReusableCell<Cell: UICollectionViewCell>(for index: Int) -> Cell {
         // swiftlint:disable:next force_cast
-        return dequeueReusableCell(withReuseIdentifier: C.self.defaultIdentifier, for: IndexPath(item: index, section: 0)) as! C
+        return dequeueReusableCell(withReuseIdentifier: Cell.self.defaultReuseIdentifier, for: IndexPath(item: index, section: 0)) as! Cell
     }
 }
 
-extension UICollectionViewCell {
-    public static var defaultIdentifier: String {
-        return className + "Identifier"
+public extension UICollectionView {
+    func registerSectionHeader(_ viewType: UICollectionReusableView.Type, with identifier: String? = nil) {
+        self.register(viewType, with: identifier, for: UICollectionView.elementKindSectionHeader)
+    }
+
+    func registerSectionFooter(_ viewType: UICollectionReusableView.Type, with identifier: String? = nil) {
+        self.register(viewType, with: identifier, for: UICollectionView.elementKindSectionFooter)
+    }
+    func register(_ viewType: UICollectionReusableView.Type, with identifier: String? = nil, for supplementaryViewKind: String) {
+        let identifier = identifier ?? viewType.defaultReuseIdentifier
+        register(viewType.self, forSupplementaryViewOfKind: supplementaryViewKind, withReuseIdentifier: identifier)
+    }
+
+    func dequeueReusableView<View: UICollectionReusableView>(of kind: String, at indexPath: IndexPath) -> View {
+        // swiftlint:disable:next force_cast
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: View.defaultReuseIdentifier, for: indexPath) as! View
     }
 }
 

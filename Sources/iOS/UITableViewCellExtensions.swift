@@ -15,9 +15,7 @@ public extension UITableViewCell {
         backgroundView?.backgroundColor = UIColor.clear
     }
     
-    class var defaultReuseIdentifier: String {
-        return className + "Identifier"
-    }
+
     
     func hideSeparatorInset() {
         self.layoutMargins = UIEdgeInsets.zero
@@ -32,6 +30,12 @@ public extension UITableViewCell {
         let bgView = UIView()
         bgView.backgroundColor = color
         self.selectedBackgroundView = bgView
+    }
+}
+
+public extension UIView {
+    class var defaultReuseIdentifier: String {
+        return className + "Identifier"
     }
 }
 #endif
