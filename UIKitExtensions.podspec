@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIKitExtensions"
   s.summary          = "A short description of UIKitExtensions."
-  s.version          = "0.0.22"
+  s.version          = "0.0.23"
   s.homepage         = "github.com/Strobocop/UIKitExtensions"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
