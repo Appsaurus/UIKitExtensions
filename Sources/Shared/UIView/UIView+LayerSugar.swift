@@ -27,14 +27,68 @@ public extension UIView {
         cornerRadius = frame.minSideLength/2.0
     }
 
-    func roundCornersUsingLayerMask(_ corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(side: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        roundCorners(corners.toCACornerMask, radius: radius)
+    }
+    func roundCorners(_ corners: CACornerMask, radius: CGFloat) {
+        if #available(iOS 11, *) {
+            self.layer.cornerRadius = radius
+            self.layer.maskedCorners = corners
+        } else {
+            var cornerMask = corners.toUIRectCorner
+            let path = UIBezierPath(roundedRect: self.bounds,
+                                    byRoundingCorners: cornerMask,
+                                    cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            self.layer.mask = mask
+        }
+    }
+}
+public extension UIRectCorner {
+    var toCACornerMask: CACornerMask {
+        var cornerMask = CACornerMask()
+        if(contains(.topLeft)){
+            cornerMask.insert(.layerMinXMinYCorner)
+        }
+        if(contains(.topRight)){
+            cornerMask.insert(.layerMaxXMinYCorner)
+        }
+        if(contains(.bottomLeft)){
+            cornerMask.insert(.layerMinXMaxYCorner)
+        }
+        if(contains(.bottomRight)){
+            cornerMask.insert(.layerMaxXMaxYCorner)
+        }
+        return cornerMask
     }
 }
 
+public extension CACornerMask {
+    var toUIRectCorner: UIRectCorner {
+        var cornerMask = UIRectCorner()
+        if(contains(.layerMinXMinYCorner)){
+            cornerMask.insert(.topLeft)
+        }
+        if(contains(.layerMaxXMinYCorner)){
+            cornerMask.insert(.topRight)
+        }
+        if(contains(.layerMinXMaxYCorner)){
+            cornerMask.insert(.bottomLeft)
+        }
+        if(contains(.layerMaxXMaxYCorner)){
+            cornerMask.insert(.bottomRight)
+        }
+        return cornerMask
+    }
+}
+
+public extension UIRectCorner {
+    static var top: UIRectCorner = [.topLeft, .topRight]
+    static var left: UIRectCorner = [.topLeft, .bottomLeft]
+    static var bottom: UIRectCorner = [.bottomLeft, .bottomRight]
+    static var right: UIRectCorner = [.topRight, .bottomRight]
+}
 // MARK: Borders
 public extension UIView {
 
