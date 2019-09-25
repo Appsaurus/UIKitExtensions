@@ -15,11 +15,11 @@ public extension UIView {
             return layer.cornerRadius
         }
         set {
-            layer.cornerRadius = newValue
-            if newValue > 0 {
-                layer.masksToBounds = true
-            }
-
+            roundCorners(.allCorners, radius: newValue)
+//            layer.cornerRadius = newValue
+//            if newValue > 0 {
+//                layer.masksToBounds = true
+//            }
         }
     }
 
@@ -42,6 +42,10 @@ public extension UIView {
             let mask = CAShapeLayer()
             mask.path = path.cgPath
             self.layer.mask = mask
+        }
+        
+        if radius > 0 {
+            layer.masksToBounds = true
         }
     }
 }
