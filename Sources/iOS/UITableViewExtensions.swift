@@ -57,6 +57,17 @@ public extension UITableView {
             register(type, with: nil)
         }
     }
+
+    //MARK: Header/Footers
+    func register<View: UITableViewHeaderFooterView>(_ viewType: View.Type, with reuseIdentifier: String? = nil) {
+        register(viewType.self, forHeaderFooterViewReuseIdentifier: reuseIdentifier ?? viewType.defaultReuseIdentifier)
+    }
+
+    func dequeueReusableView<View: UITableViewHeaderFooterView>(_ viewType: View.Type = View.self, withIdentifier identifier: String? = nil) -> View {
+        // swiftlint:disable:next force_cast
+        return dequeueReusableHeaderFooterView(withIdentifier: identifier ?? viewType.defaultReuseIdentifier) as! View
+    }
+
     
     func append(rowCount: Int, to section: Int? = nil) {
         guard let dataSource = dataSource else { return }

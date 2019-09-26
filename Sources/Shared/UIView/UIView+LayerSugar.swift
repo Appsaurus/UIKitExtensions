@@ -44,9 +44,9 @@ public extension UIView {
             self.layer.mask = mask
         }
         
-        if radius > 0 {
-            layer.masksToBounds = true
-        }
+//        if radius > 0 {
+//            layer.masksToBounds = true
+//        }
     }
 }
 public extension UIRectCorner {

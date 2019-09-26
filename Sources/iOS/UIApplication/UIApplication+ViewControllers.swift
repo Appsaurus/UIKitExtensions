@@ -66,7 +66,15 @@ public extension UIApplication {
             throw URLError(.badURL)
         }
         openURL(url)
+    }
 
+    func open(url: URLConvertible, orShowError message: String? = nil) {
+        do{
+            try UIApplication.shared.openURLIfPossible(try url.assertURL())
+        }
+        catch {
+            topmostViewController?.showError(title: "Error", message: message ?? "Unable to open URL", error: error)
+        }
     }
     
     func callNumber(_ phoneNumber: String) throws {
@@ -161,7 +169,10 @@ public extension UIApplication {
 }
 
 public extension UIApplication {
-    
+
+    class var bundleID: String {
+        return Bundle.main.bundleIdentifier!
+    }
     class var versionNumber: String {
         // swiftlint:disable next force_cast
         return Bundle.main.versionNumber!
