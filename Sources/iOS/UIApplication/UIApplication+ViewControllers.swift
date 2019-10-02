@@ -10,6 +10,7 @@
 import UIKit
 import MapKit
 import Swiftest
+import SafariServices
 
 public extension UIApplication {
     class var topmostViewController: UIViewController? {
@@ -68,7 +69,7 @@ public extension UIApplication {
         openURL(url)
     }
 
-    func open(url: URLConvertible, orShowError message: String? = nil) {
+    func open(url: URLConvertible, embeddedInApp: Bool = true, orShowError message: String? = nil) {
         do{
             try UIApplication.shared.openURLIfPossible(try url.assertURL())
         }
