@@ -47,4 +47,17 @@ public extension UISearchBar {
         barTintColor = .clear
     }
 }
+
+public extension UISearchBar {
+    func searchQuery(filterEmpty: Bool = true) -> String? {
+        let query = textField?.text
+        return filterEmpty ? query.removeEmpty : query
+    }
+
+    func hasSearchQuery(filterEmpty: Bool = true) -> Bool {
+        guard let _ = searchQuery(filterEmpty: filterEmpty) else { return false }
+        return true
+    }
+}
+
 #endif
