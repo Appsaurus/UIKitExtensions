@@ -11,6 +11,9 @@ import UIKit
 
 public extension UISearchBar {
     var textField: UITextField? {
+        if #available(iOS 13.0, *) {
+            return self.searchTextField
+        }
         for subView in subviews {
             for subsubView in subView.subviews {
                 if let textField = subsubView as? UITextField {
