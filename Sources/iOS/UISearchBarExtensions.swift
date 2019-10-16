@@ -50,8 +50,7 @@ public extension UISearchBar {
 
 public extension UISearchBar {
     func searchQuery(filterEmpty: Bool = true) -> String? {
-        let query = textField?.text
-        return filterEmpty ? query.removeEmpty : query
+        return filterEmpty ? text.removeEmpty : text
     }
 
     func hasSearchQuery(filterEmpty: Bool = true) -> Bool {
