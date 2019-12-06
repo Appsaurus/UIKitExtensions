@@ -66,7 +66,7 @@ extension UIView {
         if animated {
             UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
 
-                self?.transform = CGAffineTransform(rotationAngle: .pi)
+                self?.transform = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
 
             }) { (_) in
                 completion?()
