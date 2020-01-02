@@ -10,6 +10,24 @@
 import UIKit
 import Swiftest
 
+
+open class TitledAction {
+    public var title: String
+    public var action: () -> Void
+
+    public init(title: String, action: @escaping () -> Void) {
+        self.title = title
+        self.action = action
+    }
+}
+
+extension TitledAction: UIAlertActionConvertible {
+    public var toAlertAction: UIAlertAction {
+        return UIAlertAction(title: title, closure: action)
+    }
+}
+
+
 public typealias AlertActionTitle = String
 public protocol UIAlertActionConvertible {
     var toAlertAction: UIAlertAction { get }
@@ -73,8 +91,16 @@ extension UIAlertAction {
 
 //Overloading function mapping operator
 
-public func => (lhs: AlertActionTitle, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
-    return UIAlertAction(title: lhs, closure: rhs)
+public func => (lhs: String, rhs: @escaping () -> Void) -> TitledAction {
+    return TitledAction(title: lhs, action: rhs)
+}
+
+public func => (lhs: String, rhs: @autoclosure @escaping () -> Void) -> TitledAction {
+    return TitledAction(title: lhs, action: rhs)
+}
+
+public func => (lhs: UIAlertAction, rhs: @escaping () -> Void) -> UIAlertAction {
+    return UIAlertAction(title: lhs.title, style: lhs.style, closure: rhs)
 }
 
 public func => (lhs: UIAlertAction, rhs: @autoclosure @escaping () -> Void) -> UIAlertAction {
@@ -93,7 +119,9 @@ infix operator .~: StyleOperatorPrecedence
 ///   - lhs: A title for the UIAlertAction
 ///   - rhs: An UIAlertAction Style to apply to the title.
 /// - Returns: UIAlertAction with title and style applied.
-public func .~ (lhs: AlertActionTitle, rhs: UIAlertAction.Style) -> UIAlertAction {
+public func .~ (lhs: String, rhs: UIAlertAction.Style) -> UIAlertAction {
     return UIAlertAction(title: lhs, style: rhs)
 }
+
 #endif
+

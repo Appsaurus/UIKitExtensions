@@ -95,7 +95,7 @@ public extension UIApplication {
             }
         }
         self.topmostViewController?.presentAlert(title: "Call \(phoneNumber)?",
-                                                actions: [ "Yes" => callAction(),
+                                                actions: [ "Yes" => callAction,
                                                             "No" .~ .cancel])
     }
     
