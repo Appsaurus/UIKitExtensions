@@ -46,14 +46,14 @@ public extension UIApplication {
     }
 
 
-    @discardableResult
+
     func openURL(_ urlString: String) throws {
         guard let url = urlString.url else {
             throw URLError(.badURL)
         }
         try openURLIfPossible(url)
     }
-    @discardableResult
+
     func openURLIfPossible(_ urlString: String) throws {
         guard let url = urlString.url else {
             throw URLError(.badURL)
@@ -61,7 +61,7 @@ public extension UIApplication {
         try openURLIfPossible(url)
     }
 
-    @discardableResult
+
     func openURLIfPossible(_ url: URL) throws {
         guard canOpenURL(url) else {
             throw URLError(.badURL)
@@ -185,7 +185,6 @@ public extension UIApplication {
     }
     
     class var versionAndBuildNumber: String {
-        let version = versionNumber, build = buildNumber
         return "\(versionNumber)(\(buildNumber))"
     }
 

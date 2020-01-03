@@ -35,7 +35,7 @@ public extension UIView {
             self.layer.cornerRadius = radius
             self.layer.maskedCorners = corners
         } else {
-            var cornerMask = corners.toUIRectCorner
+            let cornerMask = corners.toUIRectCorner
             let path = UIBezierPath(roundedRect: self.bounds,
                                     byRoundingCorners: cornerMask,
                                     cornerRadii: CGSize(width: radius, height: radius))

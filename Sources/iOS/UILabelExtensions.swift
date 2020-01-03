@@ -26,7 +26,7 @@ public extension UILabel {
     
     var fontName: String {
         set {
-            self.font = UIFont(name: fontName, size: fontSize)
+            self.font = UIFont(name: newValue, size: fontSize)
         }
         get {
             return self.font.familyName

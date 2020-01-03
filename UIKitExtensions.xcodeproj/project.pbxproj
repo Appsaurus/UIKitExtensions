@@ -41,7 +41,6 @@
 		E453A64921B9E0B200B5F714 /* NSMutableAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61821B9E0B000B5F714 /* NSMutableAttributedStringExtensions.swift */; };
 		E453A64A21B9E0B200B5F714 /* NSMutableAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61821B9E0B000B5F714 /* NSMutableAttributedStringExtensions.swift */; };
 		E453A64B21B9E0B200B5F714 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61921B9E0B000B5F714 /* UINavigationControllerExtensions.swift */; };
-		E453A64F21B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61A21B9E0B000B5F714 /* UIStackViewExtensions.swift */; };
 		E453A65721B9E0B200B5F714 /* UIBarItem+TitleTextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61C21B9E0B000B5F714 /* UIBarItem+TitleTextAttributes.swift */; };
 		E453A65B21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61D21B9E0B000B5F714 /* UIScreenExtensions.swift */; };
 		E453A65F21B9E0B200B5F714 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A61E21B9E0B000B5F714 /* UIImageExtensions.swift */; };
@@ -288,7 +287,6 @@
 		E453A61721B9E0B000B5F714 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		E453A61821B9E0B000B5F714 /* NSMutableAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		E453A61921B9E0B000B5F714 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
-		E453A61A21B9E0B000B5F714 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		E453A61C21B9E0B000B5F714 /* UIBarItem+TitleTextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarItem+TitleTextAttributes.swift"; sourceTree = "<group>"; };
 		E453A61D21B9E0B000B5F714 /* UIScreenExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtensions.swift; sourceTree = "<group>"; };
 		E453A61E21B9E0B000B5F714 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -630,7 +628,6 @@
 				E453A61D21B9E0B000B5F714 /* UIScreenExtensions.swift */,
 				E453A63521B9E0B200B5F714 /* UIScrollViewExtensions.swift */,
 				E453A62221B9E0B000B5F714 /* UISearchBarExtensions.swift */,
-				E453A61A21B9E0B000B5F714 /* UIStackViewExtensions.swift */,
 				E453A62921B9E0B100B5F714 /* UITabBarControllerExtensions.swift */,
 				E453A63921B9E0B200B5F714 /* UITableViewCellExtensions.swift */,
 				E453A62E21B9E0B100B5F714 /* UITableViewExtensions.swift */,
@@ -1352,8 +1349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIKitExtensions-tvOS-Tests/Pods-UIKitExtensions-tvOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DarkMagic-tvOS/DarkMagic.framework",
@@ -1361,8 +1356,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-tvOS/SwiftTestUtils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
@@ -1400,8 +1393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIKitExtensions-macOS-Tests/Pods-UIKitExtensions-macOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DarkMagic-macOS/DarkMagic.framework",
@@ -1409,8 +1400,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-macOS/SwiftTestUtils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
@@ -1518,8 +1507,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIKitExtensions-iOS-Tests/Pods-UIKitExtensions-iOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DarkMagic-iOS/DarkMagic.framework",
@@ -1527,8 +1514,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftTestUtils-iOS/SwiftTestUtils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftest.framework",
@@ -1674,7 +1659,6 @@
 				E4F7E0D421CA1F730061EBB2 /* String+Attributed.swift in Sources */,
 				E487379221DD5D210094F2EB /* ActionDelegatable.swift in Sources */,
 				E453A69B21B9E0B200B5F714 /* UIGestureRecognizerExtensions.swift in Sources */,
-				E453A64F21B9E0B200B5F714 /* UIStackViewExtensions.swift in Sources */,
 				E453A65B21B9E0B200B5F714 /* UIScreenExtensions.swift in Sources */,
 				E499C13721D690040000C270 /* UIView+Borders.swift in Sources */,
 				E453A6AF21B9E0B200B5F714 /* UIViewController+AlertControllers.swift in Sources */,
