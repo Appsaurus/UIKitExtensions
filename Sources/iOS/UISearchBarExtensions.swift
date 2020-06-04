@@ -49,6 +49,10 @@ public extension UISearchBar {
         backgroundColor = .clear
         barTintColor = .clear
     }
+
+    func setClearButton(mode: UITextField.ViewMode) {
+        textField?.clearButtonMode = mode
+    }
 }
 
 public extension UISearchBar {
