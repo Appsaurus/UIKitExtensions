@@ -128,6 +128,7 @@ public extension UIApplication {
 }
 
 public extension UIApplication {
+
     class var mainWindow: UIWindow {
         return  UIApplication.shared.delegate!.window!!
     }
