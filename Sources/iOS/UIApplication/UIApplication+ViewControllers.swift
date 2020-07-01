@@ -130,7 +130,17 @@ public extension UIApplication {
 public extension UIApplication {
 
     class var mainWindow: UIWindow {
-        return  UIApplication.shared.delegate!.window!!
+        if #available(iOS 13.0, *) {
+            let keyWindow = UIApplication.shared.connectedScenes
+                .filter({$0.activationState == .foregroundActive})
+                .map({$0 as? UIWindowScene})
+                .compactMap({$0})
+                .first?.windows
+                .filter({$0.isKeyWindow}).first
+            return keyWindow!
+        } else {
+            return  UIApplication.shared.delegate!.window!!
+        }
     }
 
 }
@@ -186,7 +196,7 @@ public extension UIApplication {
     }
     
     class var versionAndBuildNumber: String {
-        return "\(versionNumber)(\(buildNumber))"
+        return "\(versionNumber) (\(buildNumber))"
     }
 
     class var displayName: String {
