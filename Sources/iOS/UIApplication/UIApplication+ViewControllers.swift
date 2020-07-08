@@ -127,9 +127,8 @@ public extension UIApplication {
     }
 }
 
-public extension UIApplication {
-
-    class var mainWindow: UIWindow {
+extension UIWindow {
+    static var key: UIWindow {
         if #available(iOS 13.0, *) {
             let keyWindow = UIApplication.shared.connectedScenes
                 .filter({$0.activationState == .foregroundActive})
@@ -137,10 +136,17 @@ public extension UIApplication {
                 .compactMap({$0})
                 .first?.windows
                 .filter({$0.isKeyWindow}).first
-            return keyWindow!
+            return keyWindow ?? UIApplication.shared.windows[0]
         } else {
-            return  UIApplication.shared.delegate!.window!!
+            return  UIApplication.shared.delegate?.window! ?? UIApplication.shared.windows[0]
         }
+    }
+}
+
+public extension UIApplication {
+
+    class var mainWindow: UIWindow {
+        UIWindow.key
     }
 
 }
