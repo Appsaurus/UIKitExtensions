@@ -33,10 +33,11 @@ public extension UIViewController {
                       actions: [UIAlertActionConvertible]) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         alertController.add(actions: actions.map {$0.toAlertAction})
-        if alertController.actions.count == 0 {
-            alertController.dismiss(after: delay)
-        }
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: {
+            if alertController.actions.count == 0 {
+                alertController.dismiss(after: delay)
+            }
+        })
         return alertController
     }
 }

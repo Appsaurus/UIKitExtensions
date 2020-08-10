@@ -43,14 +43,12 @@ public extension UIViewController {
     }
 
     func dismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            guard let self = self else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.dismiss(animated: animated, completion: completion)
         }
     }
     func popOrDismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            guard let self = self else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.popOrDismiss(animated: animated, completion: completion)
         }
     }

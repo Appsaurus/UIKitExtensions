@@ -25,6 +25,13 @@ public extension UIScreen {
     static var screenBounds: CGRect {
         return UIScreen.main.bounds
     }
-    
+
+    static var landscapeScreenWidth: CGFloat {
+        return screenBounds.maxSideLength
+    }
+
+    static var portraitScreenWidth: CGFloat {
+        return screenBounds.minSideLength
+    }
 }
 #endif
