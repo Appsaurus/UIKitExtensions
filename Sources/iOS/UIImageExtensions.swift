@@ -142,12 +142,15 @@ extension UIImage {
 
 extension UIImage {
     
-    public class func imageWithLayer(layer: CALayer) -> UIImage {
+    public class func imageWithLayer(layer: CALayer) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(layer.bounds.size, layer.isOpaque, UIScreen.main.scale)
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img!
+        defer { UIGraphicsEndImageContext() }
+        // Don't proceed unless we have context
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        layer.render(in: context)
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
 
