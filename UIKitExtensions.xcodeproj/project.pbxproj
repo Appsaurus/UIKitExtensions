@@ -114,6 +114,7 @@
 		E499C14A21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */; };
 		E499C14B21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */; };
 		E499C14D21D6B95D0000C270 /* UIAlertController+ActionSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */; };
+		E49BAA89277238620033ECDA /* UIView+MotionEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BAA88277238620033ECDA /* UIView+MotionEffects.swift */; };
 		E4A45A2D21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A2E21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */; };
 		E4A45A3021D585D600B96D3E /* UIResponder+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */; };
@@ -199,6 +200,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D5C6293F1C3A7FAA007F7B7C;
 			remoteInfo = "UIKitExtensions-Mac";
+		};
+		E49BAA65277235180033ECDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4DBC3C1219CD18D00145C9B /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E7C866C053CCEBFE68CAF1130D38B5C7;
+			remoteInfo = DarkMagic;
 		};
 		E4D230C421CADBAB00EBC209 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -333,6 +341,7 @@
 		E499C14621D6A3FB0000C270 /* UIViewController+PresentationAwareness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationAwareness.swift"; sourceTree = "<group>"; };
 		E499C14921D6A4AA0000C270 /* UIViewController+EasyNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EasyNavigation.swift"; sourceTree = "<group>"; };
 		E499C14C21D6B95D0000C270 /* UIAlertController+ActionSugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ActionSugar.swift"; sourceTree = "<group>"; };
+		E49BAA88277238620033ECDA /* UIView+MotionEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MotionEffects.swift"; sourceTree = "<group>"; };
 		E4A45A2C21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BatchGestureRecognizers.swift"; sourceTree = "<group>"; };
 		E4A45A2F21D585D600B96D3E /* UIResponder+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+ParentViewController.swift"; sourceTree = "<group>"; };
 		E4A45A3221D586CB00B96D3E /* UIView+NibLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
@@ -610,9 +619,9 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E4BB9D5621D427FB001ABC9B /* FileManager+DocumentDirectory.swift */,
 				E453A63621B9E0B200B5F714 /* AVURLAsset+Thumbnails.swift */,
-				E4BB9D5521D42776001ABC9B /* UIApplication */,
+				E4BB9D5621D427FB001ABC9B /* FileManager+DocumentDirectory.swift */,
+				E4D230D121CAF28C00EBC209 /* IndexPath+ExpressibleByIntegerLiteral.swift */,
 				E453A61121B9E0B000B5F714 /* UIBarButtonItemExtensions.swift */,
 				E453A61C21B9E0B000B5F714 /* UIBarItem+TitleTextAttributes.swift */,
 				E453A61721B9E0B000B5F714 /* UIButtonExtensions.swift */,
@@ -633,7 +642,8 @@
 				E453A62E21B9E0B100B5F714 /* UITableViewExtensions.swift */,
 				E453A62B21B9E0B100B5F714 /* UITextFieldExtensions.swift */,
 				E453A63021B9E0B100B5F714 /* UITextViewExtensions.swift */,
-				E4D230D121CAF28C00EBC209 /* IndexPath+ExpressibleByIntegerLiteral.swift */,
+				E4BB9D5521D42776001ABC9B /* UIApplication */,
+				E49BAA88277238620033ECDA /* UIView+MotionEffects.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -813,6 +823,7 @@
 		E4DBC3C2219CD18D00145C9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				E49BAA66277235180033ECDA /* DarkMagic.framework */,
 				E4DBC3E4219CD18D00145C9B /* Pods_UIKitExtensionsDemo.framework */,
 				E4D230C521CADBAB00EBC209 /* Swiftest.framework */,
 				E4DBC3E6219CD18D00145C9B /* UIKitExtensions.framework */,
@@ -1137,6 +1148,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E49BAA66277235180033ECDA /* DarkMagic.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DarkMagic.framework;
+			remoteRef = E49BAA65277235180033ECDA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E4D230C521CADBAB00EBC209 /* Swiftest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1651,6 +1669,7 @@
 				E4A45A2D21D584D800B96D3E /* UIView+BatchGestureRecognizers.swift in Sources */,
 				E487378321DAD2C40094F2EB /* UIControl+Closures.swift in Sources */,
 				E499C14121D692840000C270 /* UIViewController+Loading.swift in Sources */,
+				E49BAA89277238620033ECDA /* UIView+MotionEffects.swift in Sources */,
 				E453A6AB21B9E0B200B5F714 /* UIView+Animations.swift in Sources */,
 				E499C14A21D6A4AA0000C270 /* UIViewController+EasyNavigation.swift in Sources */,
 				E487378821DC5B790094F2EB /* NotificationCenter+Closures.swift in Sources */,

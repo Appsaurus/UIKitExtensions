@@ -196,13 +196,13 @@ public extension UIImage {
 }
 
 public extension UIImage {
-    func compressTo(_ expectedSizeInMB:Int) -> UIImage? {
+    func compressTo(_ expectedSizeInMB: Int) -> UIImage? {
         let sizeInBytes = expectedSizeInMB * 1000000
-        var needCompress:Bool = true
-        var imgData:Data?
-        var compressingValue:CGFloat = 1.0
-        while (needCompress && compressingValue > 0.0) {
-            if let data:Data = jpegData(compressionQuality: compressingValue) {
+        var needCompress: Bool = true
+        var imgData: Data?
+        var compressingValue: CGFloat = 1.0
+        while needCompress && compressingValue > 0.0 {
+            if let data: Data = jpegData(compressionQuality: compressingValue) {
                 if data.bytes.count < sizeInBytes {
                     needCompress = false
                     imgData = data
@@ -213,7 +213,7 @@ public extension UIImage {
         }
 
         if let data = imgData {
-            if (data.bytes.count < sizeInBytes) {
+            if data.bytes.count < sizeInBytes {
                 return UIImage(data: data)
             }
         }
@@ -221,4 +221,3 @@ public extension UIImage {
     }
 }
 #endif
-

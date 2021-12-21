@@ -45,8 +45,6 @@ public extension UIApplication {
         return topMostWindow?.rootViewController
     }
 
-
-
     func openURL(_ urlString: String) throws {
         guard let url = urlString.url else {
             throw URLError(.badURL)
@@ -61,7 +59,6 @@ public extension UIApplication {
         try openURLIfPossible(url)
     }
 
-
     func openURLIfPossible(_ url: URL) throws {
         guard canOpenURL(url) else {
             throw URLError(.badURL)
@@ -70,10 +67,9 @@ public extension UIApplication {
     }
 
     func open(url: URLConvertible, embeddedInApp: Bool = true, orShowError message: String? = nil) {
-        do{
+        do {
             try UIApplication.shared.openURLIfPossible(try url.assertURL())
-        }
-        catch {
+        } catch {
             topmostViewController?.showError(title: "Error", message: message ?? "Unable to open URL", error: error)
         }
     }
@@ -87,10 +83,9 @@ public extension UIApplication {
     
     func confirmAndCallPhoneNumber(_ phoneNumber: String) {
         let callAction = { [weak self] in
-            do{
+            do {
                 try self?.callNumber(phoneNumber)
-            }
-            catch{
+            } catch {
                 self?.topmostViewController?.showError(error: error)
             }
         }

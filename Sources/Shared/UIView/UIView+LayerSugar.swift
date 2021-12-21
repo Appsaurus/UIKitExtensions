@@ -52,16 +52,16 @@ public extension UIView {
 public extension UIRectCorner {
     var toCACornerMask: CACornerMask {
         var cornerMask = CACornerMask()
-        if(contains(.topLeft)){
+        if contains(.topLeft) {
             cornerMask.insert(.layerMinXMinYCorner)
         }
-        if(contains(.topRight)){
+        if contains(.topRight) {
             cornerMask.insert(.layerMaxXMinYCorner)
         }
-        if(contains(.bottomLeft)){
+        if contains(.bottomLeft) {
             cornerMask.insert(.layerMinXMaxYCorner)
         }
-        if(contains(.bottomRight)){
+        if contains(.bottomRight) {
             cornerMask.insert(.layerMaxXMaxYCorner)
         }
         return cornerMask
@@ -71,16 +71,16 @@ public extension UIRectCorner {
 public extension CACornerMask {
     var toUIRectCorner: UIRectCorner {
         var cornerMask = UIRectCorner()
-        if(contains(.layerMinXMinYCorner)){
+        if contains(.layerMinXMinYCorner) {
             cornerMask.insert(.topLeft)
         }
-        if(contains(.layerMaxXMinYCorner)){
+        if contains(.layerMaxXMinYCorner) {
             cornerMask.insert(.topRight)
         }
-        if(contains(.layerMinXMaxYCorner)){
+        if contains(.layerMinXMaxYCorner) {
             cornerMask.insert(.bottomLeft)
         }
-        if(contains(.layerMaxXMaxYCorner)){
+        if contains(.layerMaxXMaxYCorner) {
             cornerMask.insert(.bottomRight)
         }
         return cornerMask

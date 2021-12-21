@@ -94,7 +94,7 @@ extension UITextField {
         let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size.width + insets.left + insets.right, height: size.height + insets.top + insets.bottom))
         view.frame.size = size
         outerView.addSubview(view)
-        let _ = view.leftAnchor.constraint(equalTo: outerView.leftAnchor, constant: insets.left)
+        _ = view.leftAnchor.constraint(equalTo: outerView.leftAnchor, constant: insets.left)
         switch position {
         case .left:
             leftView = outerView

@@ -16,7 +16,7 @@ extension UIView {
                           thickness: CGFloat = 1,
                           padding: CGFloat = 0.0) -> [UIView] {
 
-        var thickness = thickness.scaledToPoints
+        let thickness = thickness.scaledToPoints
         var borders = [UIView]()
 
         func border() -> UIView {
@@ -65,7 +65,7 @@ extension UIView {
             borders.append(bottom)
         }
 
-        borders.forEach{ b in
+        borders.forEach { b in
             b.translatesAutoresizingMaskIntoConstraints = false
         }
         return borders

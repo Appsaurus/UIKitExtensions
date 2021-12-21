@@ -10,7 +10,6 @@
 import UIKit
 import Swiftest
 
-
 open class TitledAction {
     public var title: String
     public var action: () -> Void
@@ -26,7 +25,6 @@ extension TitledAction: UIAlertActionConvertible {
         return UIAlertAction(title: title, closure: action)
     }
 }
-
 
 public typealias AlertActionTitle = String
 public protocol UIAlertActionConvertible {
@@ -124,4 +122,3 @@ public func .~ (lhs: String, rhs: UIAlertAction.Style) -> UIAlertAction {
 }
 
 #endif
-
