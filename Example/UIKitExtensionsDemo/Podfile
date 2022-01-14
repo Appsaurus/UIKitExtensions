@@ -1,9 +1,0 @@
-use_frameworks!
-
-platform :ios, '9.0'
-
-target 'UIKitExtensionsDemo' do
-  pod 'UIKitExtensions', :path => '../../'
-  pod 'Swiftest', :git => 'https://github.com/appsaurus/Swiftest.git'
-  pod 'DarkMagic', :git => 'https://github.com/appsaurus/DarkMagic.git'
-end
