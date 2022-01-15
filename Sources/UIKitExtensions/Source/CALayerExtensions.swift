@@ -7,8 +7,9 @@
 //
 
 import Foundation
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
+import CoreGraphics
 
 public extension CALayer {
     

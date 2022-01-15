@@ -6,7 +6,7 @@
 //  Copyright © 2018 Brian Strobach. All rights reserved.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(tvOS)
 import UIKit
 import Swiftest
 

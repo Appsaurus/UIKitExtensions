@@ -6,6 +6,7 @@
 //
 //
 
+#if canImport(Contacts)
 import Foundation
 import CoreLocation
 import Contacts
@@ -32,3 +33,4 @@ import Swiftest
             return address
         }
     }
+#endif

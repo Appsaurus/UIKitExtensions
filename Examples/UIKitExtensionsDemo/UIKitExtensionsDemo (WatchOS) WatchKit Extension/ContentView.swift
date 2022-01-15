@@ -10,7 +10,7 @@ import UIKitExtensions
 
 struct ContentView: View {
     var body: some View {
-        Text(UIKitExtensionsClass().text)
+        Text("Hello, world.")
             .padding()
     }
 }

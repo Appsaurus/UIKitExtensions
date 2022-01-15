@@ -12,7 +12,6 @@
 		E47ABC212791EFA00065ECF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47ABC0F2791EFA00065ECF4 /* Assets.xcassets */; };
 		E47ABC222791EFA00065ECF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47ABC0F2791EFA00065ECF4 /* Assets.xcassets */; };
 		E47ABC672791F0D30065ECF4 /* UIKitExtensionsDemo (WatchOS) WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E47ABC662791F0D30065ECF4 /* UIKitExtensionsDemo (WatchOS) WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E47ABC7E2791F0D40065ECF4 /* UIKitExtensionsDemo (WatchOS).app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E47ABC5E2791F0D10065ECF4 /* UIKitExtensionsDemo (WatchOS).app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4A842E72792231B00222BCC /* UIKitExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = E4A842E62792231B00222BCC /* UIKitExtensions */; };
 		E4A842E92792232500222BCC /* UIKitExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = E4A842E82792232500222BCC /* UIKitExtensions */; };
 		E4A842EB2792233200222BCC /* UIKitExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = E4A842EA2792233200222BCC /* UIKitExtensions */; };
@@ -42,13 +41,6 @@
 			remoteGlobalIDString = E47ABC652791F0D30065ECF4;
 			remoteInfo = "SwiftPackageNameDemo (WatchOS) WatchKit Extension";
 		};
-		E47ABC7C2791F0D40065ECF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E47ABC082791EF9E0065ECF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E47ABC5D2791F0D10065ECF4;
-			remoteInfo = "SwiftPackageNameDemo (WatchOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,17 +55,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E47ABC862791F0D40065ECF4 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				E47ABC7E2791F0D40065ECF4 /* UIKitExtensionsDemo (WatchOS).app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +66,7 @@
 		E47ABC5E2791F0D10065ECF4 /* UIKitExtensionsDemo (WatchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitExtensionsDemo (WatchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47ABC662791F0D30065ECF4 /* UIKitExtensionsDemo (WatchOS) WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "UIKitExtensionsDemo (WatchOS) WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47ABC8B2791F0F10065ECF4 /* UIKitExtensionsDemo (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitExtensionsDemo (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49B546E2792A1DC0066D302 /* UIKitExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIKitExtensions; path = ../..; sourceTree = "<group>"; };
 		E4A842C627921F3C00222BCC /* UIKitExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIKitExtensions; path = ../..; sourceTree = "<group>"; };
 		E4A842C827921F4F00222BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A842CA27921F4F00222BCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -193,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E4A842C627921F3C00222BCC /* UIKitExtensions */,
+				E49B546E2792A1DC0066D302 /* UIKitExtensions */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -257,12 +240,10 @@
 				E47ABC102791EFA00065ECF4 /* Sources */,
 				E47ABC112791EFA00065ECF4 /* Frameworks */,
 				E47ABC122791EFA00065ECF4 /* Resources */,
-				E47ABC862791F0D40065ECF4 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E47ABC7D2791F0D40065ECF4 /* PBXTargetDependency */,
 			);
 			name = "UIKitExtensionsDemo (iOS)";
 			packageProductDependencies = (
@@ -491,11 +472,6 @@
 			isa = PBXTargetDependency;
 			target = E47ABC652791F0D30065ECF4 /* UIKitExtensionsDemo (WatchOS) WatchKit Extension */;
 			targetProxy = E47ABC682791F0D30065ECF4 /* PBXContainerItemProxy */;
-		};
-		E47ABC7D2791F0D40065ECF4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E47ABC5D2791F0D10065ECF4 /* UIKitExtensionsDemo (WatchOS) */;
-			targetProxy = E47ABC7C2791F0D40065ECF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

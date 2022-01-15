@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E47ABC192791EFA00065ECF4"
-            BuildableName = "UIKitExtensionsDemo.app"
+            BuildableName = "UIKitExtensionsDemo (macOS).app"
             BlueprintName = "UIKitExtensionsDemo (macOS)"
             ReferencedContainer = "container:UIKitExtensionsDemo.xcodeproj">
          </BuildableReference>

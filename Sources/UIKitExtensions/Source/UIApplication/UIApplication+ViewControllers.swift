@@ -10,7 +10,6 @@
 import UIKit
 import MapKit
 import Swiftest
-import SafariServices
 
 public extension UIApplication {
     class var topmostViewController: UIViewController? {
@@ -116,11 +115,13 @@ public extension UIApplication {
         openAppleMapsAndGiveDirections(nil, destination: mapItem)
     }
     
+    #if !os(tvOS)
     func openAppleMapsAndGiveDirections(_ startLocation: MKMapItem? = MKMapItem.forCurrentLocation(), destination: MKMapItem) {
         let launchOptions: NSDictionary = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving,
                                                        forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
         MKMapItem.openMaps(with: [startLocation!, destination], launchOptions: launchOptions as? [String: AnyObject])
     }
+    #endif
 }
 
 extension UIWindow {

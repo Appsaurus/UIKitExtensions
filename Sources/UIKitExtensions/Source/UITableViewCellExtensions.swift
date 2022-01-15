@@ -17,7 +17,9 @@ public extension UITableViewCell {
     
     func hideSeparatorInset() {
         self.layoutMargins = UIEdgeInsets.zero
+        #if !os(tvOS)
         self.separatorInset = UIEdgeInsets.zero
+        #endif
     }
     
     func setSelectedBackground(color: UIColor?) {
