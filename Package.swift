@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "UIKitExtensions",
     platforms: [
-        .iOS(.v11),
-        .macOS(.v12),
+        .iOS(.v10),
+//        .macOS(.v10_10),
         .tvOS(.v15),
         .watchOS(.v8),
     ],
