@@ -18,7 +18,10 @@ public extension UINavigationController {
      - parameter animated:       Whether or not the push should be animated
      - parameter completion:     Closure to run after push has finished
      */
-    func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping VoidClosure) {
+    func pushViewController(_ viewController: UIViewController, animated: Bool, debounced: Bool = true, completion: @escaping VoidClosure) {
+        if debounced {
+            viewController.view.debounce()
+        }
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
         pushViewController(viewController, animated: animated)

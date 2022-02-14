@@ -12,7 +12,10 @@ import Swiftest
 
 public extension UIViewController {
 
-    func present(viewController: UIViewController, animated: Bool = true, completion: VoidClosure? = nil) {
+    func present(viewController: UIViewController, animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
+        if debounced {
+            viewController.view.debounce()
+        }
         present(viewController, animated: animated, completion: completion)
     }
 
@@ -33,7 +36,10 @@ public extension UIViewController {
         navVC.push(viewController, animated: animated, completion: completion)
     }
 
-    func popOrDismiss(animated: Bool = true, completion: VoidClosure? = nil) {
+    func popOrDismiss(animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
+        if debounced {
+            view.debounce()
+        }
         guard let nav = navigationController else {
             dismiss(animated: animated, completion: nil)
             return
@@ -42,8 +48,11 @@ public extension UIViewController {
         completion?()
     }
 
-    func dismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
+    func dismiss(after delay: TimeInterval, animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            if debounced {
+                self.view.debounce()
+            }
             self.dismiss(animated: animated, completion: completion)
         }
     }
