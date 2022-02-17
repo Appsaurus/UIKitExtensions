@@ -1,43 +1,145 @@
 # UIKitExtensions
 
-[![CI Status](https://img.shields.io/circleci/project/github/Strobocop/UIKitExtensions.svg)](https://circleci.com/gh/Strobocop/UIKitExtensions)
-[![Version](https://img.shields.io/cocoapods/v/UIKitExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UIKitExtensions)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/UIKitExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UIKitExtensions)
-[![Platform](https://img.shields.io/cocoapods/p/UIKitExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UIKitExtensions)
-![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
+<!-- Header Logo -->
 
-## Description
+<!-- <div align="center">
+   <img width="600px" src="./Extras/banner-logo.png" alt="Banner Logo">
+</div> -->
 
-**UIKitExtensions** description.
 
-## Usage
+<!-- Badges -->
 
-Coming soon.
+<p>
+    <img src="https://img.shields.io/badge/Swift-5.5-F06C33.svg" />
+    <img src="https://img.shields.io/badge/iOS-15.0+-865EFC.svg" />
+    <img src="https://img.shields.io/badge/iPadOS-15.0+-F65EFC.svg" />
+    <img src="https://img.shields.io/badge/macOS-12.0+-179AC8.svg" />
+    <img src="https://img.shields.io/badge/tvOS-15.0+-41465B.svg" />
+    <img src="https://img.shields.io/badge/watchOS-8.0+-1FD67A.svg" />
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    <img src="https://github.com/Apppsaurus/UIKitExtensions/workflows/Build%20&%20Test/badge.svg" />
+    <a href="https://github.com/apple/swift-package-manager">
+      <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
+    </a>
+</p>
+
+
+<p align="center">
+
+_Description + docs coming soon_
+
+<p />
+
 
 ## Installation
 
-**UIKitExtensions** is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Xcode Projects
 
-```ruby
-pod 'UIKitExtensions', :git => 'https://github.com/appsaurus/UIKitExtensions.git'
-pod 'Swiftest', :git => 'https://github.com/appsaurus/Swiftest.git'
+Select `File` -> `Swift Packages` -> `Add Package Dependency` and enter `https://github.com/Apppsaurus/UIKitExtensions`.
+
+
+### Swift Package Manager Projects
+
+You can add `UIKitExtensions` as a package dependency in your `Package.swift` file:
+
+```swift
+let package = Package(
+    //...
+    dependencies: [
+        .package(
+            name: "UIKitExtensions",
+            url: "https://github.com/Apppsaurus/UIKitExtensions"
+        ),
+    ],
+    //...
+)
 ```
 
-**UIKitExtensions** is also available through [Carthage](https://github.com/Carthage/Carthage).
-To install just write into your Cartfile:
 
-```ruby
-github "Appsaurus/UIKitExtensions"
+<!-- 🔑 UNCOMMENT THE INSTRUCTIONS BELOW IF THE GITHUB REPO NAME MATCHES THE LIBRARY NAME 👇 -->
+
+<!-- From there, refer to `UIKitExtensions` as a "target dependency" in any of _your_ package's targets that need it.
+
+```swift
+targets: [
+    .target(
+        name: "UIKitExtensions",
+        dependencies: [
+          "UIKitExtensions",
+        ],
+        ...
+    ),
+    ...
+]
+``` -->
+
+<!-- 🔑 UNCOMMENT THE INSTRUCTIONS BELOW IF THE GITHUB REPO NAME DOESN'T MATCH THE LIBRARY NAME 👇 -->
+
+From there, refer to the `UIKitExtensions` "product" delivered by the `UIKitExtensions` "package" inside of any of your project's target dependencies:
+
+```swift
+targets: [
+    .target(
+        name: "UIKitExtensions",
+        dependencies: [
+            .product(
+                name: "UIKitExtensions",
+                package: "UIKitExtensions"
+            ),
+        ],
+        ...
+    ),
+    ...
+]
 ```
 
-**UIKitExtensions** can also be installed manually. Just download and drop `Sources` folders in your project.
+<!-- Proceed from above choice accordingly (and delete this comment) -->
+
+Then simply `import UIKitExtensions` wherever you’d like to use it.
+
+
+<!--
+    🔑 UNCOMMENT THE INSTRUCTIONS BELOW IF USING THE `@_exported` feature
+    might be handy. 👇
+-->
+
+<!-- **📝 Note:** To make the library available to your entire project, you could also leverage the [functionality of the `@_exported` keyword](https://forums.swift.org/t/package-manager-exported-dependencies/11615) by placing the following line somewhere at the top level of your project:
+
+```swift
+@_exported import UIKitExtensions
+``` -->
+
+
+## Usage
+
+
+
+## 🗺 Roadmap
+
+- World Domination
+
+
 
 ## Contributing
 
-We would love you to contribute to **UIKitExtensions**, check the [CONTRIBUTING](github.com/Appsaurus/UIKitExtensions/blob/master/CONTRIBUTING.md) file for more info.
+Contributions to `UIKitExtensions` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
 
-## License
 
-**UIKitExtensions** is available under the MIT license. See the [LICENSE](github.com/Appsaurus/UIKitExtensions/blob/master/LICENSE.md) file for more info.
+
+## 💻 Developing
+
+### Requirements
+
+- Xcode 13.0+
+
+
+### 📜 Creating & Building Documentation
+
+Documentation is built with [Xcode's DocC](https://developer.apple.com/documentation/docc). See [Apple's guidance on how to build, run, and create DocC content](https://developer.apple.com/documentation/docc/api-reference-syntax).
+
+For now, the best way to view the docs is to open the project in Xcode and run the `Build Documentation` command. At some point in the future, I'm hoping to leverage the tooling the develops for generating/hosting DocC documentation. (Please feel free to let me know if you have any ideas or tooling recommendations around this 🙂).
+
+
+## 🏷 License
+
+`UIKitExtensions` is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.
