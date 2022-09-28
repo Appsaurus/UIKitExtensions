@@ -11,6 +11,14 @@ import UIKit
 import Swiftest
 public extension UINavigationController {
     
+    func push(all viewControllers: [UIViewController], animated: Bool, completion: VoidClosure? = nil) {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock(completion)
+            self.setViewControllers(self.viewControllers + viewControllers, animated: animated)
+            CATransaction.commit()
+    }
+    
+    
     /**
      Pushes a UIViewController onto the stack and runs a completion handler after the animation has finished.
      

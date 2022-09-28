@@ -27,6 +27,11 @@ public extension UIViewController {
         }
         navVC.pushViewController(viewController, animated: animated, completion: completion)
     }
+        
+    func push(_ viewControllers: [UIViewController], animated: Bool, completion: VoidClosure? = nil) {
+        self.navigationController?.push(all : viewControllers, animated: animated, completion: completion)
+    }
+    
     
     func pushOrPresent(_ viewController: UIViewController, animated: Bool = true, completion: VoidClosure? = nil) {
         guard let navVC = self as? UINavigationController ?? self.navigationController else {
@@ -56,6 +61,7 @@ public extension UIViewController {
             self.dismiss(animated: animated, completion: completion)
         }
     }
+    
     func popOrDismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.popOrDismiss(animated: animated, completion: completion)

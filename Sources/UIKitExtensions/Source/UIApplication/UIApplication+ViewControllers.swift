@@ -211,6 +211,10 @@ public extension UIApplication {
         // swiftlint:disable next force_cast
         return versionNumber.components(separatedBy: ".").first!
     }
+    
+    class var appNameAndVersion: String {
+        return "\(displayName)/\(versionNumber)"
+    }
 }
 
 public extension Bundle {

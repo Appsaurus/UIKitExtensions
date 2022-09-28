@@ -57,6 +57,12 @@ public extension UILabel {
         numberOfLines = lines
         lineBreakMode = .byTruncatingTail
     }
+    
+    func fitTo(lines: Int, minScaleFactor: Double = 0.5) {
+        truncateAfter(lines: lines)
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = minScaleFactor
+    }
 }
 
 public extension UILabel {
