@@ -1,6 +1,6 @@
 //
 //  MKMapView+RegionWidth.swift
-//  GiftAMeal
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 8/20/20.
 //
