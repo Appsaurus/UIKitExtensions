@@ -22,7 +22,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-         .package(url: "https://github.com/Appsaurus/Swiftest", from: "0.0.43"),
+         .package(url: "https://github.com/Appsaurus/Swiftest", from: "0.1.0"),
          .package(url: "https://github.com/Appsaurus/DarkMagic", from: "0.0.4")
     ],
     targets: [
