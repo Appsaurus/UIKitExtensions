@@ -39,8 +39,8 @@ public extension UIViewController {
 }
 
 extension UIViewController {
-    class AlertDefaults {
-        static var errorMessageFormatter: ((Error) -> String)?
+    public class AlertDefaults {
+        public static var errorMessageFormatter: ((Error) -> String)?
     }
     public func showErrorAlert(title: String? = nil, message: String? = nil, _ error: Error? = nil) {
         let error: Error = error ?? BasicError.unknown
