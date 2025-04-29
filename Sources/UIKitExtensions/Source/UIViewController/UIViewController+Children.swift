@@ -1,6 +1,6 @@
 //
 //  UIViewControllerExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 5/25/16.
 //

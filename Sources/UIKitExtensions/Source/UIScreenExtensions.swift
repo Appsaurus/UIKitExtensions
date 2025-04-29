@@ -1,6 +1,6 @@
 //
 //  UIScreenExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 6/30/16.
 //

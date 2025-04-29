@@ -1,6 +1,6 @@
 //
 //  UICollectionViewExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 5/5/17.
 //

@@ -1,6 +1,6 @@
 //
 //  UIEdgeInsetExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 10/4/16.
 //

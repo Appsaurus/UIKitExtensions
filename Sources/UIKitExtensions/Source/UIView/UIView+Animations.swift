@@ -1,6 +1,6 @@
 //
 //  UIView+Animations.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 8/4/17.
 //

@@ -1,6 +1,6 @@
 //
 //  UIInterfaceOrientationExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 8/25/17.
 //

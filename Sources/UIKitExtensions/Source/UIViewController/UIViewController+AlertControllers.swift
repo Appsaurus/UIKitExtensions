@@ -1,6 +1,6 @@
 //
 //  UIViewControllerExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 5/25/16.
 //
@@ -39,13 +39,16 @@ public extension UIViewController {
 }
 
 extension UIViewController {
+    class AlertDefaults {
+        static var errorMessageFormatter: ((Error) -> String)?
+    }
     public func showErrorAlert(title: String? = nil, message: String? = nil, _ error: Error? = nil) {
         let error: Error = error ?? BasicError.unknown
-        presentAlert(title: title, message: message ?? error.localizedDescription)
+        presentAlert(title: title, message: message ?? UIViewController.AlertDefaults.errorMessageFormatter?(error) ?? error.localizedDescription)
     }
     public func showError(title: String? = nil, message: String? = nil, error: Error? = nil) {
         let error: Error = error ?? BasicError.unknown
-        presentAlert(title: title, message: message ?? error.localizedDescription)
+        presentAlert(title: title, message: message ?? UIViewController.AlertDefaults.errorMessageFormatter?(error) ?? error.localizedDescription)
     }
 }
 

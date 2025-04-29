@@ -1,6 +1,6 @@
 //
 //  UILabelExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 4/21/16.
 //

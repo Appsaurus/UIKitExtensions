@@ -1,6 +1,6 @@
 //
 //  UIBarButtonItemExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 4/12/17.
 //

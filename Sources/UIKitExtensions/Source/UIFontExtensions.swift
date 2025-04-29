@@ -1,6 +1,6 @@
 //
 //  UIFontExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 9/14/16.
 //

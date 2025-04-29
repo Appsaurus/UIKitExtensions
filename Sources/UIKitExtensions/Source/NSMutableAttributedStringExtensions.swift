@@ -1,6 +1,6 @@
 //
 //  NSMutableAttributedStringExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 9/21/16.
 //

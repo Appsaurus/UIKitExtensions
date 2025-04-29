@@ -1,6 +1,6 @@
 //
 //  UITableViewCellExtensions.swift
-//  Pods
+//  UIKitExtensions
 //
 //  Created by Brian Strobach on 9/15/16.
 //
