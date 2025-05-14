@@ -80,7 +80,7 @@ public extension UIImage {
         bitmap!.rotate(by: degrees.degreesToRadians)
         
         bitmap!.scaleBy(x: 1.0, y: -1.0)
-        bitmap!.draw(img.cgImage!, in: CGRect(x: -img.size.width / 2, y: -img.size.height / 2, width: img.size.width - 1, height: img.size.height - 1))
+        bitmap!.draw(img.cgImage!, in: CGRect(x: -img.size.width / 2, y: -img.size.height / 2, width: img.size.width, height: img.size.height))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

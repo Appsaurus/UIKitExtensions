@@ -1,5 +1,5 @@
 //
-//  UIImage+Modificaiton.swift
+//  UIImage+Modification.swift
 //  UIKitExtensions
 //
 //  Created by Brian Strobach on 3/20/19.
