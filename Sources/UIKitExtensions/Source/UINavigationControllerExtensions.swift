@@ -28,8 +28,15 @@ public extension UINavigationController {
      */
     func pushViewController(_ viewController: UIViewController, animated: Bool, debounced: Bool = true, completion: @escaping VoidClosure) {
         if debounced {
-            viewController.view.debounce()
+            let _ = PresentationDebouncer.shared.execute {
+                self.performPushViewController(viewController, animated: animated, completion: completion)
+            }
+        } else {
+            performPushViewController(viewController, animated: animated, completion: completion)
         }
+    }
+    
+    private func performPushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping VoidClosure) {
         pushViewController(viewController, animated: animated)
 
         if animated, let coordinator = transitionCoordinator {
@@ -44,8 +51,15 @@ public extension UINavigationController {
 
     func popViewController(animated: Bool, debounced: Bool = true, completion: @escaping VoidClosure) {
         if debounced {
-            view.debounce()
+            let _ = PresentationDebouncer.shared.execute {
+                self.performPopViewController(animated: animated, completion: completion)
+            }
+        } else {
+            performPopViewController(animated: animated, completion: completion)
         }
+    }
+    
+    private func performPopViewController(animated: Bool, completion: @escaping VoidClosure) {
         popViewController(animated: animated)
 
         if animated, let coordinator = transitionCoordinator {
