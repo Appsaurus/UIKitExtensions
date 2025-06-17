@@ -30,11 +30,33 @@ public extension UINavigationController {
         if debounced {
             viewController.view.debounce()
         }
-        CATransaction.begin()
-        CATransaction.setCompletionBlock(completion)
         pushViewController(viewController, animated: animated)
-        CATransaction.commit()
+
+        if animated, let coordinator = transitionCoordinator {
+            coordinator.animate(alongsideTransition: nil) { _ in
+                completion()
+            }
+        } else {
+            completion()
+        }
     }
+
+
+    func popViewController(animated: Bool, debounced: Bool = true, completion: @escaping VoidClosure) {
+        if debounced {
+            view.debounce()
+        }
+        popViewController(animated: animated)
+
+        if animated, let coordinator = transitionCoordinator {
+            coordinator.animate(alongsideTransition: nil) { _ in
+                completion()
+            }
+        } else {
+            completion()
+        }
+    }
+
     
     var previousViewController: UIViewController? {
         guard viewControllers.count > 1 else {
