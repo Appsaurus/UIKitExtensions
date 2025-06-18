@@ -12,14 +12,8 @@ import Swiftest
 
 public extension UIViewController {
 
-    func present(viewController: UIViewController, animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
-        if debounced {
-            let _ = PresentationDebouncer.shared.execute {
-                self.present(viewController, animated: animated, completion: completion)
-            }
-        } else {
-            present(viewController, animated: animated, completion: completion)
-        }
+    func present(viewController: UIViewController, animated: Bool = true, completion: VoidClosure? = nil) {
+        present(viewController, animated: animated, completion: completion)
     }
 
     func push(_ viewController: UIViewController, animated: Bool = true, completion: VoidClosure? = nil) {
@@ -44,17 +38,7 @@ public extension UIViewController {
         navVC.push(viewController, animated: animated, completion: completion)
     }
 
-    func popOrDismiss(animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
-        if debounced {
-            let _ = PresentationDebouncer.shared.execute {
-                self.performPopOrDismiss(animated: animated, completion: completion)
-            }
-        } else {
-            performPopOrDismiss(animated: animated, completion: completion)
-        }
-    }
-    
-    private func performPopOrDismiss(animated: Bool, completion: VoidClosure?) {
+    func popOrDismiss(animated: Bool = true, completion: VoidClosure? = nil) {
         guard let nav = navigationController else {
             dismiss(animated: animated, completion: completion)
             return
@@ -63,15 +47,10 @@ public extension UIViewController {
         completion?()
     }
 
-    func dismiss(after delay: TimeInterval, animated: Bool = true, debounced: Bool = true, completion: VoidClosure? = nil) {
+
+    func dismiss(after delay: TimeInterval, animated: Bool = true, completion: VoidClosure? = nil) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            if debounced {
-                let _ = PresentationDebouncer.shared.execute {
-                    self.dismiss(animated: animated, completion: completion)
-                }
-            } else {
-                self.dismiss(animated: animated, completion: completion)
-            }
+            self.dismiss(animated: animated, completion: completion)
         }
     }
     
